@@ -4,11 +4,11 @@
 		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar_collapse_1"><span class="navbar-toggler-icon"></span></button>
 		<div class="collapse navbar-collapse" id="navbar_collapse_1">
 			<ul class="navbar-nav me-auto mb-2 mb-md-0">
-				<!-- Menu Top -->
+				<!-- Menu Base -->
 				<li class="nav-item"><a class="nav-link active bg-dark foreground-light" href="?go=cover">Cover</a></li>
 				<li class="nav-item"><a class="nav-link" href="?go=stand">Stand</a></li>
 		
-				<!-- Menu Treeview -->
+				<!-- Menu Tree -->
 				<li class="nav-item dropdown">
 					<a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Rack</a>
 					<ul class="dropdown-menu">
@@ -50,14 +50,14 @@
 			</ul>
 			<div class="d-flex">
 				<div>
-					<!-- Panel Searchbox -->
+					<!-- Panel Search -->
 					<form class="me-2 d-flex">
 						<input class="form-control me-2" type="search" placeholder="Which is" aria-label="Enquire">
 						<button class="btn btn-outline-dark" type="submit">Enquire</button>
 					</form>
 				</div>
 				<div>
-					<!-- Menu Quickaccess -->
+					<!-- Menu Quick -->
 					<div class="dropstart">
 						<button class="btn btn-dark dropdown-toggle foreground-light" type="button" id="dropstart_utilities" data-bs-toggle="dropdown">Utilities</button>
 						<ul class="dropdown-menu background-light">

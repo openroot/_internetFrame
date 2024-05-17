@@ -4,12 +4,12 @@
 		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar_collapse_2"><span class="navbar-toggler-icon"></span></button>
 		<div class="collapse navbar-collapse" id="navbar_collapse_2">
 			<ul class="navbar-nav">
-				<!-- Toplevel Menu -->
+				<!-- Menu Base -->
 				<li class="nav-item"><a class="nav-link active bg-dark foreground-light" href="#">Home</a></li>
 				<li class="nav-item"><a class="nav-link" href="#">Link</a></li>
 				<li class="nav-item"><a class="nav-link disabled" href="#" tabindex="-1">Disabled</a></li>
 		
-				<!-- Treeview Dropup Menu -->
+				<!-- Menu Tree -->
 				<li class="nav-item dropup">
 					<a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Treeview menu up</a>
 					<ul class="dropdown-menu">
