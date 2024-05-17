@@ -13,8 +13,8 @@
 					<a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Rack</a>
 					<ul class="dropdown-menu">
 						<li><a class="dropdown-item" href="?go=word_fun">Word Fun</a></li>
-						<!--
-						<li><a class="dropdown-item" href="#">Menu item 2 &raquo;</a>
+						
+						<!--<li><a class="dropdown-item" href="#">Menu item 2 &raquo;</a>
 							<ul class="submenu dropdown-menu">
 								<li><a class="dropdown-item" href="#">Menu item 2.1</a></li>
 								<li><a class="dropdown-item" href="#">Menu item 2.2</a></li>
@@ -44,8 +44,7 @@
 						<li><a class="dropdown-item active bg-dark foreground-light" href="#">Menu item 3</a></li>
 						<li><a class="dropdown-item disabled" href="#" tabindex="-1">Menu item 4</a></li>
 						<li><hr class="dropdown-divider"></li>
-						<li><a class="dropdown-item" href="#">Something else here</a>
-						-->
+						<li><a class="dropdown-item" href="#">Something else here</a>-->
 					</ul>
 				</li>
 			</ul>
