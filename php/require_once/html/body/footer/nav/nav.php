@@ -14,34 +14,34 @@
 					<a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Lamp</a>
 					<ul class="dropdown-menu">
 						<li><a class="dropdown-item" href="?go=sun_glass">Sun Glass</a></li>
-						<!--<li><a class="dropdown-item" href="#">Menu item 2 &raquo;</a>
+						<li><a class="dropdown-item" href="#">Dated Results &raquo;</a>
 							<ul class="submenu-up dropdown-menu">
-								<li><a class="dropdown-item" href="#">Menu item 2.1</a></li>
-								<li><a class="dropdown-item" href="#">Menu item 2.2</a></li>
-								<li><a class="dropdown-item" href="#">Menu item 2.3 &raquo;</a>
+								<li><a class="dropdown-item" href="#">Work - Space</a></li>
+								<li><a class="dropdown-item" href="#">Food - Tourism</a></li>
+								<li><a class="dropdown-item" href="#">World - Journal &raquo;</a>
 									<ul class="submenu-up dropdown-menu">
-										<li><a class="dropdown-item" href="#">Menu item 2.3.1</a></li>
-										<li><a class="dropdown-item" href="#">Menu item 2.3.2 &raquo;</a>
+										<li><a class="dropdown-item" href="#">Political</a></li>
+										<li><a class="dropdown-item" href="#">Population &raquo;</a>
 											<ul class="submenu-up dropdown-menu">
-												<li><a class="dropdown-item" href="#">Menu item 2.3.2.1</a></li>
-												<li><a class="dropdown-item" href="#">Menu item 2.3.2.2</a></li>
-												<li><a class="dropdown-item" href="#">Menu item 2.3.2.3 &raquo;</a>
+												<li><a class="dropdown-item" href="#">Human</a></li>
+												<li><a class="dropdown-item" href="#">Plant</a></li>
+												<li><a class="dropdown-item" href="#">Animal &raquo;</a>
 													<ul class="submenu-up dropdown-menu">
-														<li><a class="dropdown-item" href="#">Menu item 2.3.2.3.1</a></li>
-														<li><a class="dropdown-item" href="#">Menu item 2.3.2.3.2</a></li>
+														<li><a class="dropdown-item" href="#">Water - Base</a></li>
+														<li><a class="dropdown-item" href="#">Soil - Base</a></li>
+														<li><a class="dropdown-item" href="#">Air - Base</a></li>
+														<li><a class="dropdown-item" href="#">Alien - Base</a></li>
 													</ul>
 												</li>
-												<li><a class="dropdown-item active bg-dark foreground-light" href="#">Menu item 2.3.2.4</a></li>
-												<li><a class="dropdown-item" href="#">Menu item 2.3.2.5</a></li>
 											</ul>
 										</li>
 									</ul>
 								</li>
-								<li><a class="dropdown-item active bg-dark foreground-light" href="#">Menu item 2.4</a></li>
-								<li><a class="dropdown-item" href="#">Menu item 2.5</a></li>
+								<li><a class="dropdown-item" href="#"></a></li>
+								<li><a class="dropdown-item" href="#"></a></li>
 							</ul>
 						</li>
-						<li><a class="dropdown-item active bg-dark foreground-light" href="#">Menu item 3</a></li>
+						<!--<li><a class="dropdown-item active bg-dark foreground-light" href="#">Menu item 3</a></li>
 						<li><a class="dropdown-item disabled" href="#" tabindex="-1">Menu item 4</a></li>
 						<li><hr class="dropdown-divider"></li>
 						<li><a class="dropdown-item" href="#">Something else here</a>-->
