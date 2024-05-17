@@ -2,12 +2,12 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="">
-	<meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-	<meta name="generator" content="Hugo 0.84.0">
-	<title>Bootstrap Template · Bootstrap v5.0</title>
+	<meta name="author" content="">
+	<meta name="generator" content="">
+	<title>InternetFrame</title>
 
-	<!-- Bootstrap core CSS -->
+	<!-- Bootstrap core -->
 	<link href="css/bootstrap.min.css" rel="stylesheet">
-	<!-- Custom styles for this template -->
+	<!-- Custom styles -->
 	<link href="css/custom.css" rel="stylesheet">
 </head>
