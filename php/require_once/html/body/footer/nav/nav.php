@@ -1,6 +1,6 @@
 <nav class="navbar fixed-bottom navbar-expand-md navbar-light background-light">
 	<div class="container-fluid">
-		<a class="navbar-brand" href="#">Bottom navbar</a>
+		<a class="navbar-brand" href="#">&copy; 2024-<?php echo date("Y"); ?></a>
 		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar_collapse_2"><span class="navbar-toggler-icon"></span></button>
 		<div class="collapse navbar-collapse" id="navbar_collapse_2">
 			<ul class="navbar-nav">
