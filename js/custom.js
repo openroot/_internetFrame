@@ -49,3 +49,11 @@ document.addEventListener("DOMContentLoaded", function () {
 		// End if inner width
 	}
 });
+
+
+// jQuery
+$(document).ready(function(){
+	$("p").click(function(){
+		//$(this).hide();
+	});
+});
