@@ -486,13 +486,193 @@
 	</div>
 </div>
 
-<!-- Album -->
+<!-- badge -->
+<hr>
 <div class="mt-5 container-fluid">
-  <h2>Badges</h2>
-  <h1>Example heading <span class="badge bg-secondary">New</span></h1>
-  <h2>Example heading <span class="badge bg-secondary">New</span></h2>
-  <h3>Example heading <span class="badge bg-secondary">New</span></h3>
-  <h4>Example heading <span class="badge bg-secondary">New</span></h4>
-  <h5>Example heading <span class="badge bg-secondary">New</span></h5>
-  <h6>Example heading <span class="badge bg-secondary">New</span></h6>
+	<h6>Badges</h6>
+	<p>Badges are used to add additional information to any content.</p>
+	<h1>Example heading <span class="badge bg-secondary">New</span></h1>
+	<h2>Example heading <span class="badge bg-secondary">New</span></h2>
+	<h3>Example heading <span class="badge bg-secondary">New</span></h3>
+	<h4>Example heading <span class="badge bg-secondary">New</span></h4>
+	<h5>Example heading <span class="badge bg-secondary">New</span></h5>
+	<h6>Example heading <span class="badge bg-secondary">New</span></h6>
+</div>
+
+<!-- Class display-(1 to 6) -->
+<hr>
+<div class="mt-5 container-fluid">
+	<h6>Display Headings</h6>
+	<p>Display headings are used to stand out more than normal headings (larger font-size and lighter font-weight).</p>
+	<h1 class="display-1">Display 1</h1>
+	<h1 class="display-2">Display 2</h1>
+	<h1 class="display-3">Display 3</h1>
+	<h1 class="display-4">Display 4</h1>
+	<h1 class="display-5">Display 5</h1>
+	<h1 class="display-6">Display 6</h1>
+</div>
+
+<!-- small -->
+<hr>
+<div class="mt-5 container-fluid">
+	<h6>Smaller, Secondary Text</h6>
+	<p>The small element (and the .small class) is used to create a smaller, secondary text in any heading.</p>
+	<h1>h1 heading <small>secondary text</small></h1>
+	<h2>h2 heading <small>secondary text</small></h2>
+	<h3>h3 heading <small>secondary text</small></h3>
+	<h4>h4 heading <small>secondary text</small></h4>
+	<h5>h5 heading <small>secondary text</small></h5>
+	<h6>h6 heading <small>secondary text</small></h6>
+</div>
+
+<!-- mark -->
+<hr>
+<div class="mt-5 container-fluid">
+	<h6>Highlight Text</h6>
+	<p>Use the mark element (or the .mark class) to <mark>highlight</mark> text.</p>
+</div>
+
+<!-- abbr -->
+<hr>
+<div class="mt-5 container-fluid">
+	<h6>Abbreviations</h6>
+	<p>The abbr element is used to mark up an abbreviation or acronym:</p>
+	<p>The <abbr title="World Health Organization">WHO</abbr> was founded in 1948.</p>
+</div>
+
+<!-- blockquote -->
+<hr>
+<div class="mt-5 container-fluid">
+	<h6>Blockquotes</h6>
+	<p>The blockquote element is used to present content from another source:</p>
+	<blockquote class="blockquote">
+		<p>For 50 years, WWF has been protecting the future of nature. The world's leading conservation organization, WWF works in 100 countries and is supported by 1.2 million members in the United States and close to 5 million globally.</p>
+		<footer class="blockquote-footer">From WWF's website</footer>
+	</blockquote>
+</div>
+
+<!-- dl -->
+<hr>
+<div class="mt-5 container-fluid">
+	<h6>Description Lists</h6>    
+	<p>The dl element indicates a description list:</p>
+	<dl>
+		<dt>Coffee</dt>
+		<dd>- black hot drink</dd>
+		<dt>Milk</dt>
+		<dd>- white cold drink</dd>
+	</dl> 
+</div>
+
+<!-- pre -->
+<hr>
+<div class="mt-5 container-fluid">
+	<h6>Multiple Code Lines</h6>
+	<p>For multiple lines of code, use the pre element:</p>
+	<pre>
+		Text in a pre element
+		is displayed in a fixed-width
+		font, and it preserves
+		both      spaces and
+		line breaks.
+	</pre>
+</div>
+
+<!-- code -->
+<hr>
+<div class="mt-5 container-fluid">
+	<h6>Code Snippets</h6>
+	<p>Inline snippets of code should be embedded in the code element:</p>
+	<p>The following HTML elements: <code>span</code>, <code>section</code>, and <code>div</code> defines a section in a document.</p>
+</div>
+
+<!-- kbd -->
+<hr>
+<div class="mt-5 container-fluid">
+	<h6>Keyboard Inputs</h6>
+	<p>To indicate input that is typically entered via the keyboard, use the kbd element:</p>
+	<p>Use <kbd>ctrl + p</kbd> to open the Print dialog box.</p>
+</div>
+
+<!-- Class .lead  -->
+<hr>
+<div class="mt-5 container-fluid">
+	<h6>Lead Class</h6>
+	<p>Use the .lead class to make a paragraph "stand out":</p>
+	<p class="lead">This paragraph stands out.</p>
+	<p>This is a regular paragraph.</p>
+</div>
+
+<!-- Class text-(typography) -->
+<hr>
+<div class="mt-5 container-fluid">
+	<h6>Typography</h6>
+	<p class="text-start">Left-aligned text.</p>
+	<p class="text-end">Right-aligned text.</p>
+	<p class="text-center">Center-aligned text.</p>
+	<p class="text-nowrap">No wrap text. No wrap text. No wrap text. No wrap text.</p>
+	<p class="text-lowercase">Lowercased text.</p>
+	<p class="text-uppercase">Uppercased text.</p>
+	<p class="text-capitalize">Capitalized text.</p>
+</div>
+
+<!-- Class text-decoration-none -->
+<hr>
+<div class="mt-5 container-fluid">
+	<h6>Text Decoration</h6>
+	<p>Use the .text-decoration-none class to remove the underline from a link.</p>
+	<a href="#" class="text-decoration-none">A link without underline.</a>
+</div>
+
+<!-- Class text-(colors) -->
+<hr>
+<div class="mt-5 container-fluid">
+	<h6>Contextual Colors</h6>
+	<p>Use the contextual classes to provide "meaning through colors":</p>
+	<p class="text-muted">This text is muted.</p>
+	<p class="text-primary">This text is important.</p>
+	<p class="text-success">This text indicates success.</p>
+	<p class="text-info">This text represents some information.</p>
+	<p class="text-warning">This text represents a warning.</p>
+	<p class="text-danger">This text represents danger.</p>
+	<p class="text-secondary">Secondary text.</p>
+	<p class="text-dark">This text is dark grey.</p>
+	<p class="text-body">Default body color (often black).</p>
+	<p class="text-light">This text is light grey (on white background).</p>
+	<p class="text-white">This text is white (on white background).</p>
+</div>
+
+<!--  -->
+<hr>
+<div class="mt-5 container-fluid">
+	<h6></h6>
+
+</div>
+
+<!--  -->
+<hr>
+<div class="mt-5 container-fluid">
+	<h6></h6>
+
+</div>
+
+<!--  -->
+<hr>
+<div class="mt-5 container-fluid">
+	<h6></h6>
+
+</div>
+
+<!--  -->
+<hr>
+<div class="mt-5 container-fluid">
+	<h6></h6>
+
+</div>
+
+<!--  -->
+<hr>
+<div class="mt-5 container-fluid">
+	<h6></h6>
+
 </div>
