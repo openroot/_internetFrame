@@ -1,5 +1,5 @@
 window.addEventListener("resize", function () {
-	"use strict"; window.location.reload();
+	// window.location.reload(); // Required for auto-setting navigation menu.
 });
 
 document.addEventListener("DOMContentLoaded", function () {
