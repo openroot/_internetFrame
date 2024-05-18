@@ -13,7 +13,11 @@
 					<a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Rack</a>
 					<ul class="dropdown-menu">
 						<li><a class="dropdown-item" href="?go=word_fun">Word Fun</a></li>
-						
+						<li><a class="dropdown-item" href="#">TV Channels &raquo;</a>
+							<ul class="submenu dropdown-menu">
+								<li><a class="dropdown-item" href="?go=aaj_tak">AajTAK</a></li>
+							</ul>
+						</li>
 						<!--<li><a class="dropdown-item" href="#">Menu item 2 &raquo;</a>
 							<ul class="submenu dropdown-menu">
 								<li><a class="dropdown-item" href="#">Menu item 2.1</a></li>
