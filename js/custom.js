@@ -54,8 +54,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 /* jQuery */
-$(document).ready(function(){
-	$("p").click(function(){
+$(document).ready(function() {
+	$("p").click(function() {
 		//$(this).hide();
 	});
 });
