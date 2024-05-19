@@ -680,32 +680,16 @@
 <div class="mt-5">
 	<h6>Background Color with Contrasting Text Color</h6>
 	<p>Use the contextual background classes to provide "meaning through colors".</p>
-	<div class="bg-primary p-3"></div>
-	<div class="bg-success p-3"></div>
-	<div class="bg-info p-3"></div>
-	<div class="bg-warning p-3"></div>
-	<div class="bg-danger p-3"></div>
-	<div class="bg-secondary p-3"></div>
-	<div class="bg-dark p-3"></div>
-	<div class="bg-light p-3"></div>
-</div>
-
-<!-- Image -->
-<hr>
-<div class="mt-5">
-	<h6>Image</h6>
-	<p>Responsive image.</p>
-	<img class="img-fluid" src="assets/images/sample_image_1.jpg" alt="Sample Image 1">
-	<p>Thumbnail image.</p>
-	<img class="rounded" src="assets/images/sample_image_1.jpg" alt="Sample Image 1" width="150px">
-	<img class="rounded-circle" src="assets/images/sample_image_1.jpg" alt="Sample Image 1" width="150px">
-	<img class="img-thumbnail" src="assets/images/sample_image_1.jpg" alt="Sample Image 1" width="150px">
-	<p>Float an image to the left with the .float-start class.</p>
-	<img class="float-start" src="assets/images/sample_image_1.jpg" alt="Sample Image 1" width="100px">
-	<p>Float an image to the right with the .float-end class.</p>
-	<img class="float-end" src="assets/images/sample_image_1.jpg" alt="Sample Image 1" width="100px">
-	<p>Center an image by adding the utility classes .mx-auto (margin:auto) and .d-block (display:block) to the image.</p>
-	<img class="mx-auto d-block" src="assets/images/sample_image_1.jpg" alt="Sample Image 1" width="100px">
+	<div style="width:8px">
+		<div class="bg-primary p-1"></div>
+		<div class="bg-success p-1"></div>
+		<div class="bg-info p-1"></div>
+		<div class="bg-warning p-1"></div>
+		<div class="bg-danger p-1"></div>
+		<div class="bg-secondary p-1"></div>
+		<div class="bg-dark p-1"></div>
+		<div class="bg-light p-1"></div>
+	</div>
 </div>
 
 <!-- Class .alert -->
@@ -802,9 +786,115 @@
 	</div>
 </div>
 
+<!-- Progress Bar -->
+<hr>
+<div class="mt-5">
+	<h6>Progress Bar</h6>
+	<p>Add the .progress-bar-animated class to animate the progress bar.</p>
+	<div class="progress">
+		<div class="progress-bar progress-bar-striped bg-danger" style="width:88%"></div>
+	</div>
+	<div class="progress">
+		<div class="progress-bar progress-bar-striped progress-bar-animated bg-danger" style="width:88%"></div>
+	</div>
+</div>
+
+<!-- Image Card -->
+<hr>
+<div class="mt-5">
+	<h6></h6>
+	<h2>Image Card</h2>
+	<p>Image at the bottom (card-img-bottom):</p>
+	<div class="card" style="width:250px">
+		<div class="card-body">
+			<h4 class="card-title">John Doe</h4>
+			<p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
+			<a href="#" class="btn btn-danger">See Profile</a>
+		</div>
+		<img class="img-fluid card-img-bottom" src="assets/images/sample_image_1.jpg" alt="Card image" style="width:100%">
+	</div>
+</div>
+
+<!-- Colored Spinners -->
+<hr>
+<div class="mt-5">
+	<h6>Colored Spinners</h6>
+	<p>Use any <strong>text color utilites</strong> to add a color to the spinner.</p>
+	<div class="spinner-border spinner-border-sm text-muted"></div>
+	<div class="spinner-border spinner-border-sm text-primary"></div>
+	<div class="spinner-border spinner-border-sm text-success"></div>
+	<div class="spinner-border spinner-border-sm text-info"></div>
+	<div class="spinner-border spinner-border-sm text-warning"></div>
+	<div class="spinner-border spinner-border-sm text-danger"></div>
+	<div class="spinner-border spinner-border-sm text-secondary"></div>
+	<div class="spinner-border spinner-border-sm text-dark"></div>
+	<div class="spinner-border spinner-border-sm text-light"></div>
+	<br>
+	<div class="spinner-grow spinner-grow-sm text-muted"></div>
+	<div class="spinner-grow spinner-grow-sm text-primary"></div>
+	<div class="spinner-grow spinner-grow-sm text-success"></div>
+	<div class="spinner-grow spinner-grow-sm text-info"></div>
+	<div class="spinner-grow spinner-grow-sm text-warning"></div>
+	<div class="spinner-grow spinner-grow-sm text-danger"></div>
+	<div class="spinner-grow spinner-grow-sm text-secondary"></div>
+	<div class="spinner-grow spinner-grow-sm text-dark"></div>
+	<div class="spinner-grow spinner-grow-sm text-light"></div>
+</div>
+
+<!-- ol -->
+<hr>
+<div class="mt-5">
+	<h6>Numbered List Group</h6>
+	<p>Use the .list-group-numbered class to create list items with numbers in front of them.</p>
+	<ol class="list-group list-group-numbered">
+		<li class="list-group-item">First item</li>
+		<li class="list-group-item">Second item</li>
+		<li class="list-group-item">Third item</li>
+	</ol>
+</div>
+
 <!--  -->
 <hr>
 <div class="mt-5">
 	<h6></h6>
 
+</div>
+
+<!--  -->
+<hr>
+<div class="mt-5">
+	<h6></h6>
+
+</div>
+
+<!--  -->
+<hr>
+<div class="mt-5">
+	<h6></h6>
+
+</div>
+
+<!--  -->
+<hr>
+<div class="mt-5">
+	<h6></h6>
+
+</div>
+
+<!-- Image -->
+<hr>
+<div class="mt-5">
+	<h6>Image</h6>
+	<p>Thumbnail image.</p>
+	<img class="rounded" src="assets/images/sample_image_1.jpg" alt="Sample Image 1" width="150px">
+	<img class="rounded-circle" src="assets/images/sample_image_1.jpg" alt="Sample Image 1" width="150px">
+	<img class="img-thumbnail" src="assets/images/sample_image_1.jpg" alt="Sample Image 1" width="150px">
+	<p>Float an image to the left with the .float-start class.</p>
+	<img class="float-start" src="assets/images/sample_image_1.jpg" alt="Sample Image 1" width="100px">
+	<p>Float an image to the right with the .float-end class.</p>
+	<img class="float-end" src="assets/images/sample_image_1.jpg" alt="Sample Image 1" width="100px">
+	<p>Center an image by adding the utility classes .mx-auto (margin:auto) and .d-block (display:block) to the image.</p>
+	<img class="mx-auto d-block" src="assets/images/sample_image_1.jpg" alt="Sample Image 1" width="100px">
+	<p>Responsive image.</p>
+	<img class="img-fluid" src="assets/images/sample_image_1.jpg" alt="Sample Image 1">
 </div>
