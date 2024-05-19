@@ -708,11 +708,98 @@
 	<img class="mx-auto d-block" src="assets/images/sample_image_1.jpg" alt="Sample Image 1" width="100px">
 </div>
 
-<!--  -->
+<!-- Class .alert -->
+<hr>
+<div class="mt-5">
+	<h6>Animated Alerts</h6>
+	<p>The .fade and .show classes adds a fading effect when closing the alert message.</p>
+	<div class="alert alert-success alert-dismissible fade show">
+		<button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+		<strong>Success!</strong> This alert box could indicate a successful or positive action.
+	</div>
+	<div class="alert alert-info alert-dismissible fade show">
+		<button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+		<strong>Info!</strong> This alert box could indicate a neutral informative change or action.
+	</div>
+	<div class="alert alert-warning alert-dismissible fade show">
+		<button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+		<strong>Warning!</strong> This alert box could indicate a warning that might need attention.
+	</div>
+	<div class="alert alert-danger alert-dismissible fade show">
+		<button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+		<strong>Danger!</strong> This alert box could indicate a dangerous or potentially negative action.
+	</div>
+	<div class="alert alert-primary alert-dismissible fade show">
+		<button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+		<strong>Primary!</strong> Indicates an important action.
+	</div>
+	<div class="alert alert-secondary alert-dismissible fade show">
+		<button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+		<strong>Secondary!</strong> Indicates a slightly less important action.
+	</div>
+	<div class="alert alert-dark alert-dismissible fade show">
+		<button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+		<strong>Dark!</strong> Dark grey alert.
+	</div>
+	<div class="alert alert-light alert-dismissible fade show">
+		<button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+		<strong>Light!</strong> Light grey alert.
+	</div>
+</div>
+
+<!-- Buttons (outlined) -->
 <hr>
 <div class="mt-5">
 	<h6></h6>
+	<p>Buttons with outline.</p>
+	<button type="button" class="btn btn-outline-primary">Primary</button>
+	<button type="button" class="btn btn-outline-secondary">Secondary</button>
+	<button type="button" class="btn btn-outline-success">Success</button>
+	<button type="button" class="btn btn-outline-info">Info</button>
+	<button type="button" class="btn btn-outline-warning">Warning</button>
+	<button type="button" class="btn btn-outline-danger">Danger</button>
+	<button type="button" class="btn btn-outline-dark">Dark</button>
+	<button type="button" class="btn btn-outline-light text-dark">Light</button>
+</div>
 
+<!-- Spinner Buttons -->
+<hr>
+<div class="mt-5">
+	<h6>Spinner Buttons</h6>
+	<p>Add spinners to buttons.</p>
+	<button class="btn btn-primary">
+		<span class="spinner-border spinner-border-sm"></span>
+	</button>
+	<button class="btn btn-primary">
+		<span class="spinner-border spinner-border-sm"></span>
+		Loading..
+	</button>  
+	<button class="btn btn-primary" disabled>
+		<span class="spinner-border spinner-border-sm"></span>
+		Loading..
+	</button>  
+	<button class="btn btn-primary" disabled>
+		<span class="spinner-grow spinner-grow-sm"></span>
+		Loading..
+	</button>
+</div>
+
+<!-- Button Groups -->
+<hr>
+<div class="mt-5">
+	<h6>Button Groups</h6>
+	<p>Nest button groups to create dropdown menus.</p>
+	<div class="btn-group">
+		<button type="button" class="btn btn-danger">Apple</button>
+		<button type="button" class="btn btn-danger">Samsung</button>
+		<div class="btn-group">
+			<button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">Sony</button>
+			<ul class="dropdown-menu">
+				<li><a class="dropdown-item" href="#">Tablet</a></li>
+				<li><a class="dropdown-item" href="#">Smartphone</a></li>
+			</ul>
+		</div>
+	</div>
 </div>
 
 <!--  -->
