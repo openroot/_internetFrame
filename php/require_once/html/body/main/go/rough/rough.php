@@ -942,7 +942,7 @@
 	<span class="border border-danger rounded-2" style="display: inline-block; height: 70px; width: 70px; margin: 6px;"></span>
 	<span class="border border-danger rounded-3" style="display: inline-block; height: 70px; width: 70px; margin: 6px;"></span>
 	<span class="border border-danger rounded-4" style="display: inline-block; height: 70px; width: 70px; margin: 6px;"></span>
-  <span class="border border-danger rounded-5" style="display: inline-block; height: 70px; width: 70px; margin: 6px;"></span>
+	<span class="border border-danger rounded-5" style="display: inline-block; height: 70px; width: 70px; margin: 6px;"></span>
 </div>
 
 <!-- Collapsible -->
