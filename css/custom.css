@@ -185,3 +185,11 @@ textarea {
 	-moz-user-select: none;
 	user-select: none;
 }
+
+.card-header {
+	background-color: #dc3545;
+}
+
+.card-body {
+	background-color: #fffae5 !important;
+}

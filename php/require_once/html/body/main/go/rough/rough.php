@@ -307,7 +307,7 @@
 							<title>Placeholder</title>
 							<rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text>
 						</svg>
-						<div class="card-body background-light">
+						<div class="card-body">
 							<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
 							<div class="d-flex justify-content-between align-items-center">
 								<div class="btn-group">
@@ -811,7 +811,7 @@
 			<p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
 			<a href="#" class="btn btn-danger">See Profile</a>
 		</div>
-		<img class="img-fluid card-img-bottom" src="assets/images/sample_image_1.jpg" alt="Card image" style="width:100%">
+		<img class="card-img-bottom" src="assets/images/sample_image_1.jpg" alt="Card image" style="width:100%">
 	</div>
 </div>
 
@@ -924,18 +924,38 @@
 	<div class="mx-auto bg-dark" style="width:150px">Centered</div>
 </div>
 
-<!--  -->
+<!-- Borders -->
 <hr>
 <div class="mt-5">
-	<h6></h6>
-
+	<h6>Borders</h6>
+	<p>Round the corner of an element with the rounded classes:</p> 
+	<span class="border border-danger rounded" style="display: inline-block; height: 70px; width: 70px; margin: 6px;"></span>
+	<span class="border border-danger rounded-top" style="display: inline-block; height: 70px; width: 70px; margin: 6px;"></span>
+	<span class="border border-danger rounded-end" style="display: inline-block; height: 70px; width: 70px; margin: 6px;"></span>
+	<span class="border border-danger rounded-bottom" style="display: inline-block; height: 70px; width: 70px; margin: 6px;"></span>
+	<span class="border border-danger rounded-start" style="display: inline-block; height: 70px; width: 70px; margin: 6px;"></span>
+	<span class="border border-danger rounded-circle" style="display: inline-block; height: 70px; width: 70px; margin: 6px;"></span>
+	<span class="border border-danger rounded-pill" style="display: inline-block; height: 70px; width: 130px; margin: 6px;"></span>
+	<br>
+	<span class="border border-danger rounded-0" style="display: inline-block; height: 70px; width: 70px; margin: 6px;"></span>
+	<span class="border border-danger rounded-1" style="display: inline-block; height: 70px; width: 70px; margin: 6px;"></span>
+	<span class="border border-danger rounded-2" style="display: inline-block; height: 70px; width: 70px; margin: 6px;"></span>
+	<span class="border border-danger rounded-3" style="display: inline-block; height: 70px; width: 70px; margin: 6px;"></span>
+	<span class="border border-danger rounded-4" style="display: inline-block; height: 70px; width: 70px; margin: 6px;"></span>
+  <span class="border border-danger rounded-5" style="display: inline-block; height: 70px; width: 70px; margin: 6px;"></span>
 </div>
 
-<!--  -->
+<!-- Collapsible -->
 <hr>
 <div class="mt-5">
-	<h6></h6>
-
+	<h6>Collapsible content</h6>
+	<p>Add the show class next to the collapse class to show the content by default.</p>
+	<p>Click on the button to toggle between showing and hiding content.</p>
+	<button type="button" class="btn btn-danger" data-bs-toggle="collapse" data-bs-target="#collapsible_demo">Simple collapsible</button>
+	<div id="collapsible_demo" class="collapse show">
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+		Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+	</div>
 </div>
 
 <!-- Accordion -->
@@ -943,14 +963,14 @@
 <div class="mt-5">
 	<h6>Accordion</h6>
 	<p><strong>Note:</strong> The <strong>data-bs-parent</strong> attribute makes sure that all collapsible elements under the specified parent will be closed when one of the collapsible item is shown.</p>
-	<div id="accordion">
+	<div id="accordion_demo">
 		<div class="card">
 			<div class="card-header">
 				<a class="btn" data-bs-toggle="collapse" href="#collapseOne">
 					Collapsible Group Item #1
 				</a>
 			</div>
-			<div id="collapseOne" class="collapse show" data-bs-parent="#accordion">
+			<div id="collapseOne" class="collapse show" data-bs-parent="#accordion_demo">
 				<div class="card-body">
 					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 				</div>
@@ -963,7 +983,7 @@
 					Collapsible Group Item #2
 				</a>
 			</div>
-			<div id="collapseTwo" class="collapse" data-bs-parent="#accordion">
+			<div id="collapseTwo" class="collapse" data-bs-parent="#accordion_demo">
 				<div class="card-body">
 					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 				</div>
@@ -976,7 +996,7 @@
 					Collapsible Group Item #3
 				</a>
 			</div>
-			<div id="collapseThree" class="collapse" data-bs-parent="#accordion">
+			<div id="collapseThree" class="collapse" data-bs-parent="#accordion_demo">
 				<div class="card-body">
 					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 				</div>
@@ -985,27 +1005,69 @@
 	</div>
 </div>
 
-<!--  -->
+<!-- Carousel -->
 <hr>
 <div class="mt-5">
-	<h6></h6>
+	<h6>Carousel</h6>
+	<p>The following example shows how to create a basic carousel with indicators and controls.</p><!-- Carousel -->
+	<div id="carousel_demo" class="carousel slide" data-bs-ride="carousel" style="width:300px">
+		<!-- Indicators/dots -->
+		<div class="carousel-indicators">
+			<button type="button" data-bs-target="#carousel_demo" data-bs-slide-to="0" class="active"></button>
+			<button type="button" data-bs-target="#carousel_demo" data-bs-slide-to="1"></button>
+			<button type="button" data-bs-target="#carousel_demo" data-bs-slide-to="2"></button>
+		</div>
 
+		<!-- The slideshow/carousel -->
+		<div class="carousel-inner">
+			<div class="carousel-item active">
+				<img src="assets/images/sample_image_1.jpg" alt="Los Angeles" class="d-block" style="width:100%">
+				<div class="carousel-caption">
+					<h3>Los Angeles</h3>
+					<p>We had such a great time in LA!</p>
+				</div>
+			</div>
+			<div class="carousel-item">
+				<img src="assets/images/sample_image_1.jpg" alt="Chicago" class="d-block" style="width:100%">
+				<div class="carousel-caption">
+					<h3>Chicago</h3>
+					<p>Thank you, Chicago!</p>
+				</div>
+			</div>
+			<div class="carousel-item">
+				<img src="assets/images/sample_image_1.jpg" alt="New York" class="d-block" style="width:100%">
+				<div class="carousel-caption">
+					<h3>New York</h3>
+					<p>We love the Big Apple!</p>
+				</div>
+			</div>
+		</div>
+
+		<!-- Left and right controls/icons -->
+		<button class="carousel-control-prev" type="button" data-bs-target="#carousel_demo" data-bs-slide="prev">
+			<span class="carousel-control-prev-icon"></span>
+		</button>
+		<button class="carousel-control-next" type="button" data-bs-target="#carousel_demo" data-bs-slide="next">
+			<span class="carousel-control-next-icon"></span>
+		</button>
+	</div>
 </div>
+	
 
 <!-- Image -->
 <hr>
 <div class="mt-5">
 	<h6>Image</h6>
 	<p>Thumbnail image.</p>
-	<img class="rounded" src="assets/images/sample_image_1.jpg" alt="Sample Image 1" width="150px">
-	<img class="rounded-circle" src="assets/images/sample_image_1.jpg" alt="Sample Image 1" width="150px">
-	<img class="img-thumbnail" src="assets/images/sample_image_1.jpg" alt="Sample Image 1" width="150px">
+	<img class="rounded" src="assets/images/sample_image_1.jpg" alt="Sample Image 1" width="300px">
+	<img class="rounded-circle" src="assets/images/sample_image_1.jpg" alt="Sample Image 1" width="300px">
+	<img class="img-thumbnail" src="assets/images/sample_image_1.jpg" alt="Sample Image 1" width="300px">
 	<p>Float an image to the left with the .float-start class.</p>
-	<img class="float-start" src="assets/images/sample_image_1.jpg" alt="Sample Image 1" width="100px">
+	<img class="float-start" src="assets/images/sample_image_1.jpg" alt="Sample Image 1" width="300px">
 	<p>Float an image to the right with the .float-end class.</p>
-	<img class="float-end" src="assets/images/sample_image_1.jpg" alt="Sample Image 1" width="100px">
+	<img class="float-end" src="assets/images/sample_image_1.jpg" alt="Sample Image 1" width="300px">
 	<p>Center an image by adding the utility classes .mx-auto (margin:auto) and .d-block (display:block) to the image.</p>
-	<img class="mx-auto d-block" src="assets/images/sample_image_1.jpg" alt="Sample Image 1" width="100px">
+	<img class="mx-auto d-block" src="assets/images/sample_image_1.jpg" alt="Sample Image 1" width="300px">
 	<p>Responsive image.</p>
 	<img class="img-fluid" src="assets/images/sample_image_1.jpg" alt="Sample Image 1">
 </div>
