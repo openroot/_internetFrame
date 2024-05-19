@@ -767,18 +767,18 @@
 <div class="mt-5">
 	<h6>Spinner Buttons</h6>
 	<p>Add spinners to buttons.</p>
-	<button class="btn btn-primary">
+	<button class="btn btn-danger">
 		<span class="spinner-border spinner-border-sm"></span>
 	</button>
-	<button class="btn btn-primary">
+	<button class="btn btn-danger">
 		<span class="spinner-border spinner-border-sm"></span>
 		Loading..
 	</button>  
-	<button class="btn btn-primary" disabled>
+	<button class="btn btn-danger" disabled>
 		<span class="spinner-border spinner-border-sm"></span>
 		Loading..
 	</button>  
-	<button class="btn btn-primary" disabled>
+	<button class="btn btn-danger" disabled>
 		<span class="spinner-grow spinner-grow-sm"></span>
 		Loading..
 	</button>
@@ -793,7 +793,7 @@
 		<button type="button" class="btn btn-danger">Apple</button>
 		<button type="button" class="btn btn-danger">Samsung</button>
 		<div class="btn-group">
-			<button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">Sony</button>
+			<button type="button" class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown">Sony</button>
 			<ul class="dropdown-menu">
 				<li><a class="dropdown-item" href="#">Tablet</a></li>
 				<li><a class="dropdown-item" href="#">Smartphone</a></li>
