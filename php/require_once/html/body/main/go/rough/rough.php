@@ -853,11 +853,75 @@
 	</ol>
 </div>
 
-<!--  -->
+<!-- Class .modal -->
 <hr>
 <div class="mt-5">
-	<h6></h6>
+	<h6>Fading Modal</h6>
+	<h3></h3>
+	<p>Click on the button to open the modal.</p>
+	<button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#myModal">Open modal</button>
+</div>
+<!-- The Modal -->
+<div class="modal fade" id="myModal">
+	<!-- modal-sm | modal-lg | modal-xl | modal-dialog-centered | modal-dialog-scrollable | modal-fullscreen -->
+	<div class="modal-dialog modal-sm">
+		<div class="modal-content">
+			<!-- Modal Header -->
+			<div class="modal-header">
+				<h4 class="modal-title">Modal Heading</h4>
+				<button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+			</div>
+			<!-- Modal body -->
+			<div class="modal-body">
+				Modal body
+			</div>
+			<!-- Modal footer -->
+			<div class="modal-footer">
+				<button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+			</div>
+		</div>
+	</div>
+</div>
 
+<!-- Tooltip -->
+<div class="mt-5">
+	<h6>Tooltip Positioning</h6>
+	<p>The data-bs-placement attribute specifies the tooltip position.</p>
+	<a href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="Hooray!">Top</a>
+	<a href="#" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Hooray!">Bottom</a>
+	<a href="#" data-bs-toggle="tooltip" data-bs-placement="left" title="Hooray!">Left</a>
+	<a href="#" data-bs-toggle="tooltip" data-bs-placement="right" title="Hooray!">Right</a>
+</div>
+
+<!-- Popover -->
+<hr>
+<div class="mt-5">
+	<h6>Popover Positioning</h6>
+	<p>Click on the links to see the popover in action.</p>
+	<a href="#" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="Content" title="Header">Top</a>
+	<a href="#" data-bs-toggle="popover" data-bs-placement="bottom" data-bs-content="Content" title="Header">Bottom</a>
+	<a href="#" data-bs-toggle="popover" data-bs-placement="left" data-bs-content="Content" title="Header">Left</a>
+	<a href="#" data-bs-toggle="popover" data-bs-placement="right" data-bs-content="Content" title="Header">Right</a>
+	<a href="#" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-content="Click anywhere in the document to close this popover" title="Dismissible popover">Dismissible</a>
+</div>
+
+<!-- Float -->
+<hr>
+<div class="mt-5">
+	<h6>Float</h6>
+	<p>Float an element to the right with the .float-end class or to the left with .float-start, and clear floats with the .clearfix class.</p> 
+	<div class="clearfix">
+		<span class="float-start">Float left</span>
+		<span class="float-end">Float right</span>
+	</div>
+</div>
+
+<!-- Horizontal Center -->
+<hr>
+<div class="mt-5">
+	<h6>Horizontal Centering</h6>
+	<p>Center an element with the .mx-auto class.</p>
+	<div class="mx-auto bg-dark" style="width:150px">Centered</div>
 </div>
 
 <!--  -->
@@ -872,6 +936,53 @@
 <div class="mt-5">
 	<h6></h6>
 
+</div>
+
+<!-- Accordion -->
+<hr>
+<div class="mt-5">
+	<h6>Accordion</h6>
+	<p><strong>Note:</strong> The <strong>data-bs-parent</strong> attribute makes sure that all collapsible elements under the specified parent will be closed when one of the collapsible item is shown.</p>
+	<div id="accordion">
+		<div class="card">
+			<div class="card-header">
+				<a class="btn" data-bs-toggle="collapse" href="#collapseOne">
+					Collapsible Group Item #1
+				</a>
+			</div>
+			<div id="collapseOne" class="collapse show" data-bs-parent="#accordion">
+				<div class="card-body">
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+				</div>
+			</div>
+		</div>
+	
+		<div class="card">
+			<div class="card-header">
+				<a class="collapsed btn" data-bs-toggle="collapse" href="#collapseTwo">
+					Collapsible Group Item #2
+				</a>
+			</div>
+			<div id="collapseTwo" class="collapse" data-bs-parent="#accordion">
+				<div class="card-body">
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+				</div>
+			</div>
+		</div>
+	
+		<div class="card">
+			<div class="card-header">
+				<a class="collapsed btn" data-bs-toggle="collapse" href="#collapseThree">
+					Collapsible Group Item #3
+				</a>
+			</div>
+			<div id="collapseThree" class="collapse" data-bs-parent="#accordion">
+				<div class="card-body">
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
 
 <!--  -->
