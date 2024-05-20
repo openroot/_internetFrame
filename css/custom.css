@@ -12,7 +12,6 @@ body {
 	margin-right: 8px;
 	border-left: 3px solid black;
 	border-right: 3px solid black;
-	background-color: bisque;
 }
 
 main {
@@ -36,7 +35,6 @@ header>div#navbar-top-e {
 	margin-left: 8px;
 	margin-right: 8px;
 	border-bottom: 3px solid black;
-	background-color: bisque;
 }
 
 footer>div#navbar-bottom-e {
@@ -50,7 +48,6 @@ footer>div#navbar-bottom-e {
 	margin-left: 8px;
 	margin-right: 8px;
 	border-top: 3px solid black;
-	background-color: bisque;
 }
 
 .fixed-top {
@@ -108,22 +105,6 @@ footer>div#navbar-bottom-e {
 	.bd-placeholder-img-lg {
 		font-size: 3.5rem;
 	}
-}
-
-.dropdown-item:hover {
-	background-color: #dc3545;
-}
-
-.background-light,
-li>.dropdown-menu {
-	background-color: #fffae5 !important;
-}
-
-.foreground-light,
-.form-control,
-input,
-textarea {
-	color: bisque !important;
 }
 
 .form-signin-container {
@@ -184,12 +165,4 @@ textarea {
 	-webkit-user-select: none;
 	-moz-user-select: none;
 	user-select: none;
-}
-
-.card-header {
-	background-color: #dc3545;
-}
-
-.card-body {
-	background-color: #fffae5 !important;
 }
