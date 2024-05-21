@@ -78,12 +78,12 @@ $(document).ready(function() {
 			$(value).attr("style", "background-color: " + backgroundColor[currentThemeIndex] + " !important");
 		});
 
-		let elements2 = new Array(".form-control", ".form-select", "input", "textarea", ".foreground-light");
+		/*let elements2 = new Array(".form-control", ".form-select", "input", "textarea", ".foreground-light");
 		elements2.forEach(function(value) {
 			$(value).attr("style", "color: " + backgroundColor[currentThemeIndex] + " !important");
-		});
+		});*/
 
-		let elements3 = new Array("li>.dropdown-menu", ".card-body", ".bg-light");
+		let elements3 = new Array("li>.dropdown-menu", ".card-body", ".bg-light", ".form-control", ".form-select", "input", "textarea", ".foreground-light");
 		elements3.forEach(function(value) {
 			$(value).attr("style", "background-color: " + baseColor[currentThemeIndex] + " !important");
 		});
