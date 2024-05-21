@@ -1,1 +1,2 @@
-<iframe allow="autoplay; fullscreen;" allowfullscreen="" frameborder="0" id="livetv_AT_web" mozallowfullscreen="" scrolling="no" src="https://feeds.intoday.in/livetv/ver-3-0/?id=livetv-at&amp;aud_togle=1&amp;autostart=1&amp;utm_medium=web&amp;utm_source=livetvpage&amp;v=1.5&amp;debug=false&amp;dimlight=1&amp;noads=0" webkitallowfullscreen="" width="100%" height="100%"></iframe>
+<iframe id="aajtakIframe" allow="autoplay; fullscreen;" allowfullscreen="" frameborder="0" mozallowfullscreen="" scrolling="no" webkitallowfullscreen="" width="100%" height="100%"
+	src="https://feeds.intoday.in/livetv/ver-3-0/?id=livetv-at&amp;aud_togle=1&amp;autostart=1&amp;utm_medium=web&amp;utm_source=livetvpage&amp;v=1.5&amp;debug=false&amp;dimlight=1&amp;noads=0"></iframe>
