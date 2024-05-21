@@ -69,35 +69,35 @@ $(document).ready(function() {
 	let currentThemeIndex = 1;
 
 	if (currentThemeIndex !== 0) {
-		let color1 = new Array("default", "bisque");
-		let color2 = new Array("default", "#fffae5");
-		let color3 = new Array("default", "#dc3545");
+		let backgroundColor = new Array("default", "bisque");
+		let baseColor = new Array("default", "#fffae5");
+		let focusPrimeColor = new Array("default", "#dc3545");
 
 		let elements1 = new Array("body", "header>div#navbar-top-e", "footer>div#navbar-bottom-e");
 		elements1.forEach(function(value) {
-			$(value).attr("style", "background-color: " + color1[currentThemeIndex] + " !important");
+			$(value).attr("style", "background-color: " + backgroundColor[currentThemeIndex] + " !important");
 		});
 
 		let elements2 = new Array(".form-control", ".form-select", "input", "textarea", ".foreground-light");
 		elements2.forEach(function(value) {
-			$(value).attr("style", "color: " + color1[currentThemeIndex] + " !important");
+			$(value).attr("style", "color: " + backgroundColor[currentThemeIndex] + " !important");
 		});
 
-		let elements3 = new Array("li>.dropdown-menu", ".card-body", ".background-light");
+		let elements3 = new Array("li>.dropdown-menu", ".card-body", ".bg-light");
 		elements3.forEach(function(value) {
-			$(value).attr("style", "background-color: " + color2[currentThemeIndex] + " !important");
+			$(value).attr("style", "background-color: " + baseColor[currentThemeIndex] + " !important");
 		});
 
-		let elements4 = new Array(".card-header");
+		let elements4 = new Array(".btn-primary", ".btn-outline-primary", ".card-header");
 		elements4.forEach(function(value) {
-			$(value).attr("style", "background-color: " + color3[currentThemeIndex] + " !important");
+			$(value).attr("style", "background-color: " + focusPrimeColor[currentThemeIndex] + " !important");
 		});
 
 		let elements5 = new Array(".dropdown-item");
 		elements5.forEach(function(value) {
 			$(value).hover(function(e) {
 				if (e.type === "mouseenter") {
-					$(this).attr("style", "background-color: " + color3[currentThemeIndex] + " !important");
+					$(this).attr("style", "background-color: " + focusPrimeColor[currentThemeIndex] + " !important");
 				}
 				else {
 					$(this).attr("style", "background-color: " + "transparent !important");

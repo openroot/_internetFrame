@@ -1,20 +1,20 @@
 ﻿<!-- Jumbotron 1 -->
-<div class="p-5 bg-light background-light rounded-3">
+<div class="p-5 bg-light rounded-3">
 	<div class="container-fluid py-5">
 		<h1 class="display-5 fw-bold">Custom jumbotron</h1>
 		<p class="col-md-8 fs-4">Using a series of utilities, you can create this jumbotron, just like the one in previous versions of Bootstrap.
 			Check out the examples below for how you can remix and restyle it to your liking.</p>
-		<button class="btn btn-danger btn-lg" type="button">Example button</button>
+		<button class="btn btn-primary btn-lg" type="button">Example button</button>
 	</div>
 </div>
 <!-- end -->
 
 <!-- Jumbotron 2 -->
-<div class="mt-5 p-5 bg-light background-light rounded">
+<div class="mt-5 p-5 bg-light rounded">
 	<h1>Navbar example</h1>
 	<p class="lead">This example is a quick exercise to illustrate how fixed to top navbar works.
 		As you scroll, it will remain fixed to the top of your browser’s viewport.</p>
-	<a class="btn btn-lg btn-danger" href="../components/navbar/" role="button">View navbar docs »</a>
+	<a class="btn btn-primary btn-lg" href="../components/navbar/" role="button">View navbar docs »</a>
 </div>
 <!-- end -->
 
@@ -26,23 +26,23 @@
 			<h2>Change the background</h2>
 			<p>Swap the background-color utility and add a `.text-*` color utility to mix up the jumbotron look.
 				Then, mix and match with additional component themes and more.</p>
-			<button class="btn btn-outline-danger" type="button">Example button</button>
+			<button class="btn btn-outline-primary" type="button">Example button</button>
 		</div>
 	</div>
 	<div class="col-md-6">
 		<!-- Jumbotron 3 -->
-		<div class="h-100 p-5 bg-light background-light border rounded-3">
+		<div class="h-100 p-5 bg-light border rounded-3">
 			<h2>Add borders</h2>
 			<p>Or, keep it light and add a border for some added definition to the boundaries of your content.
 				Be sure to look under the hood at the source HTML here as we've adjusted the alignment and sizing of both column's content for equal-height.</p>
-			<button class="btn btn-outline-danger" type="button">Example button</button>
+			<button class="btn btn-outline-primary" type="button">Example button</button>
 		</div>
 	</div>
 </div>
 <!-- end -->
 
 <!-- Sign in -->
-<div class="mt-5 text-center form-signin-container background-light">
+<div class="mt-5 text-center form-signin-container">
 	<div class="form-signin">
 		<form>
 			<img class="mb-4" src="assets/bootstrap-logo.svg" alt="" width="72" height="57">
@@ -74,7 +74,7 @@
 		<h2>Checkout form</h2>
 		<p class="lead">Below is an example form built entirely with Bootstrap’s form controls. Each required form group has a validation state that can be triggered by attempting to submit the form without completing it.</p>
 	</div>
-	<div class="row gy-5 background-light">
+	<div class="row gy-5">
 		<div class="col-md-5 col-lg-4 order-md-last">
 			<h4 class="d-flex justify-content-between align-items-center mb-3">
 				<span class="text-primary">Your cart</span>
