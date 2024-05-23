@@ -93,10 +93,14 @@ $(document).ready(function() {
 			"transparent": [".dropdown-item"]
 		};
 
-		for (let cssProperties in css) {
-			let colors = css[cssProperties];
-			for (let cssProperty in colors) {
-				console.log(colorPallet[cssProperty][currentThemeIndex] + " = " + colors[cssProperty]);
+		for (let cssPropertyKey in css) {
+			let cssProperty = css[cssPropertyKey];
+			for (let colorPalletKey in cssProperty) {
+				console.log(colorPallet[colorPalletKey][currentThemeIndex] + " = " + cssProperty[colorPalletKey]);
+				let htmlElements = cssProperty[colorPalletKey];
+				for (let htmlElementKey in htmlElements) {
+					console.log(htmlElements[htmlElementKey]);
+				}
 			}
 		}
 
