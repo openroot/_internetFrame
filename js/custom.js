@@ -162,12 +162,14 @@ $(document).ready(function() {
 		}
 	}
 
-	/*$(window).resize(function(){
+	/*
+	$(window).resize(function(){
 		let mainWidth = $("main").width();
 		let mainHeight = $("main").height();
 	});
 
 	$("p").click(function() {
 		$(this).hide();
-	});*/
+	});
+	*/
 });
