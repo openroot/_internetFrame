@@ -69,9 +69,25 @@ $(document).ready(function() {
 	let currentThemeIndex = 1;
 
 	if (currentThemeIndex !== 0) {
-		let backgroundColor = new Array("default", "bisque");
-		let baseColor = new Array("default", "#fffae5");
-		let focusPrimeColor = new Array("default", "#dc3545");
+		let backgroundColor = ["default", "bisque"];
+		let baseColor = ["default", "#fffae5"];
+		let focusPrimeColor = ["default", "#dc3545"];
+		let transparentColor = ["default", "transparent"];
+
+		let cssBackgroundColor = {
+			"backgroundColor": ["body", "header>div#navbar-top-e", "footer>div#navbar-bottom-e"],
+			"baseColor": ["li>.dropdown-menu", ".card-body", ".bg-light", ".form-control", ".form-select", "input", "textarea", ".foreground-light"],
+			"focusPrimeColor": [".btn-primary", ".btn-outline-primary", ".card-header"]
+		};
+		let cssColor = {
+			"backgroundColor": [".form-control", ".form-select", "input", "textarea", ".foreground-light"]
+		};
+		let cssBackgroundColor_hoverin = {
+			"focusPrimeColor": [".dropdown-item"]
+		};
+		let cssBackgroundColor_hoverout = {
+			"transparentColor": [".dropdown-item"]
+		};
 
 		let elements1 = new Array("body", "header>div#navbar-top-e", "footer>div#navbar-bottom-e");
 		elements1.forEach(function(value) {
