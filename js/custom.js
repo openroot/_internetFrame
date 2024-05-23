@@ -71,10 +71,10 @@ $(document).ready(function() {
 	if (currentThemeIndex !== 0) {
 		let pallets = {
 			"coloring": {
-				"background": ["default", "bisque"],
-				"base": ["default", "#fffae5"],
-				"focusPrime": ["default", "#dc3545"],
-				"transparent": ["default", "transparent"]
+				"background": ["default", "bisque", "#7CB9E8"],
+				"base": ["default", "#FFFAE5", "#C9FFE5"],
+				"focusPrime": ["default", "#DC3545", "#551B8C"],
+				"transparent": ["default", "transparent", "transparent"]
 			}
 		}
 
