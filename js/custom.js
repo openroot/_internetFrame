@@ -86,7 +86,7 @@ $(document).ready(function() {
 				"background": [".form-control", ".form-select", "input", "textarea", ".foreground-light"]
 			}
 		};
-		let cssInlineStyles = {};
+		let generalInlineStyles = {};
 		let hoverInInlineStyles = {};
 		for (let cssPropertyKey in css) {
 			let cssProperty = css[cssPropertyKey];
@@ -95,15 +95,15 @@ $(document).ready(function() {
 				//console.log(colorPallet[colorPalletKey][currentThemeIndex] + " = " + cssProperty[colorPalletKey]);
 				for (let htmlElementKey in htmlElements) {
 					//console.log("HTML Element = " + htmlElements[htmlElementKey]);
-					cssInlineStyles[htmlElements[htmlElementKey]] = cssInlineStyles[htmlElements[htmlElementKey]] ?
-						cssInlineStyles[htmlElements[htmlElementKey]] + " " + cssPropertyKey + ": " + colorPallet[colorPalletKey][currentThemeIndex] + " !important;" :
+					generalInlineStyles[htmlElements[htmlElementKey]] = generalInlineStyles[htmlElements[htmlElementKey]] ?
+						generalInlineStyles[htmlElements[htmlElementKey]] + " " + cssPropertyKey + ": " + colorPallet[colorPalletKey][currentThemeIndex] + " !important;" :
 						cssPropertyKey + ": " + colorPallet[colorPalletKey][currentThemeIndex] + " !important;";
 				}
 			}
 		}
-		for (let cssInlineStyleKey in cssInlineStyles) {
-			console.log(cssInlineStyleKey + " -> " + cssInlineStyles[cssInlineStyleKey]);
-			$(cssInlineStyleKey).attr("style", cssInlineStyles[cssInlineStyleKey]);
+		for (let cssInlineStyleKey in generalInlineStyles) {
+			console.log(cssInlineStyleKey + " -> " + generalInlineStyles[cssInlineStyleKey]);
+			$(cssInlineStyleKey).attr("style", generalInlineStyles[cssInlineStyleKey]);
 		}
 
 		let hoverIn = {
