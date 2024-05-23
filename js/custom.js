@@ -110,7 +110,6 @@ $(document).ready(function() {
 
 		for (let inlineStyleKey in inlineStyles) {
 			console.log(inlineStyleKey + " -> " + inlineStyles[inlineStyleKey]);
-			//console.log($(inlineStyleKey).get(0).style);
 			$(inlineStyleKey).attr("style", inlineStyles[inlineStyleKey]);
 		}
 
