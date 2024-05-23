@@ -69,29 +69,43 @@ $(document).ready(function() {
 	let currentThemeIndex = 1;
 
 	if (currentThemeIndex !== 0) {
+		let colorPallet = {
+			"background": ["default", "bisque"],
+			"base": ["default", "#fffae5"],
+			"focusPrime": ["default", "#dc3545"],
+			"transparent": ["default", "transparent"]
+		}
+
+		let css = {
+			"background_color": {
+				"background": ["body", "header>div#navbar-top-e", "footer>div#navbar-bottom-e"],
+				"base": ["li>.dropdown-menu", ".card-body", ".bg-light", ".form-control", ".form-select", "input", "textarea", ".foreground-light"],
+				"focusPrime": [".btn-primary", ".btn-outline-primary", ".card-header"]
+			},
+			"color": {
+				"background": [".form-control", ".form-select", "input", "textarea", ".foreground-light"]
+			}
+		};
+		let csscolorBackground_hoverin = {
+			"focusPrime": [".dropdown-item"]
+		};
+		let csscolorBackground_hoverout = {
+			"transparent": [".dropdown-item"]
+		};
+
+		for (let cssProperties in css) {
+			let colors = css[cssProperties];
+			for (let cssProperty in colors) {
+				console.log(colorPallet[cssProperty][currentThemeIndex] + " = " + colors[cssProperty]);
+			}
+		}
+
+
+
 		let colorBackground = ["default", "bisque"];
 		let colorBase = ["default", "#fffae5"];
 		let colorFocusPrime = ["default", "#dc3545"];
 		let transparentColor = ["default", "transparent"];
-
-		let css = {
-			"background_color": {
-				"colorBackground": ["body", "header>div#navbar-top-e", "footer>div#navbar-bottom-e"],
-				"colorBase": ["li>.dropdown-menu", ".card-body", ".bg-light", ".form-control", ".form-select", "input", "textarea", ".foreground-light"],
-				"colorFocusPrime": [".btn-primary", ".btn-outline-primary", ".card-header"]
-			},
-			"color": {
-				"colorBackground": [".form-control", ".form-select", "input", "textarea", ".foreground-light"]
-			}
-		}; //console.log(css);
-		let csscolorBackground_hoverin = {
-			"colorFocusPrime": [".dropdown-item"]
-		};
-		let csscolorBackground_hoverout = {
-			"colorTransparent": [".dropdown-item"]
-		};
-
-
 
 		let elements1 = new Array("body", "header>div#navbar-top-e", "footer>div#navbar-bottom-e");
 		elements1.forEach(function(value) {
