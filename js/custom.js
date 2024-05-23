@@ -96,8 +96,8 @@ $(document).ready(function() {
 		for (let cssPropertyKey in css) {
 			let cssProperty = css[cssPropertyKey];
 			for (let colorPalletKey in cssProperty) {
-				console.log(colorPallet[colorPalletKey][currentThemeIndex] + " = " + cssProperty[colorPalletKey]);
 				let htmlElements = cssProperty[colorPalletKey];
+				console.log(colorPallet[colorPalletKey][currentThemeIndex] + " = " + cssProperty[colorPalletKey]);
 				for (let htmlElementKey in htmlElements) {
 					console.log(htmlElements[htmlElementKey]);
 				}
