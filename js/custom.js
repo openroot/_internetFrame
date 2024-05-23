@@ -78,23 +78,29 @@ $(document).ready(function() {
 
 		let css = {
 			"general": {
-				"background-color": {
-					"background": ["body", "header>div#navbar-top-e", "footer>div#navbar-bottom-e"],
-					"base": ["li>.dropdown-menu", ".card-body", ".bg-light", ".form-control", ".form-select", "input", "textarea", ".foreground-light"],
-					"focusPrime": [".btn-primary", ".btn-outline-primary", ".card-header"]
-				},
-				"color": {
-					"background": [".form-control", ".form-select", "input", "textarea", ".foreground-light"]
+				"coloring": {
+					"background-color": {
+						"background": ["body", "header>div#navbar-top-e", "footer>div#navbar-bottom-e"],
+						"base": ["li>.dropdown-menu", ".card-body", ".bg-light", ".form-control", ".form-select", "input", "textarea", ".foreground-light"],
+						"focusPrime": [".btn-primary", ".btn-outline-primary", ".card-header"]
+					},
+					"color": {
+						"background": [".form-control", ".form-select", "input", "textarea", ".foreground-light"]
+					}
 				}
 			},
 			"hoverIn": {
-				"background-color": {
-					"focusPrime": [".dropdown-item"]
+				"coloring": {
+					"background-color": {
+						"focusPrime": [".dropdown-item"]
+					}
 				}
 			},
 			"hoverOut": {
-				"background-color": {
-					"transparent": [".dropdown-item"]
+				"coloring": {
+					"background-color": {
+						"transparent": [".dropdown-item"]
+					}
 				}
 			}
 		};
@@ -103,28 +109,32 @@ $(document).ready(function() {
 		let hoverInInlineStyles = {};
 		let hoverOutInlineStyles = {};
 		for (let cssKey in css) {
-			let cssZone = css[cssKey];
-			for (let propertyKey in cssZone) {
-				let pallet = cssZone[propertyKey];
-				for (let colorPalletKey in pallet) {
-					let htmlElements = pallet[colorPalletKey];
-					for (let htmlElementKey in htmlElements) {
-						switch (cssKey) {
-							case "general":
-								generalInlineStyles[htmlElements[htmlElementKey]] = generalInlineStyles[htmlElements[htmlElementKey]] ?
-									generalInlineStyles[htmlElements[htmlElementKey]] + " " + propertyKey + ": " + colorPallet[colorPalletKey][currentThemeIndex] + " !important;" :
-									propertyKey + ": " + colorPallet[colorPalletKey][currentThemeIndex] + " !important;";
-								break;
-							case "hoverIn":
-								hoverInInlineStyles[htmlElements[htmlElementKey]] = hoverInInlineStyles[htmlElements[htmlElementKey]] ?
-									hoverInInlineStyles[htmlElements[htmlElementKey]] + " " + propertyKey + ": " + colorPallet[colorPalletKey][currentThemeIndex] + " !important;" :
-									propertyKey + ": " + colorPallet[colorPalletKey][currentThemeIndex] + " !important;";
-								break;
-							case "hoverOut":
-								hoverOutInlineStyles[htmlElements[htmlElementKey]] = hoverOutInlineStyles[htmlElements[htmlElementKey]] ?
-									hoverOutInlineStyles[htmlElements[htmlElementKey]] + " " + propertyKey + ": " + colorPallet[colorPalletKey][currentThemeIndex] + " !important;" :
-									propertyKey + ": " + colorPallet[colorPalletKey][currentThemeIndex] + " !important;";
-								break;
+			let zone = css[cssKey]; // e.g., cssKey = general
+			for (let palletKey in zone) {
+				let pallet = zone[palletKey]; // e.g., palletKey = coloring
+				for (let propertyKey in pallet) {
+					let set = pallet[propertyKey]; // e.g., propertyKey = background-color
+					for (let setKey in set) {
+						let elements = set[setKey]; // e.g., setKey = background
+						for (let elementKey in elements) {
+							// e.g., elementKey = body
+							switch (cssKey) {
+								case "general":
+									generalInlineStyles[elements[elementKey]] = generalInlineStyles[elements[elementKey]] ?
+										generalInlineStyles[elements[elementKey]] + " " + propertyKey + ": " + colorPallet[setKey][currentThemeIndex] + " !important;" :
+										propertyKey + ": " + colorPallet[setKey][currentThemeIndex] + " !important;";
+									break;
+								case "hoverIn":
+									hoverInInlineStyles[elements[elementKey]] = hoverInInlineStyles[elements[elementKey]] ?
+										hoverInInlineStyles[elements[elementKey]] + " " + propertyKey + ": " + colorPallet[setKey][currentThemeIndex] + " !important;" :
+										propertyKey + ": " + colorPallet[setKey][currentThemeIndex] + " !important;";
+									break;
+								case "hoverOut":
+									hoverOutInlineStyles[elements[elementKey]] = hoverOutInlineStyles[elements[elementKey]] ?
+										hoverOutInlineStyles[elements[elementKey]] + " " + propertyKey + ": " + colorPallet[setKey][currentThemeIndex] + " !important;" :
+										propertyKey + ": " + colorPallet[setKey][currentThemeIndex] + " !important;";
+									break;
+							}
 						}
 					}
 				}
