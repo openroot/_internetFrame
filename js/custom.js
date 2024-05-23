@@ -77,7 +77,7 @@ $(document).ready(function() {
 		}
 
 		let css = {
-			"background_color": {
+			"background-color": {
 				"background": ["body", "header>div#navbar-top-e", "footer>div#navbar-bottom-e"],
 				"base": ["li>.dropdown-menu", ".card-body", ".bg-light", ".form-control", ".form-select", "input", "textarea", ".foreground-light"],
 				"focusPrime": [".btn-primary", ".btn-outline-primary", ".card-header"]
@@ -93,15 +93,25 @@ $(document).ready(function() {
 			"transparent": [".dropdown-item"]
 		};
 
+		let inlineStyles = {};
 		for (let cssPropertyKey in css) {
 			let cssProperty = css[cssPropertyKey];
 			for (let colorPalletKey in cssProperty) {
 				let htmlElements = cssProperty[colorPalletKey];
-				console.log(colorPallet[colorPalletKey][currentThemeIndex] + " = " + cssProperty[colorPalletKey]);
+				//console.log(colorPallet[colorPalletKey][currentThemeIndex] + " = " + cssProperty[colorPalletKey]);
 				for (let htmlElementKey in htmlElements) {
-					console.log(htmlElements[htmlElementKey]);
+					//console.log("HTML Element = " + htmlElements[htmlElementKey]);
+					inlineStyles[htmlElements[htmlElementKey]] = inlineStyles[htmlElements[htmlElementKey]] ?
+						inlineStyles[htmlElements[htmlElementKey]] + " " + cssPropertyKey + ": " + colorPallet[colorPalletKey][currentThemeIndex] + " !important;" :
+						cssPropertyKey + ": " + colorPallet[colorPalletKey][currentThemeIndex] + " !important;";
 				}
 			}
+		}
+
+		for (let inlineStyleKey in inlineStyles) {
+			console.log(inlineStyleKey + " -> " + inlineStyles[inlineStyleKey]);
+			//console.log($(inlineStyleKey).get(0).style);
+			$(inlineStyleKey).attr("style", inlineStyles[inlineStyleKey]);
 		}
 
 
@@ -111,7 +121,7 @@ $(document).ready(function() {
 		let colorFocusPrime = ["default", "#dc3545"];
 		let transparentColor = ["default", "transparent"];
 
-		let elements1 = new Array("body", "header>div#navbar-top-e", "footer>div#navbar-bottom-e");
+		/*let elements1 = new Array("body", "header>div#navbar-top-e", "footer>div#navbar-bottom-e");
 		elements1.forEach(function(value) {
 			$(value).attr("style", "background-color: " + colorBackground[currentThemeIndex] + " !important");
 		});
@@ -129,7 +139,7 @@ $(document).ready(function() {
 		let elements4 = new Array(".btn-primary", ".btn-outline-primary", ".card-header");
 		elements4.forEach(function(value) {
 			$(value).attr("style", "background-color: " + colorFocusPrime[currentThemeIndex] + " !important");
-		});
+		});*/
 
 		let elements5 = new Array(".dropdown-item");
 		elements5.forEach(function(value) {
