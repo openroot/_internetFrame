@@ -77,49 +77,78 @@ $(document).ready(function() {
 		}
 
 		let css = {
-			"background-color": {
-				"background": ["body", "header>div#navbar-top-e", "footer>div#navbar-bottom-e"],
-				"base": ["li>.dropdown-menu", ".card-body", ".bg-light", ".form-control", ".form-select", "input", "textarea", ".foreground-light"],
-				"focusPrime": [".btn-primary", ".btn-outline-primary", ".card-header"]
+			"general": {
+				"background-color": {
+					"background": ["body", "header>div#navbar-top-e", "footer>div#navbar-bottom-e"],
+					"base": ["li>.dropdown-menu", ".card-body", ".bg-light", ".form-control", ".form-select", "input", "textarea", ".foreground-light"],
+					"focusPrime": [".btn-primary", ".btn-outline-primary", ".card-header"]
+				},
+				"color": {
+					"background": [".form-control", ".form-select", "input", "textarea", ".foreground-light"]
+				}
 			},
-			"color": {
-				"background": [".form-control", ".form-select", "input", "textarea", ".foreground-light"]
+			"hoverIn": {
+				"background-color": {
+					"focusPrime": [".dropdown-item"]
+				}
+			},
+			"hoverOut": {
+				"background-color": {
+					"transparent": [".dropdown-item"]
+				}
 			}
 		};
+
 		let generalInlineStyles = {};
 		let hoverInInlineStyles = {};
-		for (let cssPropertyKey in css) {
-			let cssProperty = css[cssPropertyKey];
-			for (let colorPalletKey in cssProperty) {
-				let htmlElements = cssProperty[colorPalletKey];
-				//console.log(colorPallet[colorPalletKey][currentThemeIndex] + " = " + cssProperty[colorPalletKey]);
-				for (let htmlElementKey in htmlElements) {
-					//console.log("HTML Element = " + htmlElements[htmlElementKey]);
-					generalInlineStyles[htmlElements[htmlElementKey]] = generalInlineStyles[htmlElements[htmlElementKey]] ?
-						generalInlineStyles[htmlElements[htmlElementKey]] + " " + cssPropertyKey + ": " + colorPallet[colorPalletKey][currentThemeIndex] + " !important;" :
-						cssPropertyKey + ": " + colorPallet[colorPalletKey][currentThemeIndex] + " !important;";
+		let hoverOutInlineStyles = {};
+		for (let cssDedicatedKey in css) {
+			let cssZone = css[cssDedicatedKey];
+			for (let cssPropertyKey in cssZone) {
+				let cssProperty = cssZone[cssPropertyKey];
+				for (let colorPalletKey in cssProperty) {
+					let htmlElements = cssProperty[colorPalletKey];
+					for (let htmlElementKey in htmlElements) {
+						switch (cssDedicatedKey) {
+							case "general":
+								generalInlineStyles[htmlElements[htmlElementKey]] = generalInlineStyles[htmlElements[htmlElementKey]] ?
+									generalInlineStyles[htmlElements[htmlElementKey]] + " " + cssPropertyKey + ": " + colorPallet[colorPalletKey][currentThemeIndex] + " !important;" :
+									cssPropertyKey + ": " + colorPallet[colorPalletKey][currentThemeIndex] + " !important;";
+								break;
+							case "hoverIn":
+								hoverInInlineStyles[htmlElements[htmlElementKey]] = hoverInInlineStyles[htmlElements[htmlElementKey]] ?
+									hoverInInlineStyles[htmlElements[htmlElementKey]] + " " + cssPropertyKey + ": " + colorPallet[colorPalletKey][currentThemeIndex] + " !important;" :
+									cssPropertyKey + ": " + colorPallet[colorPalletKey][currentThemeIndex] + " !important;";
+								break;
+							case "hoverOut":
+								hoverOutInlineStyles[htmlElements[htmlElementKey]] = hoverOutInlineStyles[htmlElements[htmlElementKey]] ?
+									hoverOutInlineStyles[htmlElements[htmlElementKey]] + " " + cssPropertyKey + ": " + colorPallet[colorPalletKey][currentThemeIndex] + " !important;" :
+									cssPropertyKey + ": " + colorPallet[colorPalletKey][currentThemeIndex] + " !important;";
+								break;
+						}
+					}
 				}
 			}
 		}
-		for (let cssInlineStyleKey in generalInlineStyles) {
-			console.log(cssInlineStyleKey + " -> " + generalInlineStyles[cssInlineStyleKey]);
-			$(cssInlineStyleKey).attr("style", generalInlineStyles[cssInlineStyleKey]);
+
+		for (let generalInlineStyleKey in generalInlineStyles) {
+			console.log(generalInlineStyleKey + " -> " + generalInlineStyles[generalInlineStyleKey]);
+			$(generalInlineStyleKey).attr("style", generalInlineStyles[generalInlineStyleKey]);
+		}
+		for (let hoverInInlineStyleKey in hoverInInlineStyles) {
+			console.log(hoverInInlineStyleKey + " -> " + hoverInInlineStyles[hoverInInlineStyleKey]);
+		}
+		for (let hoverOutInlineStyleKey in hoverOutInlineStyles) {
+			console.log(hoverOutInlineStyleKey + " -> " + hoverOutInlineStyles[hoverOutInlineStyleKey]);
 		}
 
-		let hoverIn = {
-			"background-color": {
-				"focusPrime": [".dropdown-item"]
-			}
-		};
 
-
-
-		let colorBackground = ["default", "bisque"];
+		/*let colorBackground = ["default", "bisque"];
 		let colorBase = ["default", "#fffae5"];
 		let colorFocusPrime = ["default", "#dc3545"];
 		let transparentColor = ["default", "transparent"];
 
-		/*let elements1 = new Array("body", "header>div#navbar-top-e", "footer>div#navbar-bottom-e");
+		let elements1 = new Array("body", "header>div#navbar-top-e", "footer>div#navbar-bottom-e");
 		elements1.forEach(function(value) {
 			$(value).attr("style", "background-color: " + colorBackground[currentThemeIndex] + " !important");
 		});
@@ -137,7 +166,7 @@ $(document).ready(function() {
 		let elements4 = new Array(".btn-primary", ".btn-outline-primary", ".card-header");
 		elements4.forEach(function(value) {
 			$(value).attr("style", "background-color: " + colorFocusPrime[currentThemeIndex] + " !important");
-		});*/
+		});
 
 		let elements5 = new Array(".dropdown-item");
 		elements5.forEach(function(value) {
@@ -149,7 +178,7 @@ $(document).ready(function() {
 					$(this).attr("style", "background-color: " + "transparent !important");
 				}
 			})
-		});
+		});*/
 	}
 
 	$(window).resize(function(){
