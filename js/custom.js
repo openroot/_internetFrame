@@ -86,14 +86,8 @@ $(document).ready(function() {
 				"background": [".form-control", ".form-select", "input", "textarea", ".foreground-light"]
 			}
 		};
-		let csscolorBackground_hoverin = {
-			"focusPrime": [".dropdown-item"]
-		};
-		let csscolorBackground_hoverout = {
-			"transparent": [".dropdown-item"]
-		};
-
-		let inlineStyles = {};
+		let cssInlineStyles = {};
+		let hoverInInlineStyles = {};
 		for (let cssPropertyKey in css) {
 			let cssProperty = css[cssPropertyKey];
 			for (let colorPalletKey in cssProperty) {
@@ -101,17 +95,22 @@ $(document).ready(function() {
 				//console.log(colorPallet[colorPalletKey][currentThemeIndex] + " = " + cssProperty[colorPalletKey]);
 				for (let htmlElementKey in htmlElements) {
 					//console.log("HTML Element = " + htmlElements[htmlElementKey]);
-					inlineStyles[htmlElements[htmlElementKey]] = inlineStyles[htmlElements[htmlElementKey]] ?
-						inlineStyles[htmlElements[htmlElementKey]] + " " + cssPropertyKey + ": " + colorPallet[colorPalletKey][currentThemeIndex] + " !important;" :
+					cssInlineStyles[htmlElements[htmlElementKey]] = cssInlineStyles[htmlElements[htmlElementKey]] ?
+						cssInlineStyles[htmlElements[htmlElementKey]] + " " + cssPropertyKey + ": " + colorPallet[colorPalletKey][currentThemeIndex] + " !important;" :
 						cssPropertyKey + ": " + colorPallet[colorPalletKey][currentThemeIndex] + " !important;";
 				}
 			}
 		}
-
-		for (let inlineStyleKey in inlineStyles) {
-			console.log(inlineStyleKey + " -> " + inlineStyles[inlineStyleKey]);
-			$(inlineStyleKey).attr("style", inlineStyles[inlineStyleKey]);
+		for (let cssInlineStyleKey in cssInlineStyles) {
+			console.log(cssInlineStyleKey + " -> " + cssInlineStyles[cssInlineStyleKey]);
+			$(cssInlineStyleKey).attr("style", cssInlineStyles[cssInlineStyleKey]);
 		}
+
+		let hoverIn = {
+			"background-color": {
+				"focusPrime": [".dropdown-item"]
+			}
+		};
 
 
 
