@@ -64,104 +64,105 @@ var popoverList = popoverTriggerList.map(function(popoverTriggerEl) {
 	return new bootstrap.Popover(popoverTriggerEl)
 })
 
-/* jQuery */
-$(document).ready(function() {
-	let currentThemeIndex = 1;
+let themeIndex = 1;
+setTheme(themeIndex);
 
-	if (currentThemeIndex !== 0) {
-		let pallets = {
-			"coloring": {
-				"background": ["default", "bisque", "#7CB9E8"],
-				"base": ["default", "#FFFAE5", "#C9FFE5"],
-				"focusPrime": ["default", "#DC3545", "#551B8C"],
-				"transparent": ["default", "transparent", "transparent"]
-			}
-		}
-
-		let css = {
-			"general": {
+function setTheme(themeIndex) {
+	$(document).ready(function() {
+		if (themeIndex !== 0) {
+			let pallets = {
 				"coloring": {
-					"background-color": {
-						"background": ["body", "header>div#navbar-top-e", "footer>div#navbar-bottom-e"],
-						"base": ["li>.dropdown-menu", ".card-body", ".bg-light", ".form-control", ".form-select", "input", "textarea", ".foreground-light"],
-						"focusPrime": [".btn-primary", ".btn-outline-primary", ".card-header"]
-					},
-					"color": {
-						"background": [".form-control", ".form-select", "input", "textarea", ".foreground-light"]
-					}
-				}
-			},
-			"hoverIn": {
-				"coloring": {
-					"background-color": {
-						"focusPrime": [".dropdown-item"]
-					}
-				}
-			},
-			"hoverOut": {
-				"coloring": {
-					"background-color": {
-						"transparent": [".dropdown-item"]
-					}
+					"background": ["default", "bisque", "#7CB9E8"],
+					"base": ["default", "#FFFAE5", "#C9FFE5"],
+					"focusPrime": ["default", "#DC3545", "#551B8C"],
+					"transparent": ["default", "transparent", "transparent"]
 				}
 			}
-		};
 
-		let generalInlineStyles = {};
-		let hoverInInlineStyles = {};
-		let hoverOutInlineStyles = {};
-		for (let cssKey in css) {
-			let zone = css[cssKey]; // e.g., cssKey = "general"
-			for (let palletKey in zone) {
-				let pallet = zone[palletKey]; // e.g., palletKey = "coloring"
-				for (let propertyKey in pallet) {
-					let set = pallet[propertyKey]; // e.g., propertyKey = "background-color"
-					for (let setKey in set) {
-						let elements = set[setKey]; // e.g., setKey = "background"
-						for (let elementKey in elements) {
-							// e.g., elementKey = "body"
-							switch (cssKey) {
-								case "general":
-									generalInlineStyles[elements[elementKey]] = generalInlineStyles[elements[elementKey]] ?
-										generalInlineStyles[elements[elementKey]] + " " + propertyKey + ": " + pallets[palletKey][setKey][currentThemeIndex] + " !important;" :
-										propertyKey + ": " + pallets[palletKey][setKey][currentThemeIndex] + " !important;";
-									break;
-								case "hoverIn":
-									hoverInInlineStyles[elements[elementKey]] = hoverInInlineStyles[elements[elementKey]] ?
-										hoverInInlineStyles[elements[elementKey]] + " " + propertyKey + ": " + pallets[palletKey][setKey][currentThemeIndex] + " !important;" :
-										propertyKey + ": " + pallets[palletKey][setKey][currentThemeIndex] + " !important;";
-									break;
-								case "hoverOut":
-									hoverOutInlineStyles[elements[elementKey]] = hoverOutInlineStyles[elements[elementKey]] ?
-										hoverOutInlineStyles[elements[elementKey]] + " " + propertyKey + ": " + pallets[palletKey][setKey][currentThemeIndex] + " !important;" :
-										propertyKey + ": " + pallets[palletKey][setKey][currentThemeIndex] + " !important;";
-									break;
+			let css = {
+				"general": {
+					"coloring": {
+						"background-color": {
+							"background": ["body", "header>div#navbar-top-e", "footer>div#navbar-bottom-e"],
+							"base": ["li>.dropdown-menu", ".card-body", ".bg-light", ".form-control", ".form-select", "input", "textarea", ".foreground-light"],
+							"focusPrime": [".btn-primary", ".btn-outline-primary", ".card-header"]
+						},
+						"color": {
+							"background": [".form-control", ".form-select", "input", "textarea", ".foreground-light"]
+						}
+					}
+				},
+				"hoverIn": {
+					"coloring": {
+						"background-color": {
+							"focusPrime": [".dropdown-item"]
+						}
+					}
+				},
+				"hoverOut": {
+					"coloring": {
+						"background-color": {
+							"transparent": [".dropdown-item"]
+						}
+					}
+				}
+			};
+
+			let generalInlineStyles = {};
+			let hoverInInlineStyles = {};
+			let hoverOutInlineStyles = {};
+			for (let cssKey in css) {
+				let zone = css[cssKey]; // e.g., cssKey = "general"
+				for (let palletKey in zone) {
+					let pallet = zone[palletKey]; // e.g., palletKey = "coloring"
+					for (let propertyKey in pallet) {
+						let set = pallet[propertyKey]; // e.g., propertyKey = "background-color"
+						for (let setKey in set) {
+							let elements = set[setKey]; // e.g., setKey = "background"
+							for (let elementKey in elements) {
+								// e.g., elementKey = "body"
+								switch (cssKey) {
+									case "general":
+										generalInlineStyles[elements[elementKey]] = generalInlineStyles[elements[elementKey]] ?
+											generalInlineStyles[elements[elementKey]] + " " + propertyKey + ": " + pallets[palletKey][setKey][themeIndex] + " !important;" : propertyKey + ": " + pallets[palletKey][setKey][themeIndex] + " !important;";
+										break;
+									case "hoverIn":
+										hoverInInlineStyles[elements[elementKey]] = hoverInInlineStyles[elements[elementKey]] ?
+											hoverInInlineStyles[elements[elementKey]] + " " + propertyKey + ": " + pallets[palletKey][setKey][themeIndex] + " !important;" : propertyKey + ": " + pallets[palletKey][setKey][themeIndex] + " !important;";
+										break;
+									case "hoverOut":
+										hoverOutInlineStyles[elements[elementKey]] = hoverOutInlineStyles[elements[elementKey]] ?
+											hoverOutInlineStyles[elements[elementKey]] + " " + propertyKey + ": " + pallets[palletKey][setKey][themeIndex] + " !important;" : propertyKey + ": " + pallets[palletKey][setKey][themeIndex] + " !important;";
+										break;
+								}
 							}
 						}
 					}
 				}
 			}
-		}
 
-		for (let generalInlineStyleKey in generalInlineStyles) {
-			$(generalInlineStyleKey).attr("style", generalInlineStyles[generalInlineStyleKey]);
+			for (let generalInlineStyleKey in generalInlineStyles) {
+				$(generalInlineStyleKey).attr("style", generalInlineStyles[generalInlineStyleKey]);
+			}
+			for (let hoverInInlineStyleKey in hoverInInlineStyles) {
+				$(hoverInInlineStyleKey).hover(function(e) {
+					if (e.type === "mouseenter") {
+						$(this).attr("style", hoverInInlineStyles[hoverInInlineStyleKey]);
+					}
+				});
+			}
+			for (let hoverOutInlineStyleKey in hoverOutInlineStyles) {
+				$(hoverOutInlineStyleKey).hover(function(e) {
+					if (e.type === "mouseleave") {
+						$(this).attr("style", hoverOutInlineStyles[hoverOutInlineStyleKey]);
+					}
+				});
+			}
 		}
-		for (let hoverInInlineStyleKey in hoverInInlineStyles) {
-			$(hoverInInlineStyleKey).hover(function(e) {
-				if (e.type === "mouseenter") {
-					$(this).attr("style", hoverInInlineStyles[hoverInInlineStyleKey]);
-				}
-			});
-		}
-		for (let hoverOutInlineStyleKey in hoverOutInlineStyles) {
-			$(hoverOutInlineStyleKey).hover(function(e) {
-				if (e.type === "mouseleave") {
-					$(this).attr("style", hoverOutInlineStyles[hoverOutInlineStyleKey]);
-				}
-			});
-		}
-	}
+	});
+}
 
+$(document).ready(function() {
 	/*
 	$(window).resize(function(){
 		let mainWidth = $("main").width();
