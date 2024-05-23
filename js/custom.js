@@ -102,28 +102,28 @@ $(document).ready(function() {
 		let generalInlineStyles = {};
 		let hoverInInlineStyles = {};
 		let hoverOutInlineStyles = {};
-		for (let cssDedicatedKey in css) {
-			let cssZone = css[cssDedicatedKey];
-			for (let cssPropertyKey in cssZone) {
-				let cssProperty = cssZone[cssPropertyKey];
-				for (let colorPalletKey in cssProperty) {
-					let htmlElements = cssProperty[colorPalletKey];
+		for (let cssKey in css) {
+			let cssZone = css[cssKey];
+			for (let propertyKey in cssZone) {
+				let pallet = cssZone[propertyKey];
+				for (let colorPalletKey in pallet) {
+					let htmlElements = pallet[colorPalletKey];
 					for (let htmlElementKey in htmlElements) {
-						switch (cssDedicatedKey) {
+						switch (cssKey) {
 							case "general":
 								generalInlineStyles[htmlElements[htmlElementKey]] = generalInlineStyles[htmlElements[htmlElementKey]] ?
-									generalInlineStyles[htmlElements[htmlElementKey]] + " " + cssPropertyKey + ": " + colorPallet[colorPalletKey][currentThemeIndex] + " !important;" :
-									cssPropertyKey + ": " + colorPallet[colorPalletKey][currentThemeIndex] + " !important;";
+									generalInlineStyles[htmlElements[htmlElementKey]] + " " + propertyKey + ": " + colorPallet[colorPalletKey][currentThemeIndex] + " !important;" :
+									propertyKey + ": " + colorPallet[colorPalletKey][currentThemeIndex] + " !important;";
 								break;
 							case "hoverIn":
 								hoverInInlineStyles[htmlElements[htmlElementKey]] = hoverInInlineStyles[htmlElements[htmlElementKey]] ?
-									hoverInInlineStyles[htmlElements[htmlElementKey]] + " " + cssPropertyKey + ": " + colorPallet[colorPalletKey][currentThemeIndex] + " !important;" :
-									cssPropertyKey + ": " + colorPallet[colorPalletKey][currentThemeIndex] + " !important;";
+									hoverInInlineStyles[htmlElements[htmlElementKey]] + " " + propertyKey + ": " + colorPallet[colorPalletKey][currentThemeIndex] + " !important;" :
+									propertyKey + ": " + colorPallet[colorPalletKey][currentThemeIndex] + " !important;";
 								break;
 							case "hoverOut":
 								hoverOutInlineStyles[htmlElements[htmlElementKey]] = hoverOutInlineStyles[htmlElements[htmlElementKey]] ?
-									hoverOutInlineStyles[htmlElements[htmlElementKey]] + " " + cssPropertyKey + ": " + colorPallet[colorPalletKey][currentThemeIndex] + " !important;" :
-									cssPropertyKey + ": " + colorPallet[colorPalletKey][currentThemeIndex] + " !important;";
+									hoverOutInlineStyles[htmlElements[htmlElementKey]] + " " + propertyKey + ": " + colorPallet[colorPalletKey][currentThemeIndex] + " !important;" :
+									propertyKey + ": " + colorPallet[colorPalletKey][currentThemeIndex] + " !important;";
 								break;
 						}
 					}
