@@ -69,11 +69,13 @@ $(document).ready(function() {
 	let currentThemeIndex = 1;
 
 	if (currentThemeIndex !== 0) {
-		let colorPallet = {
-			"background": ["default", "bisque"],
-			"base": ["default", "#fffae5"],
-			"focusPrime": ["default", "#dc3545"],
-			"transparent": ["default", "transparent"]
+		let pallets = {
+			"coloring": {
+				"background": ["default", "bisque"],
+				"base": ["default", "#fffae5"],
+				"focusPrime": ["default", "#dc3545"],
+				"transparent": ["default", "transparent"]
+			}
 		}
 
 		let css = {
@@ -121,18 +123,18 @@ $(document).ready(function() {
 							switch (cssKey) {
 								case "general":
 									generalInlineStyles[elements[elementKey]] = generalInlineStyles[elements[elementKey]] ?
-										generalInlineStyles[elements[elementKey]] + " " + propertyKey + ": " + colorPallet[setKey][currentThemeIndex] + " !important;" :
-										propertyKey + ": " + colorPallet[setKey][currentThemeIndex] + " !important;";
+										generalInlineStyles[elements[elementKey]] + " " + propertyKey + ": " + pallets[palletKey][setKey][currentThemeIndex] + " !important;" :
+										propertyKey + ": " + pallets[palletKey][setKey][currentThemeIndex] + " !important;";
 									break;
 								case "hoverIn":
 									hoverInInlineStyles[elements[elementKey]] = hoverInInlineStyles[elements[elementKey]] ?
-										hoverInInlineStyles[elements[elementKey]] + " " + propertyKey + ": " + colorPallet[setKey][currentThemeIndex] + " !important;" :
-										propertyKey + ": " + colorPallet[setKey][currentThemeIndex] + " !important;";
+										hoverInInlineStyles[elements[elementKey]] + " " + propertyKey + ": " + pallets[palletKey][setKey][currentThemeIndex] + " !important;" :
+										propertyKey + ": " + pallets[palletKey][setKey][currentThemeIndex] + " !important;";
 									break;
 								case "hoverOut":
 									hoverOutInlineStyles[elements[elementKey]] = hoverOutInlineStyles[elements[elementKey]] ?
-										hoverOutInlineStyles[elements[elementKey]] + " " + propertyKey + ": " + colorPallet[setKey][currentThemeIndex] + " !important;" :
-										propertyKey + ": " + colorPallet[setKey][currentThemeIndex] + " !important;";
+										hoverOutInlineStyles[elements[elementKey]] + " " + propertyKey + ": " + pallets[palletKey][setKey][currentThemeIndex] + " !important;" :
+										propertyKey + ": " + pallets[palletKey][setKey][currentThemeIndex] + " !important;";
 									break;
 							}
 						}
@@ -142,23 +144,33 @@ $(document).ready(function() {
 		}
 
 		for (let generalInlineStyleKey in generalInlineStyles) {
-			console.log(generalInlineStyleKey + " -> " + generalInlineStyles[generalInlineStyleKey]);
+			//console.log(generalInlineStyleKey + " -> " + generalInlineStyles[generalInlineStyleKey]);
 			$(generalInlineStyleKey).attr("style", generalInlineStyles[generalInlineStyleKey]);
 		}
-		for (let hoverInInlineStyleKey in hoverInInlineStyles) {
-			console.log(hoverInInlineStyleKey + " -> " + hoverInInlineStyles[hoverInInlineStyleKey]);
+		/*for (let hoverInInlineStyleKey in hoverInInlineStyles) {
+			//console.log(hoverInInlineStyleKey + " -> " + hoverInInlineStyles[hoverInInlineStyleKey]);
+			$(hoverInInlineStyleKey).hover(function(e) {
+				if (e.type === "mouseenter") {
+					//console.log(e.type + " -> " + $(hoverInInlineStyleKey).text());
+					$(hoverInInlineStyleKey).attr("style", hoverInInlineStyles[hoverInInlineStyleKey]);
+				}
+				else if (e.type === "mouseleave") {
+					//console.log(e.type + " -> " + $(hoverInInlineStyleKey).text());
+					$(hoverInInlineStyleKey).attr("style", "background-color: " + "transparent !important");
+				}
+			});
 		}
 		for (let hoverOutInlineStyleKey in hoverOutInlineStyles) {
-			console.log(hoverOutInlineStyleKey + " -> " + hoverOutInlineStyles[hoverOutInlineStyleKey]);
-		}
+			//console.log(hoverOutInlineStyleKey + " -> " + hoverOutInlineStyles[hoverOutInlineStyleKey]);
+		}*/
 
 
-		/*let colorBackground = ["default", "bisque"];
+		let colorBackground = ["default", "bisque"];
 		let colorBase = ["default", "#fffae5"];
 		let colorFocusPrime = ["default", "#dc3545"];
 		let transparentColor = ["default", "transparent"];
 
-		let elements1 = new Array("body", "header>div#navbar-top-e", "footer>div#navbar-bottom-e");
+		/*let elements1 = new Array("body", "header>div#navbar-top-e", "footer>div#navbar-bottom-e");
 		elements1.forEach(function(value) {
 			$(value).attr("style", "background-color: " + colorBackground[currentThemeIndex] + " !important");
 		});
@@ -176,7 +188,7 @@ $(document).ready(function() {
 		let elements4 = new Array(".btn-primary", ".btn-outline-primary", ".card-header");
 		elements4.forEach(function(value) {
 			$(value).attr("style", "background-color: " + colorFocusPrime[currentThemeIndex] + " !important");
-		});
+		});*/
 
 		let elements5 = new Array(".dropdown-item");
 		elements5.forEach(function(value) {
@@ -188,7 +200,7 @@ $(document).ready(function() {
 					$(this).attr("style", "background-color: " + "transparent !important");
 				}
 			})
-		});*/
+		});
 	}
 
 	$(window).resize(function(){
