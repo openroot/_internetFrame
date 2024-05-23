@@ -83,8 +83,7 @@ $(document).ready(function() {
 			"color": {
 				"colorBackground": [".form-control", ".form-select", "input", "textarea", ".foreground-light"]
 			}
-		};
-		console.log(css);
+		}; //console.log(css);
 		let csscolorBackground_hoverin = {
 			"colorFocusPrime": [".dropdown-item"]
 		};
