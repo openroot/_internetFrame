@@ -111,15 +111,15 @@ $(document).ready(function() {
 		let hoverInInlineStyles = {};
 		let hoverOutInlineStyles = {};
 		for (let cssKey in css) {
-			let zone = css[cssKey]; // e.g., cssKey = general
+			let zone = css[cssKey]; // e.g., cssKey = "general"
 			for (let palletKey in zone) {
-				let pallet = zone[palletKey]; // e.g., palletKey = coloring
+				let pallet = zone[palletKey]; // e.g., palletKey = "coloring"
 				for (let propertyKey in pallet) {
-					let set = pallet[propertyKey]; // e.g., propertyKey = background-color
+					let set = pallet[propertyKey]; // e.g., propertyKey = "background-color"
 					for (let setKey in set) {
-						let elements = set[setKey]; // e.g., setKey = background
+						let elements = set[setKey]; // e.g., setKey = "background"
 						for (let elementKey in elements) {
-							// e.g., elementKey = body
+							// e.g., elementKey = "body"
 							switch (cssKey) {
 								case "general":
 									generalInlineStyles[elements[elementKey]] = generalInlineStyles[elements[elementKey]] ?
@@ -144,51 +144,30 @@ $(document).ready(function() {
 		}
 
 		for (let generalInlineStyleKey in generalInlineStyles) {
-			//console.log(generalInlineStyleKey + " -> " + generalInlineStyles[generalInlineStyleKey]);
 			$(generalInlineStyleKey).attr("style", generalInlineStyles[generalInlineStyleKey]);
 		}
-		/*for (let hoverInInlineStyleKey in hoverInInlineStyles) {
-			//console.log(hoverInInlineStyleKey + " -> " + hoverInInlineStyles[hoverInInlineStyleKey]);
+		for (let hoverInInlineStyleKey in hoverInInlineStyles) {
 			$(hoverInInlineStyleKey).hover(function(e) {
 				if (e.type === "mouseenter") {
-					//console.log(e.type + " -> " + $(hoverInInlineStyleKey).text());
-					$(hoverInInlineStyleKey).attr("style", hoverInInlineStyles[hoverInInlineStyleKey]);
-				}
-				else if (e.type === "mouseleave") {
-					//console.log(e.type + " -> " + $(hoverInInlineStyleKey).text());
-					$(hoverInInlineStyleKey).attr("style", "background-color: " + "transparent !important");
+					$(this).attr("style", hoverInInlineStyles[hoverInInlineStyleKey]);
 				}
 			});
 		}
 		for (let hoverOutInlineStyleKey in hoverOutInlineStyles) {
-			//console.log(hoverOutInlineStyleKey + " -> " + hoverOutInlineStyles[hoverOutInlineStyleKey]);
-		}*/
-
-
-		let colorBackground = ["default", "bisque"];
-		let colorBase = ["default", "#fffae5"];
-		let colorFocusPrime = ["default", "#dc3545"];
-		let transparentColor = ["default", "transparent"];
-
-		let elements5 = new Array(".dropdown-item");
-		elements5.forEach(function(value) {
-			$(value).hover(function(e) {
-				if (e.type === "mouseenter") {
-					$(this).attr("style", "background-color: " + colorFocusPrime[currentThemeIndex] + " !important");
+			$(hoverOutInlineStyleKey).hover(function(e) {
+				if (e.type === "mouseleave") {
+					$(this).attr("style", hoverOutInlineStyles[hoverOutInlineStyleKey]);
 				}
-				else {
-					$(this).attr("style", "background-color: " + "transparent !important");
-				}
-			})
-		});
+			});
+		}
 	}
 
-	$(window).resize(function(){
+	/*$(window).resize(function(){
 		let mainWidth = $("main").width();
 		let mainHeight = $("main").height();
 	});
 
 	$("p").click(function() {
-		//$(this).hide();
-	});
+		$(this).hide();
+	});*/
 });
