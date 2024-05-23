@@ -69,51 +69,56 @@ $(document).ready(function() {
 	let currentThemeIndex = 1;
 
 	if (currentThemeIndex !== 0) {
-		let backgroundColor = ["default", "bisque"];
-		let baseColor = ["default", "#fffae5"];
-		let focusPrimeColor = ["default", "#dc3545"];
+		let colorBackground = ["default", "bisque"];
+		let colorBase = ["default", "#fffae5"];
+		let colorFocusPrime = ["default", "#dc3545"];
 		let transparentColor = ["default", "transparent"];
 
-		let cssBackgroundColor = {
-			"backgroundColor": ["body", "header>div#navbar-top-e", "footer>div#navbar-bottom-e"],
-			"baseColor": ["li>.dropdown-menu", ".card-body", ".bg-light", ".form-control", ".form-select", "input", "textarea", ".foreground-light"],
-			"focusPrimeColor": [".btn-primary", ".btn-outline-primary", ".card-header"]
+		let css = {
+			"background_color": {
+				"colorBackground": ["body", "header>div#navbar-top-e", "footer>div#navbar-bottom-e"],
+				"colorBase": ["li>.dropdown-menu", ".card-body", ".bg-light", ".form-control", ".form-select", "input", "textarea", ".foreground-light"],
+				"colorFocusPrime": [".btn-primary", ".btn-outline-primary", ".card-header"]
+			},
+			"color": {
+				"colorBackground": [".form-control", ".form-select", "input", "textarea", ".foreground-light"]
+			}
 		};
-		let cssColor = {
-			"backgroundColor": [".form-control", ".form-select", "input", "textarea", ".foreground-light"]
+		console.log(css);
+		let csscolorBackground_hoverin = {
+			"colorFocusPrime": [".dropdown-item"]
 		};
-		let cssBackgroundColor_hoverin = {
-			"focusPrimeColor": [".dropdown-item"]
+		let csscolorBackground_hoverout = {
+			"colorTransparent": [".dropdown-item"]
 		};
-		let cssBackgroundColor_hoverout = {
-			"transparentColor": [".dropdown-item"]
-		};
+
+
 
 		let elements1 = new Array("body", "header>div#navbar-top-e", "footer>div#navbar-bottom-e");
 		elements1.forEach(function(value) {
-			$(value).attr("style", "background-color: " + backgroundColor[currentThemeIndex] + " !important");
+			$(value).attr("style", "background-color: " + colorBackground[currentThemeIndex] + " !important");
 		});
 
-		/*let elements2 = new Array(".form-control", ".form-select", "input", "textarea", ".foreground-light");
+		let elements2 = new Array(".form-control", ".form-select", "input", "textarea", ".foreground-light");
 		elements2.forEach(function(value) {
-			$(value).attr("style", "color: " + backgroundColor[currentThemeIndex] + " !important");
-		});*/
+			$(value).attr("style", "color: " + colorBackground[currentThemeIndex] + " !important");
+		});
 
 		let elements3 = new Array("li>.dropdown-menu", ".card-body", ".bg-light", ".form-control", ".form-select", "input", "textarea", ".foreground-light");
 		elements3.forEach(function(value) {
-			$(value).attr("style", "background-color: " + baseColor[currentThemeIndex] + " !important");
+			$(value).attr("style", "background-color: " + colorBase[currentThemeIndex] + " !important");
 		});
 
 		let elements4 = new Array(".btn-primary", ".btn-outline-primary", ".card-header");
 		elements4.forEach(function(value) {
-			$(value).attr("style", "background-color: " + focusPrimeColor[currentThemeIndex] + " !important");
+			$(value).attr("style", "background-color: " + colorFocusPrime[currentThemeIndex] + " !important");
 		});
 
 		let elements5 = new Array(".dropdown-item");
 		elements5.forEach(function(value) {
 			$(value).hover(function(e) {
 				if (e.type === "mouseenter") {
-					$(this).attr("style", "background-color: " + focusPrimeColor[currentThemeIndex] + " !important");
+					$(this).attr("style", "background-color: " + colorFocusPrime[currentThemeIndex] + " !important");
 				}
 				else {
 					$(this).attr("style", "background-color: " + "transparent !important");
