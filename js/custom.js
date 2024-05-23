@@ -170,26 +170,6 @@ $(document).ready(function() {
 		let colorFocusPrime = ["default", "#dc3545"];
 		let transparentColor = ["default", "transparent"];
 
-		/*let elements1 = new Array("body", "header>div#navbar-top-e", "footer>div#navbar-bottom-e");
-		elements1.forEach(function(value) {
-			$(value).attr("style", "background-color: " + colorBackground[currentThemeIndex] + " !important");
-		});
-
-		let elements2 = new Array(".form-control", ".form-select", "input", "textarea", ".foreground-light");
-		elements2.forEach(function(value) {
-			$(value).attr("style", "color: " + colorBackground[currentThemeIndex] + " !important");
-		});
-
-		let elements3 = new Array("li>.dropdown-menu", ".card-body", ".bg-light", ".form-control", ".form-select", "input", "textarea", ".foreground-light");
-		elements3.forEach(function(value) {
-			$(value).attr("style", "background-color: " + colorBase[currentThemeIndex] + " !important");
-		});
-
-		let elements4 = new Array(".btn-primary", ".btn-outline-primary", ".card-header");
-		elements4.forEach(function(value) {
-			$(value).attr("style", "background-color: " + colorFocusPrime[currentThemeIndex] + " !important");
-		});*/
-
 		let elements5 = new Array(".dropdown-item");
 		elements5.forEach(function(value) {
 			$(value).hover(function(e) {
