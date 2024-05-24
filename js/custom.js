@@ -89,17 +89,18 @@ function setTheme(themeIndex) {
 						"color": {
 							"background": [],
 							"focusPrime": [".btn-outline-primary"],
-							"darkTextPrime": ["body", ".dropdown-item", "input", "textarea", ".form-select", ".form-control"]
+							"darkTextPrime": ["body", ".dropdown-item", ".alert-primary", "input", "textarea", ".form-select", ".form-control"]
 						},
 						"background-color": {
 							"background": ["body", "header>div#navbarTopShade", "footer>div#navbarBottomShade"],
-							"base": [".navbar", ".dropdown-menu", "input", "textarea", ".form-select", ".form-control", ".card-body", "li>.dropdown-menu"],
+							"base": [".navbar", ".dropdown-menu", ".alert-primary", "input", "textarea", ".form-select", ".form-control", ".card-body", "li>.dropdown-menu"],
 							"focusPrime": [".btn-primary", ".btn-outline-primary", ".card-header"],
 							"transparent": [".btn-outline-primary", "input[type='range']"]
 						},
 						"border-color": {
 							"background": [".btn-primary"],
-							"focusPrime": [".btn-outline-primary"]
+							"focusPrime": [".btn-outline-primary"],
+							"darkTextPrime": [".alert-primary"]
 						}
 					}
 				},
