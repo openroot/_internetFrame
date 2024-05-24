@@ -117,6 +117,9 @@ function setTheme(themeIndex) {
 							"base": [".bg-light"],
 							"focusPrime": [".bg-primary"],
 							"darkTextPrime": [".bg-dark"]
+						},
+						"border-color": {
+							"darkTextPrime": [".border-primary"]
 						}
 					}
 				},

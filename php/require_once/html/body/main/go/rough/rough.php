@@ -934,20 +934,20 @@
 <div class="mt-5">
 	<h6>Borders</h6>
 	<p>Round the corner of an element with the rounded classes:</p> 
-	<span class="border border-primary rounded" style="display: inline-block; height: 70px; width: 70px; margin: 6px;"></span>
-	<span class="border border-primary rounded-top" style="display: inline-block; height: 70px; width: 70px; margin: 6px;"></span>
-	<span class="border border-primary rounded-end" style="display: inline-block; height: 70px; width: 70px; margin: 6px;"></span>
-	<span class="border border-primary rounded-bottom" style="display: inline-block; height: 70px; width: 70px; margin: 6px;"></span>
-	<span class="border border-primary rounded-start" style="display: inline-block; height: 70px; width: 70px; margin: 6px;"></span>
-	<span class="border border-primary rounded-circle" style="display: inline-block; height: 70px; width: 70px; margin: 6px;"></span>
-	<span class="border border-primary rounded-pill" style="display: inline-block; height: 70px; width: 130px; margin: 6px;"></span>
+	<span class="border border-primary rounded border-test"></span>
+	<span class="border border-primary rounded-top border-test"></span>
+	<span class="border border-primary rounded-end border-test"></span>
+	<span class="border border-primary rounded-bottom border-test"></span>
+	<span class="border border-primary rounded-start border-test"></span>
+	<span class="border border-primary rounded-circle border-test"></span>
+	<span class="border border-primary rounded-pill border-test border-test-2"></span>
 	<br>
-	<span class="border border-primary rounded-0" style="display: inline-block; height: 70px; width: 70px; margin: 6px;"></span>
-	<span class="border border-primary rounded-1" style="display: inline-block; height: 70px; width: 70px; margin: 6px;"></span>
-	<span class="border border-primary rounded-2" style="display: inline-block; height: 70px; width: 70px; margin: 6px;"></span>
-	<span class="border border-primary rounded-3" style="display: inline-block; height: 70px; width: 70px; margin: 6px;"></span>
-	<span class="border border-primary rounded-4" style="display: inline-block; height: 70px; width: 70px; margin: 6px;"></span>
-	<span class="border border-primary rounded-5" style="display: inline-block; height: 70px; width: 70px; margin: 6px;"></span>
+	<span class="border border-primary rounded-0 border-test"></span>
+	<span class="border border-primary rounded-1 border-test"></span>
+	<span class="border border-primary rounded-2 border-test"></span>
+	<span class="border border-primary rounded-3 border-test"></span>
+	<span class="border border-primary rounded-4 border-test"></span>
+	<span class="border border-primary rounded-5 border-test"></span>
 </div>
 
 <!-- Collapsible -->
