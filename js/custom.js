@@ -96,7 +96,8 @@ function setTheme(themeIndex) {
 						"background-color": {
 							"background": ["body", "header>div#navbarTopShade", "footer>div#navbarBottomShade"],
 							"base": [".navbar", ".dropdown-menu", ".alert-primary", "input", "textarea", ".form-select", ".form-control", ".card-body", "li>.dropdown-menu"],
-							"focusPrime": [".btn-primary", ".btn-outline-primary", ".card-header"],
+							"focusPrime": [".btn-primary", ".btn-outline-primary"],
+							"opacifiedFocusPrime": [".card-header"],
 							"transparent": [".btn-outline-primary", "input[type='range']"]
 						},
 						"border-color": {
@@ -122,12 +123,11 @@ function setTheme(themeIndex) {
 				"hoverIn": {
 					"coloring": {
 						"color": {
-							"lightTextPrime": [".btn-outline-primary", ".dropdown-item"],
-							//"opacifiedFocusPrime": ["a"]
+							"lightTextPrime": [".btn-outline-primary", ".dropdown-item"]
 						},
 						"background-color": {
 							"focusPrime": [".btn-outline-primary", ".dropdown-item"],
-							//"opacifiedFocusPrime": ["a.btn"]
+							"opacifiedFocusPrime": ["a.btn-primary"]
 						},
 						"border-color": {
 							"background": [".btn-outline-primary"]
@@ -139,10 +139,10 @@ function setTheme(themeIndex) {
 						"color": {
 							"focusPrime": [".btn-outline-primary"],
 							"darkTextPrime": [".dropdown-item"],
-							//"lightTextPrime": ["a.btn"]
+							"lightTextPrime": ["a.btn-primary"]
 						},
 						"background-color": {
-							//"focusPrime": ["a.btn"],
+							"focusPrime": ["a.btn-primary"],
 							"transparent": [".btn-outline-primary", ".dropdown-item"]
 						},
 						"border-color": {
@@ -153,14 +153,14 @@ function setTheme(themeIndex) {
 				"focusIn": {
 					"coloring": {
 						"box-shadow": {
-							"boxShadow": [".btn-primary", ".btn-outline-primary", "input", "textarea", ".form-select", ".form-control"]
+							"boxShadow": [".btn", ".btn-primary", ".btn-outline-primary", "input", "textarea", ".form-select", ".form-control"]
 						}
 					}
 				},
 				"focusOut": {
 					"coloring": {
 						"box-shadow": {
-							"none": [".btn-primary", ".btn-outline-primary", "input", "textarea", ".form-select", ".form-control"]
+							"none": [".btn", ".btn-primary", ".btn-outline-primary", "input", "textarea", ".form-select", ".form-control"]
 						}
 					}
 				}
