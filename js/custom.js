@@ -72,12 +72,12 @@ function setTheme(themeIndex) {
 		if (themeIndex !== 0) {
 			let pallets = {
 				"coloring": {
-					"background":		["default", "bisque", "#7CB9E8", "#DE5D83"],	// Tips: Random in darker side.
+					"background":		["default", "#FFE4C4", "#7CB9E8", "#DE5D83"],	// Tips: Random in darker side.
 					"base":				["default", "#FFFAE5", "#C9FFE5", "#DEC4CC"],	// Tips: Lighter side of 'background'.
 					"focusPrime":		["default", "#DC3545", "#551B8C", "#3C2126"],	// Tips: Random darker side yet relative to 'base'.
-					"opacifiedPrime":	["default", "0 0 0 .25rem #DC354580", "0 0 0 .25rem #551B8C80", "0 0 0 .25rem #3C212680"],	// Tips: RGB of 'focusPrime' as 0.5 opacity.
+					"darkTextPrime":	["default", "#211A00", "#00512A", "#21000A"],	// Tips: Multiplied darker side of 'base'.
 					"lightTextPrime":	["default", "#FFFFFF", "#FFFFFF", "#FFFFFF"],	// Tips: generally selected as closer to color white.
-					"darkTextPrime":	["default", "#211A00", "#00512A", "#21000A"], // Tips: Multiplied darker side of 'base'.
+					"opacifiedPrime":	["default", "0 0 0 .25rem #DC354580", "0 0 0 .25rem #551B8C80", "0 0 0 .25rem #3C212680"],	// Tips: RGB of 'focusPrime' as 0.5 opacity.
 					"transparent":		["default", "transparent", "transparent", "transparent"],
 					"none":				["default", "none", "none", "none"]
 				}
