@@ -87,13 +87,13 @@ function setTheme(themeIndex) {
 				"general": {
 					"coloring": {
 						"color": {
-							"background": ["input", "textarea", ".form-control", ".form-select"],
+							"background": [],
 							"focusPrime": [".btn-outline-primary"],
-							"darkTextPrime": ["body", ".dropdown-item"]
+							"darkTextPrime": ["body", ".dropdown-item", "input", "textarea", ".form-select", ".form-control"]
 						},
 						"background-color": {
 							"background": ["body", "header>div#navbarTopShade", "footer>div#navbarBottomShade"],
-							"base": [".navbar", ".dropdown-menu", "input", "textarea", ".form-control", ".form-select", ".card-body", "li>.dropdown-menu"],
+							"base": [".navbar", ".dropdown-menu", "input", "textarea", ".form-select", ".form-control", ".card-body", "li>.dropdown-menu"],
 							"focusPrime": [".btn-primary", ".btn-outline-primary", ".card-header"],
 							"transparent": [".btn-outline-primary", "input[type='range']"]
 						},
@@ -141,14 +141,14 @@ function setTheme(themeIndex) {
 				"focusIn": {
 					"coloring": {
 						"box-shadow": {
-							"opacifiedPrime": [".btn-primary", ".btn-outline-primary", "input"]
+							"opacifiedPrime": [".btn-primary", ".btn-outline-primary", "input", "textarea", ".form-select", ".form-control"]
 						}
 					}
 				},
 				"focusOut": {
 					"coloring": {
 						"box-shadow": {
-							"none": [".btn-primary", ".btn-outline-primary", "input"]
+							"none": [".btn-primary", ".btn-outline-primary", "input", "textarea", ".form-select", ".form-control"]
 						}
 					}
 				}
