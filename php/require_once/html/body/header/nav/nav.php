@@ -71,6 +71,13 @@
 							<li><a class="dropdown-item" href="#">Scale</a></li>
 							<li><hr class="dropdown-divider"></li>
 							<li><a class="dropdown-item" href="#">Refresh</a></li>
+							<li><hr class="dropdown-divider"></li>
+							<li>
+								<div class="mx-3">
+									<p>Change theme</p>
+									<input id="themeslider" type="range" class="form-range" min="0" max="2" step="1" value="1">
+								</span>
+							</li>
 						</ul>
 					</div>
 				</div>

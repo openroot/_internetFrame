@@ -85,7 +85,8 @@ function setTheme(themeIndex) {
 						"background-color": {
 							"background": ["body", "header>div#navbar-top-e", "footer>div#navbar-bottom-e"],
 							"base": ["li>.dropdown-menu", ".card-body", ".bg-light", ".form-control", ".form-select", "input", "textarea", ".foreground-light"],
-							"focusPrime": [".btn-primary", ".btn-outline-primary", ".card-header"]
+							"focusPrime": [".btn-primary", ".btn-outline-primary", ".card-header"],
+							"transparent": ["input[type='range']"]
 						},
 						"color": {
 							"background": [".form-control", ".form-select", "input", "textarea", ".foreground-light"]
@@ -161,6 +162,13 @@ function setTheme(themeIndex) {
 		}
 	});
 }
+
+$(document).ready(function() {
+	$("#themeslider").on("input", function(e) {
+		setTheme($("#themeslider").val());
+	});
+});
+
 
 $(document).ready(function() {
 	/*

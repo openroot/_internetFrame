@@ -799,6 +799,14 @@
 	</div>
 </div>
 
+<!-- Range Bar -->
+<hr>
+<div class="mt-5">
+	<h6>Range Bar</h6>
+	<p>Use the min and/or max attribute to specify the minimum/maximum value of a range:</p>
+	<input type="range" class="form-range" min="0" max="20">
+</div>
+
 <!-- Image Card -->
 <hr>
 <div class="mt-5">
