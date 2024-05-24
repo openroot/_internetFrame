@@ -90,6 +90,9 @@ function setTheme(themeIndex) {
 						},
 						"color": {
 							"background": [".form-control", ".form-select", "input", "textarea"]
+						},
+						"border-color": {
+							"background": [".btn-primary"]
 						}
 					}
 				},
