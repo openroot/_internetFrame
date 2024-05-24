@@ -1,11 +1,11 @@
 <nav class="navbar fixed-top navbar-expand-md navbar-light background-light">
 	<div class="container-fluid">
 		<a class="navbar-brand" href="?go=cover">InternetFrame</a>
-		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar_collapse_1"><span class="navbar-toggler-icon"></span></button>
-		<div class="collapse navbar-collapse" id="navbar_collapse_1">
+		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse1"><span class="navbar-toggler-icon"></span></button>
+		<div id="navbarCollapse1" class="collapse navbar-collapse">
 			<ul class="navbar-nav me-auto mb-2 mb-md-0">
 				<!-- Menu Base -->
-				<li class="nav-item"><a class="nav-link active bg-dark foreground-light" href="?go=cover">Cover</a></li>
+				<li class="nav-item"><a class="nav-link bg-dark text-white" href="?go=cover">Cover</a></li>
 				<li class="nav-item"><a class="nav-link" href="?go=stand">Stand</a></li>
 		
 				<!-- Menu Tree -->
@@ -63,7 +63,7 @@
 				<div>
 					<!-- Menu Quick -->
 					<div class="dropstart">
-						<button class="btn btn-dark dropdown-toggle foreground-light" type="button" id="dropstart_utilities" data-bs-toggle="dropdown">Utilities</button>
+						<button id="dropstartUtilities" class="btn btn-dark dropdown-toggle" type="button" data-bs-toggle="dropdown">Utilities</button>
 						<ul class="dropdown-menu background-light">
 							<li><h6 class="dropdown-header">Aisle</h6></li>
 							<li><a class="dropdown-item" href="#">Dark</a></li>
@@ -75,7 +75,7 @@
 							<li>
 								<div class="mx-3">
 									<p>Change theme</p>
-									<input id="themeslider" type="range" class="form-range" min="0" max="2" step="1" value="1">
+									<input id="themeSlider" type="range" class="form-range" min="0" max="2" step="1" value="1">
 								</span>
 							</li>
 						</ul>

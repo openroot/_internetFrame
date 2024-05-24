@@ -49,11 +49,11 @@
 			<h1 class="h3 mb-3 fw-normal">Please sign in</h1>
 				
 			<div class="form-floating">
-				<input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+				<input id="floatingInput" type="email" class="form-control" placeholder="name@example.com">
 				<label for="floatingInput">Email address</label>
 			</div>
 			<div class="form-floating">
-				<input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+				<input id="floatingPassword" type="password" class="form-control" placeholder="Password">
 				<label for="floatingPassword">Password</label>
 			</div>
 			<div class="form-check mb-3">
@@ -61,7 +61,7 @@
 					<input type="checkbox" class="form-check-input" value="remember-me"> Remember me
 				</label>
 			</div>
-			<button class="w-100 btn btn-lg btn-danger" type="submit">Sign in</button>
+			<button class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
 			<p class="mt-5 mb-3 text-muted">© 2017–2024</p>
 		</form>
 	</div>
@@ -128,7 +128,7 @@
 				<div class="row g-3">
 					<div class="col-sm-6">
 						<label for="firstName" class="form-label">First name</label>
-						<input type="text" class="form-control" id="firstName" placeholder="" value="" required="">
+						<input id="firstName" type="text" class="form-control" placeholder="" value="" required="">
 						<div class="invalid-feedback">
 							Valid first name is required.
 						</div>
@@ -136,7 +136,7 @@
 				
 					<div class="col-sm-6">
 						<label for="lastName" class="form-label">Last name</label>
-						<input type="text" class="form-control" id="lastName" placeholder="" value="" required="">
+						<input id="lastName" type="text" class="form-control" placeholder="" value="" required="">
 						<div class="invalid-feedback">
 							Valid last name is required.
 						</div>
@@ -146,7 +146,7 @@
 						<label for="username" class="form-label">Username</label>
 						<div class="input-group has-validation">
 							<span class="input-group-text">@</span>
-							<input type="text" class="form-control" id="username" placeholder="Username" required="">
+							<input id="username" type="text" class="form-control" placeholder="Username" required="">
 							<div class="invalid-feedback">
 								Your username is required.
 							</div>
@@ -155,7 +155,7 @@
 				
 					<div class="col-12">
 						<label for="email" class="form-label">Email <span class="text-muted">(Optional)</span></label>
-						<input type="email" class="form-control" id="email" placeholder="you@example.com">
+						<input id="email" type="email" class="form-control" placeholder="you@example.com">
 						<div class="invalid-feedback">
 							Please enter a valid email address for shipping updates.
 						</div>
@@ -163,21 +163,20 @@
 				
 					<div class="col-12">
 						<label for="address" class="form-label">Address</label>
-						<input type="text" class="form-control" id="address" placeholder="1234 Main St" required="">
+						<input id="address" type="text" class="form-control" placeholder="1234 Main St" required="">
 						<div class="invalid-feedback">
 							Please enter your shipping address.
 						</div>
 					</div>
 				
 					<div class="col-12">
-						<label for="address2" class="form-label">Address 2 <span
-								class="text-muted">(Optional)</span></label>
-						<input type="text" class="form-control" id="address2" placeholder="Apartment or suite">
+						<label for="address2" class="form-label">Address 2 <span class="text-muted">(Optional)</span></label>
+						<input id="address2" type="text" class="form-control" placeholder="Apartment or suite">
 					</div>
 				
 					<div class="col-md-5">
 						<label for="country" class="form-label">Country</label>
-						<select class="form-select" id="country" required="">
+						<select id="country" class="form-select" required="">
 							<option value="">Choose...</option>
 							<option>United States</option>
 						</select>
@@ -188,7 +187,7 @@
 				
 					<div class="col-md-4">
 						<label for="state" class="form-label">State</label>
-						<select class="form-select" id="state" required="">
+						<select id="state" class="form-select" required="">
 							<option value="">Choose...</option>
 							<option>California</option>
 						</select>
@@ -199,7 +198,7 @@
 				
 					<div class="col-md-3">
 						<label for="zip" class="form-label">Zip</label>
-						<input type="text" class="form-control" id="zip" placeholder="" required="">
+						<input id="zip" type="text" class="form-control" placeholder="" required="">
 						<div class="invalid-feedback">
 							Zip code required.
 						</div>
@@ -209,14 +208,13 @@
 				<hr class="my-4">
 				
 				<div class="form-check">
-					<input type="checkbox" class="form-check-input" id="same-address">
-					<label class="form-check-label" for="same-address">Shipping address is the same as my billing
-						address</label>
+					<input id="sameAddress" type="checkbox" class="form-check-input">
+					<label class="form-check-label" for="sameAddress">Shipping address is the same as my billing address</label>
 				</div>
 				
 				<div class="form-check">
-					<input type="checkbox" class="form-check-input" id="save-info">
-					<label class="form-check-label" for="save-info">Save this information for next time</label>
+					<input id="saveInfo" type="checkbox" class="form-check-input">
+					<label class="form-check-label" for="saveInfo">Save this information for next time</label>
 				</div>
 				
 				<hr class="my-4">
@@ -225,8 +223,7 @@
 				
 				<div class="my-3">
 					<div class="form-check">
-						<input id="credit" name="paymentMethod" type="radio" class="form-check-input" checked=""
-							required="">
+						<input id="credit" name="paymentMethod" type="radio" class="form-check-input" checked="" required="">
 						<label class="form-check-label" for="credit">Credit card</label>
 					</div>
 					<div class="form-check">
@@ -241,8 +238,8 @@
 				
 				<div class="row gy-3">
 					<div class="col-md-6">
-						<label for="cc-name" class="form-label">Name on card</label>
-						<input type="text" class="form-control" id="cc-name" placeholder="" required="">
+						<label for="ccName" class="form-label">Name on card</label>
+						<input id="ccName" type="text" class="form-control" placeholder="" required="">
 						<small class="text-muted">Full name as displayed on card</small>
 						<div class="invalid-feedback">
 							Name on card is required
@@ -250,24 +247,24 @@
 					</div>
 				
 					<div class="col-md-6">
-						<label for="cc-number" class="form-label">Credit card number</label>
-						<input type="text" class="form-control" id="cc-number" placeholder="" required="">
+						<label for="ccNumber" class="form-label">Credit card number</label>
+						<input id="ccNumber" type="text" class="form-control" placeholder="" required="">
 						<div class="invalid-feedback">
 							Credit card number is required
 						</div>
 					</div>
 				
 					<div class="col-md-3">
-						<label for="cc-expiration" class="form-label">Expiration</label>
-						<input type="text" class="form-control" id="cc-expiration" placeholder="" required="">
+						<label for="ccExpiration" class="form-label">Expiration</label>
+						<input id="ccExpiration" type="text" class="form-control" placeholder="" required="">
 						<div class="invalid-feedback">
 							Expiration date required
 						</div>
 					</div>
 				
 					<div class="col-md-3">
-						<label for="cc-cvv" class="form-label">CVV</label>
-						<input type="text" class="form-control" id="cc-cvv" placeholder="" required="">
+						<label for="ccCvv" class="form-label">CVV</label>
+						<input id="ccCvv" type="text" class="form-control" placeholder="" required="">
 						<div class="invalid-feedback">
 							Security code required
 						</div>
@@ -276,7 +273,7 @@
 				
 				<hr class="my-4">
 				
-				<button class="mb-5 btn btn-outline-danger btn-lg" type="submit">Continue to checkout</button>
+				<button class="mb-5 btn btn-outline-primary btn-lg" type="submit">Continue to checkout</button>
 			</form>
 		</div>
 	</div>
@@ -292,7 +289,7 @@
 				<p class="lead text-muted">Something short and leading about the collection below—its contents, the creator, etc.
 					Make it short and sweet, but not too short so folks don’t simply skip over it entirely.</p>
 				<p>
-					<a href="#" class="btn btn-danger my-2">Main call to action</a>
+					<a href="#" class="btn btn-primary my-2">Main call to action</a>
 					<a href="#" class="btn btn-secondary my-2">Secondary action</a>
 				</p>
 			</div>
@@ -305,14 +302,14 @@
 					<div class="card shadow-sm">
 						<svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
 							<title>Placeholder</title>
-							<rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text>
+							<rect width="100%" height="100%" fill="#55595C"></rect><text x="50%" y="50%" fill="#ECEEEF" dy=".3em">Thumbnail</text>
 						</svg>
 						<div class="card-body">
 							<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
 							<div class="d-flex justify-content-between align-items-center">
 								<div class="btn-group">
-									<button type="button" class="btn btn-sm btn-outline-danger">View</button>
-									<button type="button" class="btn btn-sm btn-outline-danger">Edit</button>
+									<button type="button" class="btn btn-sm btn-outline-primary">View</button>
+									<button type="button" class="btn btn-sm btn-outline-primary">Edit</button>
 								</div>
 								<small class="text-muted">9 mins</small>
 							</div>
@@ -323,14 +320,14 @@
 					<div class="card shadow-sm">
 						<svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
 							<title>Placeholder</title>
-							<rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text>
+							<rect width="100%" height="100%" fill="#55595C"></rect><text x="50%" y="50%" fill="#ECEEEF" dy=".3em">Thumbnail</text>
 						</svg>
 						<div class="card-body">
 							<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
 							<div class="d-flex justify-content-between align-items-center">
 								<div class="btn-group">
-									<button type="button" class="btn btn-sm btn-outline-danger">View</button>
-									<button type="button" class="btn btn-sm btn-outline-danger">Edit</button>
+									<button type="button" class="btn btn-sm btn-outline-primary">View</button>
+									<button type="button" class="btn btn-sm btn-outline-primary">Edit</button>
 								</div>
 								<small class="text-muted">9 mins</small>
 							</div>
@@ -341,14 +338,14 @@
 					<div class="card shadow-sm">
 						<svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
 							<title>Placeholder</title>
-							<rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text>
+							<rect width="100%" height="100%" fill="#55595C"></rect><text x="50%" y="50%" fill="#ECEEEF" dy=".3em">Thumbnail</text>
 						</svg>
 						<div class="card-body">
 							<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
 							<div class="d-flex justify-content-between align-items-center">
 								<div class="btn-group">
-									<button type="button" class="btn btn-sm btn-outline-danger">View</button>
-									<button type="button" class="btn btn-sm btn-outline-danger">Edit</button>
+									<button type="button" class="btn btn-sm btn-outline-primary">View</button>
+									<button type="button" class="btn btn-sm btn-outline-primary">Edit</button>
 								</div>
 								<small class="text-muted">9 mins</small>
 							</div>
@@ -359,14 +356,14 @@
 					<div class="card shadow-sm">
 						<svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
 							<title>Placeholder</title>
-							<rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text>
+							<rect width="100%" height="100%" fill="#55595C"></rect><text x="50%" y="50%" fill="#ECEEEF" dy=".3em">Thumbnail</text>
 						</svg>
 						<div class="card-body">
 							<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
 							<div class="d-flex justify-content-between align-items-center">
 								<div class="btn-group">
-									<button type="button" class="btn btn-sm btn-outline-danger">View</button>
-									<button type="button" class="btn btn-sm btn-outline-danger">Edit</button>
+									<button type="button" class="btn btn-sm btn-outline-primary">View</button>
+									<button type="button" class="btn btn-sm btn-outline-primary">Edit</button>
 								</div>
 								<small class="text-muted">9 mins</small>
 							</div>
@@ -377,14 +374,14 @@
 					<div class="card shadow-sm">
 						<svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
 							<title>Placeholder</title>
-							<rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text>
+							<rect width="100%" height="100%" fill="#55595C"></rect><text x="50%" y="50%" fill="#ECEEEF" dy=".3em">Thumbnail</text>
 						</svg>
 						<div class="card-body">
 							<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
 							<div class="d-flex justify-content-between align-items-center">
 								<div class="btn-group">
-									<button type="button" class="btn btn-sm btn-outline-danger">View</button>
-									<button type="button" class="btn btn-sm btn-outline-danger">Edit</button>
+									<button type="button" class="btn btn-sm btn-outline-primary">View</button>
+									<button type="button" class="btn btn-sm btn-outline-primary">Edit</button>
 								</div>
 								<small class="text-muted">9 mins</small>
 							</div>
@@ -395,14 +392,14 @@
 					<div class="card shadow-sm">
 						<svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
 							<title>Placeholder</title>
-							<rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text>
+							<rect width="100%" height="100%" fill="#55595C"></rect><text x="50%" y="50%" fill="#ECEEEF" dy=".3em">Thumbnail</text>
 						</svg>
 						<div class="card-body">
 							<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
 							<div class="d-flex justify-content-between align-items-center">
 								<div class="btn-group">
-									<button type="button" class="btn btn-sm btn-outline-danger">View</button>
-									<button type="button" class="btn btn-sm btn-outline-danger">Edit</button>
+									<button type="button" class="btn btn-sm btn-outline-primary">View</button>
+									<button type="button" class="btn btn-sm btn-outline-primary">Edit</button>
 								</div>
 								<small class="text-muted">9 mins</small>
 							</div>
@@ -413,14 +410,14 @@
 					<div class="card shadow-sm">
 						<svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
 							<title>Placeholder</title>
-							<rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text>
+							<rect width="100%" height="100%" fill="#55595C"></rect><text x="50%" y="50%" fill="#ECEEEF" dy=".3em">Thumbnail</text>
 						</svg>
 						<div class="card-body">
 							<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
 							<div class="d-flex justify-content-between align-items-center">
 								<div class="btn-group">
-									<button type="button" class="btn btn-sm btn-outline-danger">View</button>
-									<button type="button" class="btn btn-sm btn-outline-danger">Edit</button>
+									<button type="button" class="btn btn-sm btn-outline-primary">View</button>
+									<button type="button" class="btn btn-sm btn-outline-primary">Edit</button>
 								</div>
 								<small class="text-muted">9 mins</small>
 							</div>
@@ -431,14 +428,14 @@
 					<div class="card shadow-sm">
 						<svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
 							<title>Placeholder</title>
-							<rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text>
+							<rect width="100%" height="100%" fill="#55595C"></rect><text x="50%" y="50%" fill="#ECEEEF" dy=".3em">Thumbnail</text>
 						</svg>
 						<div class="card-body">
 							<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
 							<div class="d-flex justify-content-between align-items-center">
 								<div class="btn-group">
-									<button type="button" class="btn btn-sm btn-outline-danger">View</button>
-									<button type="button" class="btn btn-sm btn-outline-danger">Edit</button>
+									<button type="button" class="btn btn-sm btn-outline-primary">View</button>
+									<button type="button" class="btn btn-sm btn-outline-primary">Edit</button>
 								</div>
 								<small class="text-muted">9 mins</small>
 							</div>
@@ -449,14 +446,14 @@
 					<div class="card shadow-sm">
 						<svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
 							<title>Placeholder</title>
-							<rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text>
+							<rect width="100%" height="100%" fill="#55595C"></rect><text x="50%" y="50%" fill="#ECEEEF" dy=".3em">Thumbnail</text>
 						</svg>
 						<div class="card-body">
 							<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
 							<div class="d-flex justify-content-between align-items-center">
 								<div class="btn-group">
-									<button type="button" class="btn btn-sm btn-outline-danger">View</button>
-									<button type="button" class="btn btn-sm btn-outline-danger">Edit</button>
+									<button type="button" class="btn btn-sm btn-outline-primary">View</button>
+									<button type="button" class="btn btn-sm btn-outline-primary">Edit</button>
 								</div>
 								<small class="text-muted">9 mins</small>
 							</div>
@@ -467,14 +464,14 @@
 					<div class="card shadow-sm">
 						<svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
 							<title>Placeholder</title>
-							<rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text>
+							<rect width="100%" height="100%" fill="#55595C"></rect><text x="50%" y="50%" fill="#ECEEEF" dy=".3em">Thumbnail</text>
 						</svg>
 						<div class="card-body">
 							<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
 							<div class="d-flex justify-content-between align-items-center">
 								<div class="btn-group">
-									<button type="button" class="btn btn-sm btn-outline-danger">View</button>
-									<button type="button" class="btn btn-sm btn-outline-danger">Edit</button>
+									<button type="button" class="btn btn-sm btn-outline-primary">View</button>
+									<button type="button" class="btn btn-sm btn-outline-primary">Edit</button>
 								</div>
 								<small class="text-muted">9 mins</small>
 							</div>
@@ -751,18 +748,18 @@
 <div class="mt-5">
 	<h6>Spinner Buttons</h6>
 	<p>Add spinners to buttons.</p>
-	<button class="btn btn-danger">
+	<button class="btn btn-primary">
 		<span class="spinner-border spinner-border-sm"></span>
 	</button>
-	<button class="btn btn-danger">
+	<button class="btn btn-primary">
 		<span class="spinner-border spinner-border-sm"></span>
 		Loading..
-	</button>  
-	<button class="btn btn-danger" disabled>
+	</button>
+	<button class="btn btn-primary" disabled>
 		<span class="spinner-border spinner-border-sm"></span>
 		Loading..
-	</button>  
-	<button class="btn btn-danger" disabled>
+	</button>
+	<button class="btn btn-primary" disabled>
 		<span class="spinner-grow spinner-grow-sm"></span>
 		Loading..
 	</button>
@@ -774,10 +771,10 @@
 	<h6>Button Groups</h6>
 	<p>Nest button groups to create dropdown menus.</p>
 	<div class="btn-group">
-		<button type="button" class="btn btn-danger">Apple</button>
-		<button type="button" class="btn btn-danger">Samsung</button>
+		<button type="button" class="btn btn-primary">Apple</button>
+		<button type="button" class="btn btn-primary">Samsung</button>
 		<div class="btn-group">
-			<button type="button" class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown">Sony</button>
+			<button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">Sony</button>
 			<ul class="dropdown-menu">
 				<li><a class="dropdown-item" href="#">Tablet</a></li>
 				<li><a class="dropdown-item" href="#">Smartphone</a></li>
@@ -792,10 +789,10 @@
 	<h6>Progress Bar</h6>
 	<p>Add the .progress-bar-animated class to animate the progress bar.</p>
 	<div class="progress">
-		<div class="progress-bar progress-bar-striped bg-danger" style="width:88%"></div>
+		<div class="progress-bar progress-bar-striped bg-primary" style="width:88%"></div>
 	</div>
 	<div class="progress">
-		<div class="progress-bar progress-bar-striped progress-bar-animated bg-danger" style="width:88%"></div>
+		<div class="progress-bar progress-bar-striped progress-bar-animated bg-primary" style="width:88%"></div>
 	</div>
 </div>
 
@@ -804,7 +801,7 @@
 <div class="mt-5">
 	<h6>Range Bar</h6>
 	<p>Use the min and/or max attribute to specify the minimum/maximum value of a range:</p>
-	<input type="range" class="form-range" min="0" max="20">
+	<input type="range" class="form-range" min="0" max="8">
 </div>
 
 <!-- Image Card -->
@@ -817,7 +814,7 @@
 		<div class="card-body">
 			<h4 class="card-title">John Doe</h4>
 			<p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
-			<a href="#" class="btn btn-danger">See Profile</a>
+			<a href="#" class="btn btn-primary">See Profile</a>
 		</div>
 		<img class="card-img-bottom" src="assets/images/sample_image_1.jpg" alt="Card image" style="width:100%">
 	</div>
@@ -867,10 +864,10 @@
 	<h6>Fading Modal</h6>
 	<h3></h3>
 	<p>Click on the button to open the modal.</p>
-	<button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#myModal">Open modal</button>
+	<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">Open modal</button>
 </div>
 <!-- The Modal -->
-<div class="modal fade" id="myModal">
+<div id="myModal" class="modal fade">
 	<!-- modal-sm | modal-lg | modal-xl | modal-dialog-centered | modal-dialog-scrollable | modal-fullscreen -->
 	<div class="modal-dialog modal-sm">
 		<div class="modal-content">
@@ -885,7 +882,7 @@
 			</div>
 			<!-- Modal footer -->
 			<div class="modal-footer">
-				<button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+				<button type="button" class="btn" data-bs-dismiss="modal">Close</button>
 			</div>
 		</div>
 	</div>
@@ -937,20 +934,20 @@
 <div class="mt-5">
 	<h6>Borders</h6>
 	<p>Round the corner of an element with the rounded classes:</p> 
-	<span class="border border-danger rounded" style="display: inline-block; height: 70px; width: 70px; margin: 6px;"></span>
-	<span class="border border-danger rounded-top" style="display: inline-block; height: 70px; width: 70px; margin: 6px;"></span>
-	<span class="border border-danger rounded-end" style="display: inline-block; height: 70px; width: 70px; margin: 6px;"></span>
-	<span class="border border-danger rounded-bottom" style="display: inline-block; height: 70px; width: 70px; margin: 6px;"></span>
-	<span class="border border-danger rounded-start" style="display: inline-block; height: 70px; width: 70px; margin: 6px;"></span>
-	<span class="border border-danger rounded-circle" style="display: inline-block; height: 70px; width: 70px; margin: 6px;"></span>
-	<span class="border border-danger rounded-pill" style="display: inline-block; height: 70px; width: 130px; margin: 6px;"></span>
+	<span class="border border-primary rounded" style="display: inline-block; height: 70px; width: 70px; margin: 6px;"></span>
+	<span class="border border-primary rounded-top" style="display: inline-block; height: 70px; width: 70px; margin: 6px;"></span>
+	<span class="border border-primary rounded-end" style="display: inline-block; height: 70px; width: 70px; margin: 6px;"></span>
+	<span class="border border-primary rounded-bottom" style="display: inline-block; height: 70px; width: 70px; margin: 6px;"></span>
+	<span class="border border-primary rounded-start" style="display: inline-block; height: 70px; width: 70px; margin: 6px;"></span>
+	<span class="border border-primary rounded-circle" style="display: inline-block; height: 70px; width: 70px; margin: 6px;"></span>
+	<span class="border border-primary rounded-pill" style="display: inline-block; height: 70px; width: 130px; margin: 6px;"></span>
 	<br>
-	<span class="border border-danger rounded-0" style="display: inline-block; height: 70px; width: 70px; margin: 6px;"></span>
-	<span class="border border-danger rounded-1" style="display: inline-block; height: 70px; width: 70px; margin: 6px;"></span>
-	<span class="border border-danger rounded-2" style="display: inline-block; height: 70px; width: 70px; margin: 6px;"></span>
-	<span class="border border-danger rounded-3" style="display: inline-block; height: 70px; width: 70px; margin: 6px;"></span>
-	<span class="border border-danger rounded-4" style="display: inline-block; height: 70px; width: 70px; margin: 6px;"></span>
-	<span class="border border-danger rounded-5" style="display: inline-block; height: 70px; width: 70px; margin: 6px;"></span>
+	<span class="border border-primary rounded-0" style="display: inline-block; height: 70px; width: 70px; margin: 6px;"></span>
+	<span class="border border-primary rounded-1" style="display: inline-block; height: 70px; width: 70px; margin: 6px;"></span>
+	<span class="border border-primary rounded-2" style="display: inline-block; height: 70px; width: 70px; margin: 6px;"></span>
+	<span class="border border-primary rounded-3" style="display: inline-block; height: 70px; width: 70px; margin: 6px;"></span>
+	<span class="border border-primary rounded-4" style="display: inline-block; height: 70px; width: 70px; margin: 6px;"></span>
+	<span class="border border-primary rounded-5" style="display: inline-block; height: 70px; width: 70px; margin: 6px;"></span>
 </div>
 
 <!-- Collapsible -->
@@ -959,8 +956,8 @@
 	<h6>Collapsible content</h6>
 	<p>Add the show class next to the collapse class to show the content by default.</p>
 	<p>Click on the button to toggle between showing and hiding content.</p>
-	<button type="button" class="btn btn-danger" data-bs-toggle="collapse" data-bs-target="#collapsible_demo">Simple collapsible</button>
-	<div id="collapsible_demo" class="collapse show">
+	<button type="button" class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#collapsibleDemo">Simple collapsible</button>
+	<div id="collapsibleDemo" class="collapse show">
 		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 		Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 	</div>
@@ -971,14 +968,14 @@
 <div class="mt-5">
 	<h6>Accordion</h6>
 	<p><strong>Note:</strong> The <strong>data-bs-parent</strong> attribute makes sure that all collapsible elements under the specified parent will be closed when one of the collapsible item is shown.</p>
-	<div id="accordion_demo">
+	<div id="accordionDemo">
 		<div class="card">
 			<div class="card-header">
 				<a class="btn" data-bs-toggle="collapse" href="#collapseOne">
 					Collapsible Group Item #1
 				</a>
 			</div>
-			<div id="collapseOne" class="collapse show" data-bs-parent="#accordion_demo">
+			<div id="collapseOne" class="collapse show" data-bs-parent="#accordionDemo">
 				<div class="card-body">
 					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 				</div>
@@ -991,7 +988,7 @@
 					Collapsible Group Item #2
 				</a>
 			</div>
-			<div id="collapseTwo" class="collapse" data-bs-parent="#accordion_demo">
+			<div id="collapseTwo" class="collapse" data-bs-parent="#accordionDemo">
 				<div class="card-body">
 					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 				</div>
@@ -1004,7 +1001,7 @@
 					Collapsible Group Item #3
 				</a>
 			</div>
-			<div id="collapseThree" class="collapse" data-bs-parent="#accordion_demo">
+			<div id="collapseThree" class="collapse" data-bs-parent="#accordionDemo">
 				<div class="card-body">
 					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 				</div>
@@ -1018,12 +1015,12 @@
 <div class="mt-5">
 	<h6>Carousel</h6>
 	<p>The following example shows how to create a basic carousel with indicators and controls.</p><!-- Carousel -->
-	<div id="carousel_demo" class="carousel slide" data-bs-ride="carousel" style="width:300px">
+	<div id="carouselDemo" class="carousel slide" data-bs-ride="carousel" style="width:300px">
 		<!-- Indicators/dots -->
 		<div class="carousel-indicators">
-			<button type="button" data-bs-target="#carousel_demo" data-bs-slide-to="0" class="active"></button>
-			<button type="button" data-bs-target="#carousel_demo" data-bs-slide-to="1"></button>
-			<button type="button" data-bs-target="#carousel_demo" data-bs-slide-to="2"></button>
+			<button type="button" data-bs-target="#carouselDemo" data-bs-slide-to="0" class="active"></button>
+			<button type="button" data-bs-target="#carouselDemo" data-bs-slide-to="1"></button>
+			<button type="button" data-bs-target="#carouselDemo" data-bs-slide-to="2"></button>
 		</div>
 
 		<!-- The slideshow/carousel -->
@@ -1052,10 +1049,10 @@
 		</div>
 
 		<!-- Left and right controls/icons -->
-		<button class="carousel-control-prev" type="button" data-bs-target="#carousel_demo" data-bs-slide="prev">
+		<button class="carousel-control-prev" type="button" data-bs-target="#carouselDemo" data-bs-slide="prev">
 			<span class="carousel-control-prev-icon"></span>
 		</button>
-		<button class="carousel-control-next" type="button" data-bs-target="#carousel_demo" data-bs-slide="next">
+		<button class="carousel-control-next" type="button" data-bs-target="#carouselDemo" data-bs-slide="next">
 			<span class="carousel-control-next-icon"></span>
 		</button>
 	</div>

@@ -4,5 +4,5 @@
 		require_once("nav/nav.php");
 		echo PHP_EOL;
 	?>
-	<div id="navbar-bottom-e"></div>
+	<div id="navbarBottomShade"></div>
 </footer>

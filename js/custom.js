@@ -83,7 +83,7 @@ function setTheme(themeIndex) {
 				"general": {
 					"coloring": {
 						"background-color": {
-							"background": ["body", "header>div#navbar-top-e", "footer>div#navbar-bottom-e"],
+							"background": ["body", "header>div#navbarTopShade", "footer>div#navbarBottomShade"],
 							"base": ["li>.dropdown-menu", ".card-body", ".bg-light", ".form-control", ".form-select", "input", "textarea", ".foreground-light"],
 							"focusPrime": [".btn-primary", ".btn-outline-primary", ".card-header"],
 							"transparent": ["input[type='range']"]
@@ -164,8 +164,8 @@ function setTheme(themeIndex) {
 }
 
 $(document).ready(function() {
-	$("#themeslider").on("input", function(e) {
-		setTheme($("#themeslider").val());
+	$("#themeSlider").on("input", function(e) {
+		setTheme($("#themeSlider").val());
 	});
 });
 

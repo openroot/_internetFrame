@@ -25,7 +25,7 @@ main>.container-fluid {
 	padding: 15px 15px 15px;
 }
 
-header>div#navbar-top-e {
+header>div#navbarTopShade {
 	position: fixed;
 	top: 0;
 	right: 0;
@@ -39,7 +39,7 @@ header>div#navbar-top-e {
 	background-color: bisque;
 }
 
-footer>div#navbar-bottom-e {
+footer>div#navbarBottomShade {
 	position: fixed;
 	bottom: 0;
 	right: 0;

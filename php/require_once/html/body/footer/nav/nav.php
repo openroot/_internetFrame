@@ -1,11 +1,11 @@
 <nav class="navbar fixed-bottom navbar-expand-md navbar-light background-light">
 	<div class="container-fluid">
 		<a class="navbar-brand" href="?go=cover">&copy; 2024-<?php echo date("Y"); ?></a>
-		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar_collapse_2"><span class="navbar-toggler-icon"></span></button>
-		<div class="collapse navbar-collapse" id="navbar_collapse_2">
+		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse2"><span class="navbar-toggler-icon"></span></button>
+		<div id="navbarCollapse2" class="collapse navbar-collapse">
 			<ul class="navbar-nav">
 				<!-- Menu Base -->
-				<li class="nav-item"><a class="nav-link bg-dark foreground-light" href="?go=board">Board</a></li>
+				<li class="nav-item"><a class="nav-link bg-dark text-white" href="?go=board">Board</a></li>
 				<li class="nav-item"><a class="nav-link" href="?go=pen">Pen</a></li>
 				<li class="nav-item"><a class="nav-link disabled" href="?go=clip" tabindex="-1">Clip</a></li>
 		
