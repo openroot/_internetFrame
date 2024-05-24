@@ -76,7 +76,7 @@ function setTheme(themeIndex) {
 					"base": ["default", "#FFFAE5", "#C9FFE5"],
 					"focusPrime": ["default", "#DC3545", "#551B8C"],
 					"opacifiedPrime": ["default", "0 0 0 .25rem rgba(220, 53, 69, .5)", "0 0 0 .25rem rgba(85, 27, 140, .5)"],
-					"textPrime": ["#FFFFFF"],
+					"textDarkPrime": ["default", "#FFFFFF", "#FFFFFF"],
 					"transparent": ["default", "transparent", "transparent"],
 					"none": ["default", "none", "none"]
 				}
@@ -107,7 +107,7 @@ function setTheme(themeIndex) {
 				"hoverIn": {
 					"coloring": {
 						"color": {
-							//"textPrime": [".btn-outline-primary"]
+							"textDarkPrime": [".btn-outline-primary"]
 						},
 						"background-color": {
 							"focusPrime": [".btn-outline-primary", ".dropdown-item"]
