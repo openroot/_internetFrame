@@ -173,32 +173,24 @@ function setTheme(themeIndex) {
 											hoverInStyles[elements[elementKey]] = {};
 										}
 										hoverInStyles[elements[elementKey]][propertyKey] = pallets[palletKey][setKey][themeIndex];
-										//hoverInStyles[elements[elementKey]] = hoverInStyles[elements[elementKey]] ?
-											//hoverInStyles[elements[elementKey]] + " " + propertyKey + ": " + pallets[palletKey][setKey][themeIndex] + " !important;" : propertyKey + ": " + pallets[palletKey][setKey][themeIndex] + " !important;";
 										break;
 									case "hoverOut":
 										if (!hoverOutStyles[elements[elementKey]]) {
 											hoverOutStyles[elements[elementKey]] = {};
 										}
 										hoverOutStyles[elements[elementKey]][propertyKey] = pallets[palletKey][setKey][themeIndex];
-										//hoverOutStyles[elements[elementKey]] = hoverOutStyles[elements[elementKey]] ?
-											//hoverOutStyles[elements[elementKey]] + " " + propertyKey + ": " + pallets[palletKey][setKey][themeIndex] + " !important;" : propertyKey + ": " + pallets[palletKey][setKey][themeIndex] + " !important;";
 										break;
 									case "focusIn":
 										if (!focusInStyles[elements[elementKey]]) {
 											focusInStyles[elements[elementKey]] = {};
 										}
 										focusInStyles[elements[elementKey]][propertyKey] = pallets[palletKey][setKey][themeIndex];
-										//focusInStyles[elements[elementKey]] = focusInStyles[elements[elementKey]] ?
-											//focusInStyles[elements[elementKey]] + " " + propertyKey + ": " + pallets[palletKey][setKey][themeIndex] + " !important;" : propertyKey + ": " + pallets[palletKey][setKey][themeIndex] + " !important;";
 										break;
 									case "focusOut":
 										if (!focusOutStyles[elements[elementKey]]) {
 											focusOutStyles[elements[elementKey]] = {};
 										}
 										focusOutStyles[elements[elementKey]][propertyKey] = pallets[palletKey][setKey][themeIndex];
-										//focusOutStyles[elements[elementKey]] = focusOutStyles[elements[elementKey]] ?
-											//focusOutStyles[elements[elementKey]] + " " + propertyKey + ": " + pallets[palletKey][setKey][themeIndex] + " !important;" : propertyKey + ": " + pallets[palletKey][setKey][themeIndex] + " !important;";
 										break;
 								}
 							}
@@ -215,7 +207,6 @@ function setTheme(themeIndex) {
 			for (let hoverInStyleKey in hoverInStyles) {
 				$(hoverInStyleKey).hover(function(e) {
 					for (let propertyKey in hoverInStyles[hoverInStyleKey]) {
-						console.log(hoverInStyleKey + ": " + propertyKey + " -> " + hoverInStyles[hoverInStyleKey][propertyKey]);
 						if (e.type === "mouseenter") {
 							$(this).css(propertyKey, hoverInStyles[hoverInStyleKey][propertyKey]);
 						}
@@ -232,17 +223,20 @@ function setTheme(themeIndex) {
 					}
 				});
 			}
-			/*for (let focusInStyleKey in focusInStyles) {
+			for (let focusInStyleKey in focusInStyles) {
 				$(focusInStyleKey).focus(function(e) {
-					console.log($(this).attr('style'));
-					$(this).attr("style", $(this).attr("style") + focusInStyles[focusInStyleKey]);
+					for (let propertyKey in focusInStyles[focusInStyleKey]) {
+						$(this).css(propertyKey, focusInStyles[focusInStyleKey][propertyKey]);
+					}
 				});
 			}
 			for (let focusOutStyleKey in focusOutStyles) {
 				$(focusOutStyleKey).focusout(function(e) {
-					$(this).attr("style", focusOutStyles[focusOutStyleKey]);
+					for (let propertyKey in focusOutStyles[focusOutStyleKey]) {
+						$(this).css(propertyKey, focusOutStyles[focusOutStyleKey][propertyKey]);
+					}
 				});
-			}*/
+			}
 		}
 	});
 }
