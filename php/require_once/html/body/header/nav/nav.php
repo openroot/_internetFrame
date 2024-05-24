@@ -75,7 +75,7 @@
 							<li>
 								<div class="mx-3">
 									<p>Change theme</p>
-									<input id="themeSlider" type="range" class="form-range" min="0" max="2" step="1" value="1">
+									<input id="themeSlider" type="range" class="form-range" min="1" max="2" step="1" value="1">
 								</span>
 							</li>
 						</ul>

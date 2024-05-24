@@ -41,10 +41,10 @@ document.addEventListener("DOMContentLoaded", function() {
 					console.log(nextEl);
 					if (nextEl.style.display == "block") {
 						nextEl.style.display = "none";
-					} else {
+					}
+					else {
 						nextEl.style.display = "block";
 					}
-
 				}
 			});
 		})
@@ -76,7 +76,8 @@ function setTheme(themeIndex) {
 					"base": ["default", "#FFFAE5", "#C9FFE5"],
 					"focusPrime": ["default", "#DC3545", "#551B8C"],
 					"opacifiedPrime": ["default", "0 0 0 .25rem rgba(220, 53, 69, .5)", "0 0 0 .25rem rgba(85, 27, 140, .5)"],
-					"textDarkPrime": ["default", "#FFFFFF", "#FFFFFF"],
+					"lightTextPrime": ["default", "#FFFFFF", "#FFFFFF"],
+					"darkTextPrime": ["default", "#212529", "#212529"],
 					"transparent": ["default", "transparent", "transparent"],
 					"none": ["default", "none", "none"]
 				}
@@ -91,23 +92,27 @@ function setTheme(themeIndex) {
 						},
 						"background-color": {
 							"background": ["body", "header>div#navbarTopShade", "footer>div#navbarBottomShade"],
-							"base": [".bg-light", "input", "textarea", ".form-control", ".form-select", ".card-body", "li>.dropdown-menu"],
+							"base": ["input", "textarea", ".form-control", ".form-select", ".card-body", "li>.dropdown-menu"],
 							"focusPrime": [".btn-primary", ".btn-outline-primary", ".card-header"],
 							"transparent": [".btn-outline-primary", "input[type='range']"]
 						},
 						"border-color": {
 							"background": [".btn-primary"],
 							"focusPrime": [".btn-outline-primary"]
-						},
-						"box-shadow": {
-							"opacifiedPrime": [".btn-primary:focus"]
+						}
+					}
+				},
+				"inline": {
+					"coloring": {
+						"background-color": {
+							"base": [".bg-light"]
 						}
 					}
 				},
 				"hoverIn": {
 					"coloring": {
 						"color": {
-							"textDarkPrime": [".btn-outline-primary"]
+							"lightTextPrime": [".btn-outline-primary", ".dropdown-item"]
 						},
 						"background-color": {
 							"focusPrime": [".btn-outline-primary", ".dropdown-item"]
@@ -120,7 +125,8 @@ function setTheme(themeIndex) {
 				"hoverOut": {
 					"coloring": {
 						"color": {
-							"focusPrime": [".btn-outline-primary"]
+							"focusPrime": [".btn-outline-primary"],
+							"darkTextPrime": [".dropdown-item"]
 						},
 						"background-color": {
 							"transparent": [".btn-outline-primary", ".dropdown-item"]
@@ -133,20 +139,21 @@ function setTheme(themeIndex) {
 				"focusIn": {
 					"coloring": {
 						"box-shadow": {
-							"opacifiedPrime": [".btn-primary"]
+							"opacifiedPrime": [".btn-primary", ".btn-outline-primary"]
 						}
 					}
 				},
 				"focusOut": {
 					"coloring": {
 						"box-shadow": {
-							"none": [".btn-primary"]
+							"none": [".btn-primary", ".btn-outline-primary"]
 						}
 					}
 				}
 			};
 
 			let generalStyles = {};
+			let inlineStyles = {};
 			let hoverInStyles = {};
 			let hoverOutStyles = {};
 			let focusInStyles = {};
@@ -167,6 +174,12 @@ function setTheme(themeIndex) {
 											generalStyles[elements[elementKey]] = {};
 										}
 										generalStyles[elements[elementKey]][propertyKey] = pallets[palletKey][setKey][themeIndex];
+										break;
+									case "inline":
+										if (!inlineStyles[elements[elementKey]]) {
+											inlineStyles[elements[elementKey]] = {};
+										}
+										inlineStyles[elements[elementKey]][propertyKey] = pallets[palletKey][setKey][themeIndex] + " !important";
 										break;
 									case "hoverIn":
 										if (!hoverInStyles[elements[elementKey]]) {
@@ -202,6 +215,15 @@ function setTheme(themeIndex) {
 			for (let generalStyleKey in generalStyles) {
 				for (let propertyKey in generalStyles[generalStyleKey]) {
 					$(generalStyleKey).css(propertyKey, generalStyles[generalStyleKey][propertyKey]);
+				}
+			}
+			for (let inlineStyleKey in inlineStyles) {
+				let styleString = "";
+				for (let propertyKey in inlineStyles[inlineStyleKey]) {
+					styleString += propertyKey + ": " + inlineStyles[inlineStyleKey][propertyKey] + ";";
+				}
+				if (styleString.length > 0) {
+					$(inlineStyleKey).attr("style", styleString);
 				}
 			}
 			for (let hoverInStyleKey in hoverInStyles) {
