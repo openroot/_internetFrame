@@ -72,15 +72,15 @@ function setTheme(themeIndex) {
 		if (themeIndex !== 0) {
 			let pallets = {
 				"coloring": {
-					"background":		["default", "#FFE4C4", "#7CB9E8", "#FF9899"],		// Tips: Random in darker side.
-					"base":				["default", "#FFFAE5", "#C9FFE5", "#F4CACA"],		// Tips: Lighter side of 'background'.
-					"focusPrime":		["default", "#DC3545", "#551B8C", "#0A1195"],		// Tips: Random darker side yet relative to 'base'.
-					"darkTextPrime":	["default", "#211A00", "#00954d", "#230000"],		// Tips: Multiplied darker side of 'base'.
-					"lightTextPrime":	["default", "#FFFFFF", "#FFFFFF", "#FFFFFF"],		// Tips: generally selected as closer to color white.
-					"opacifiedBase":	["default", "#FFFAE580", "#C9FFE580", "#F4CACA80"],	// Tips: RGB of 'base' as 0.5 opacity.
-					"opacifiedPrime":	["default", "0 0 0 .25rem #DC354580", "0 0 0 .25rem #551B8C80", "0 0 0 .25rem #0A119580"],	// Tips: RGB of 'focusPrime' as 0.5 opacity.
-					"transparent":		["default", "transparent", "transparent", "transparent"],
-					"none":				["default", "none", "none", "none"]
+					"background":			["default", "#FFE4C4", "#7CB9E8", "#FF9899"],		// Tips: Random in darker side.
+					"base":					["default", "#FFFAE5", "#C9FFE5", "#F4CACA"],		// Tips: Lighter side of 'background'.
+					"focusPrime":			["default", "#DC3545", "#551B8C", "#0A1195"],		// Tips: Random darker side yet relative to 'base'.
+					"darkTextPrime":		["default", "#211A00", "#00954d", "#230000"],		// Tips: Multiplied darker side of 'base'.
+					"lightTextPrime":		["default", "#FFFFFF", "#FFFFFF", "#FFFFFF"],		// Tips: generally selected as closer to color white.
+					"opacifiedBase":		["default", "#FFFAE580", "#C9FFE580", "#F4CACA80"],	// Tips: RGB of 'base' as 0.5 opacity.
+					"opacifiedFocusPrime":	["default", "0 0 0 .25rem #DC354580", "0 0 0 .25rem #551B8C80", "0 0 0 .25rem #0A119580"],	// Tips: RGB of 'focusPrime' as 0.5 opacity.
+					"transparent":			["default", "transparent", "transparent", "transparent"],
+					"none":					["default", "none", "none", "none"]
 				}
 			}
 
@@ -148,7 +148,7 @@ function setTheme(themeIndex) {
 				"focusIn": {
 					"coloring": {
 						"box-shadow": {
-							"opacifiedPrime": [".btn-primary", ".btn-outline-primary", "input", "textarea", ".form-select", ".form-control"]
+							"opacifiedFocusPrime": [".btn-primary", ".btn-outline-primary", "input", "textarea", ".form-select", ".form-control"]
 						}
 					}
 				},
