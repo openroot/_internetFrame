@@ -84,12 +84,12 @@ function setTheme(themeIndex) {
 					"coloring": {
 						"background-color": {
 							"background": ["body", "header>div#navbarTopShade", "footer>div#navbarBottomShade"],
-							"base": ["li>.dropdown-menu", ".card-body", ".bg-light", ".form-control", ".form-select", "input", "textarea", ".foreground-light"],
+							"base": ["li>.dropdown-menu", ".card-body", ".bg-light", ".form-control", ".form-select", "input", "textarea"],
 							"focusPrime": [".btn-primary", ".btn-outline-primary", ".card-header"],
 							"transparent": ["input[type='range']"]
 						},
 						"color": {
-							"background": [".form-control", ".form-select", "input", "textarea", ".foreground-light"]
+							"background": [".form-control", ".form-select", "input", "textarea"]
 						}
 					}
 				},
