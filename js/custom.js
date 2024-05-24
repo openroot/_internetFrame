@@ -77,7 +77,7 @@ function setTheme(themeIndex) {
 					"focusPrime": ["default", "#DC3545", "#551B8C"],
 					"opacifiedPrime": ["default", "0 0 0 .25rem rgba(220, 53, 69, .5)", "0 0 0 .25rem rgba(85, 27, 140, .5)"],
 					"lightTextPrime": ["default", "#FFFFFF", "#FFFFFF"],
-					"darkTextPrime": ["default", "#212529", "#03532C"],
+					"darkTextPrime": ["default", "#211A00", "#00512A"],
 					"transparent": ["default", "transparent", "transparent"],
 					"none": ["default", "none", "none"]
 				}
