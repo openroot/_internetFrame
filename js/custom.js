@@ -141,14 +141,14 @@ function setTheme(themeIndex) {
 				"focusIn": {
 					"coloring": {
 						"box-shadow": {
-							"opacifiedPrime": [".btn-primary", ".btn-outline-primary"]
+							"opacifiedPrime": [".btn-primary", ".btn-outline-primary", "input"]
 						}
 					}
 				},
 				"focusOut": {
 					"coloring": {
 						"box-shadow": {
-							"none": [".btn-primary", ".btn-outline-primary"]
+							"none": [".btn-primary", ".btn-outline-primary", "input"]
 						}
 					}
 				}
