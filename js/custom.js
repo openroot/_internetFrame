@@ -159,25 +159,34 @@ function setTheme(themeIndex) {
 								// e.g., elementKey = "body"
 								switch (cssKey) {
 									case "general":
-										generalStyles[elements[elementKey]] = generalStyles[elements[elementKey]] ?
-											generalStyles[elements[elementKey]] + " " + propertyKey + ": " + pallets[palletKey][setKey][themeIndex] + " !important;" : propertyKey + ": " + pallets[palletKey][setKey][themeIndex] + " !important;";
+										if(!generalStyles[elements[elementKey]]) {
+											generalStyles[elements[elementKey]] = {};
+										}
+										generalStyles[elements[elementKey]][propertyKey] = pallets[palletKey][setKey][themeIndex];
+										//generalStyles[elements[elementKey]] = generalStyles[elements[elementKey]] ?
+											//generalStyles[elements[elementKey]] + " " + propertyKey + ": " + pallets[palletKey][setKey][themeIndex] + " !important;" : propertyKey + ": " + pallets[palletKey][setKey][themeIndex] + " !important;";
 										break;
+										/*
 									case "hoverIn":
-										hoverInStyles[elements[elementKey]] = hoverInStyles[elements[elementKey]] ?
-											hoverInStyles[elements[elementKey]] + " " + propertyKey + ": " + pallets[palletKey][setKey][themeIndex] + " !important;" : propertyKey + ": " + pallets[palletKey][setKey][themeIndex] + " !important;";
+										hoverInStyles[elements[elementKey]][propertyKey] = pallets[palletKey][setKey][themeIndex] + " !important";
+										//hoverInStyles[elements[elementKey]] = hoverInStyles[elements[elementKey]] ?
+											//hoverInStyles[elements[elementKey]] + " " + propertyKey + ": " + pallets[palletKey][setKey][themeIndex] + " !important;" : propertyKey + ": " + pallets[palletKey][setKey][themeIndex] + " !important;";
 										break;
 									case "hoverOut":
-										hoverOutStyles[elements[elementKey]] = hoverOutStyles[elements[elementKey]] ?
-											hoverOutStyles[elements[elementKey]] + " " + propertyKey + ": " + pallets[palletKey][setKey][themeIndex] + " !important;" : propertyKey + ": " + pallets[palletKey][setKey][themeIndex] + " !important;";
+										hoverOutStyles[elements[elementKey]][propertyKey] = pallets[palletKey][setKey][themeIndex] + " !important";
+										//hoverOutStyles[elements[elementKey]] = hoverOutStyles[elements[elementKey]] ?
+											//hoverOutStyles[elements[elementKey]] + " " + propertyKey + ": " + pallets[palletKey][setKey][themeIndex] + " !important;" : propertyKey + ": " + pallets[palletKey][setKey][themeIndex] + " !important;";
 										break;
 									case "focusIn":
-										focusInStyles[elements[elementKey]] = focusInStyles[elements[elementKey]] ?
-											focusInStyles[elements[elementKey]] + " " + propertyKey + ": " + pallets[palletKey][setKey][themeIndex] + " !important;" : propertyKey + ": " + pallets[palletKey][setKey][themeIndex] + " !important;";
+										focusInStyles[elements[elementKey]][propertyKey] = pallets[palletKey][setKey][themeIndex] + " !important";
+										//focusInStyles[elements[elementKey]] = focusInStyles[elements[elementKey]] ?
+											//focusInStyles[elements[elementKey]] + " " + propertyKey + ": " + pallets[palletKey][setKey][themeIndex] + " !important;" : propertyKey + ": " + pallets[palletKey][setKey][themeIndex] + " !important;";
 										break;
 									case "focusOut":
-										focusOutStyles[elements[elementKey]] = focusOutStyles[elements[elementKey]] ?
-											focusOutStyles[elements[elementKey]] + " " + propertyKey + ": " + pallets[palletKey][setKey][themeIndex] + " !important;" : propertyKey + ": " + pallets[palletKey][setKey][themeIndex] + " !important;";
-										break;
+										focusOutStyles[elements[elementKey]][propertyKey] = pallets[palletKey][setKey][themeIndex] + " !important";
+										//focusOutStyles[elements[elementKey]] = focusOutStyles[elements[elementKey]] ?
+											//focusOutStyles[elements[elementKey]] + " " + propertyKey + ": " + pallets[palletKey][setKey][themeIndex] + " !important;" : propertyKey + ": " + pallets[palletKey][setKey][themeIndex] + " !important;";
+										break;*/
 								}
 							}
 						}
@@ -186,9 +195,11 @@ function setTheme(themeIndex) {
 			}
 
 			for (let generalStyleKey in generalStyles) {
-				$(generalStyleKey).attr("style", generalStyles[generalStyleKey]);
+				for (let propertyKey in generalStyles[generalStyleKey]){
+					$(generalStyleKey).css(propertyKey, generalStyles[generalStyleKey][propertyKey]);
+				}
 			}
-			for (let hoverInStyleKey in hoverInStyles) {
+			/*for (let hoverInStyleKey in hoverInStyles) {
 				$(hoverInStyleKey).hover(function(e) {
 					if (e.type === "mouseenter") {
 						$(this).attr("style", hoverInStyles[hoverInStyleKey]);
@@ -212,7 +223,7 @@ function setTheme(themeIndex) {
 				$(focusOutStyleKey).focusout(function(e) {
 					$(this).attr("style", focusOutStyles[focusOutStyleKey]);
 				});
-			}
+			}*/
 		}
 	});
 }
