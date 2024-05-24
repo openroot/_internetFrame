@@ -82,15 +82,15 @@ function setTheme(themeIndex) {
 			let css = {
 				"general": {
 					"coloring": {
+						"color": {
+							"background": ["input", "textarea", ".form-control", ".form-select"],
+							"focusPrime": [".btn-outline-primary"]
+						},
 						"background-color": {
 							"background": ["body", "header>div#navbarTopShade", "footer>div#navbarBottomShade"],
 							"base": [".bg-light", "input", "textarea", ".form-control", ".form-select", ".card-body", "li>.dropdown-menu"],
 							"focusPrime": [".btn-primary", ".btn-outline-primary", ".card-header"],
 							"transparent": [".btn-outline-primary", "input[type='range']"]
-						},
-						"color": {
-							"background": ["input", "textarea", ".form-control", ".form-select"],
-							"focusPrime": [".btn-outline-primary"]
 						},
 						"border-color": {
 							"background": [".btn-primary"],
