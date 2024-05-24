@@ -76,6 +76,7 @@ function setTheme(themeIndex) {
 					"base": ["default", "#FFFAE5", "#C9FFE5"],
 					"focusPrime": ["default", "#DC3545", "#551B8C"],
 					"opacifiedPrime": ["default", "0 0 0 .25rem rgba(220, 53, 69, .5)", "0 0 0 .25rem rgba(85, 27, 140, .5)"],
+					"textPrime": ["#FFFFFF"],
 					"transparent": ["default", "transparent", "transparent"],
 					"none": ["default", "none", "none"]
 				}
@@ -105,6 +106,9 @@ function setTheme(themeIndex) {
 				},
 				"hoverIn": {
 					"coloring": {
+						"color": {
+							//"textPrime": [".btn-outline-primary"]
+						},
 						"background-color": {
 							"focusPrime": [".btn-outline-primary", ".dropdown-item"]
 						},
@@ -209,22 +213,24 @@ function setTheme(themeIndex) {
 				}
 			}
 			for (let hoverInStyleKey in hoverInStyles) {
-				for (let propertyKey in hoverInStyles[hoverInStyleKey]) {
-					$(hoverInStyleKey).hover(function(e) {
+				$(hoverInStyleKey).hover(function(e) {
+					for (let propertyKey in hoverInStyles[hoverInStyleKey]) {
+						console.log(hoverInStyleKey + ": " + propertyKey + " -> " + hoverInStyles[hoverInStyleKey][propertyKey]);
 						if (e.type === "mouseenter") {
 							$(this).css(propertyKey, hoverInStyles[hoverInStyleKey][propertyKey]);
 						}
-					});
-				}
+					
+					}
+				});
 			}
 			for (let hoverOutStyleKey in hoverOutStyles) {
-				for (let propertyKey in hoverOutStyles[hoverOutStyleKey]) {
-					$(hoverOutStyleKey).hover(function(e) {
+				$(hoverOutStyleKey).hover(function(e) {
+					for (let propertyKey in hoverOutStyles[hoverOutStyleKey]) {
 						if (e.type === "mouseleave") {
 							$(this).css(propertyKey, hoverOutStyles[hoverOutStyleKey][propertyKey]);
 						}
-					});
-				}
+					}
+				});
 			}
 			/*for (let focusInStyleKey in focusInStyles) {
 				$(focusInStyleKey).focus(function(e) {
