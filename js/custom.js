@@ -105,8 +105,12 @@ function setTheme(themeIndex) {
 				},
 				"inline": {
 					"coloring": {
+						"color": {
+							"focusPrime": [".text-primary"]
+						},
 						"background-color": {
 							"base": [".bg-light"],
+							"focusPrime": [".bg-primary"],
 							"darkTextPrime": [".bg-dark"]
 						}
 					}
