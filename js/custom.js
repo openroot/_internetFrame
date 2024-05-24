@@ -77,7 +77,7 @@ function setTheme(themeIndex) {
 					"focusPrime": ["default", "#DC3545", "#551B8C"],
 					"opacifiedPrime": ["default", "0 0 0 .25rem rgba(220, 53, 69, .5)", "0 0 0 .25rem rgba(85, 27, 140, .5)"],
 					"lightTextPrime": ["default", "#FFFFFF", "#FFFFFF"],
-					"darkTextPrime": ["default", "#212529", "#212529"],
+					"darkTextPrime": ["default", "#212529", "#03532C"],
 					"transparent": ["default", "transparent", "transparent"],
 					"none": ["default", "none", "none"]
 				}
@@ -88,11 +88,12 @@ function setTheme(themeIndex) {
 					"coloring": {
 						"color": {
 							"background": ["input", "textarea", ".form-control", ".form-select"],
-							"focusPrime": [".btn-outline-primary"]
+							"focusPrime": [".btn-outline-primary"],
+							"darkTextPrime": ["body", ".dropdown-item"]
 						},
 						"background-color": {
 							"background": ["body", "header>div#navbarTopShade", "footer>div#navbarBottomShade"],
-							"base": ["input", "textarea", ".form-control", ".form-select", ".card-body", "li>.dropdown-menu"],
+							"base": [".navbar", "input", "textarea", ".form-control", ".form-select", ".card-body", "li>.dropdown-menu"],
 							"focusPrime": [".btn-primary", ".btn-outline-primary", ".card-header"],
 							"transparent": [".btn-outline-primary", "input[type='range']"]
 						},
@@ -105,7 +106,8 @@ function setTheme(themeIndex) {
 				"inline": {
 					"coloring": {
 						"background-color": {
-							"base": [".bg-light"]
+							"base": [".bg-light"],
+							"darkTextPrime": [".bg-dark"]
 						}
 					}
 				},
