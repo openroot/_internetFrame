@@ -488,7 +488,7 @@
 <div class="mt-5">
 	<h6>Badges</h6>
 	<p>Badges are used to add additional information to any content.</p>
-	<h1>Example heading <span class="badge bg-secondary">New</span></h1>
+	<h1>Example heading <span class="badge bg-primary">New</span></h1>
 	<h2>Example heading <span class="badge bg-secondary">New</span></h2>
 	<h3>Example heading <span class="badge bg-secondary">New</span></h3>
 	<h4>Example heading <span class="badge bg-secondary">New</span></h4>
