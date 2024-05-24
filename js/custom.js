@@ -72,12 +72,12 @@ function setTheme(themeIndex) {
 		if (themeIndex !== 0) {
 			let pallets = {
 				"coloring": {
-					"background":		["default", "#FFE4C4", "#7CB9E8", "#DE5D83"],	// Tips: Random in darker side.
-					"base":				["default", "#FFFAE5", "#C9FFE5", "#DEC4CC"],	// Tips: Lighter side of 'background'.
-					"focusPrime":		["default", "#DC3545", "#551B8C", "#3C2126"],	// Tips: Random darker side yet relative to 'base'.
-					"darkTextPrime":	["default", "#211A00", "#00512A", "#21000A"],	// Tips: Multiplied darker side of 'base'.
+					"background":		["default", "#FFE4C4", "#7CB9E8", "#FF9899"],	// Tips: Random in darker side.
+					"base":				["default", "#FFFAE5", "#C9FFE5", "#F4CACA"],	// Tips: Lighter side of 'background'.
+					"focusPrime":		["default", "#DC3545", "#551B8C", "#0A1195"],	// Tips: Random darker side yet relative to 'base'.
+					"darkTextPrime":	["default", "#211A00", "#00954d", "#230000"],	// Tips: Multiplied darker side of 'base'.
 					"lightTextPrime":	["default", "#FFFFFF", "#FFFFFF", "#FFFFFF"],	// Tips: generally selected as closer to color white.
-					"opacifiedPrime":	["default", "0 0 0 .25rem #DC354580", "0 0 0 .25rem #551B8C80", "0 0 0 .25rem #3C212680"],	// Tips: RGB of 'focusPrime' as 0.5 opacity.
+					"opacifiedPrime":	["default", "0 0 0 .25rem #DC354580", "0 0 0 .25rem #551B8C80", "0 0 0 .25rem #0A119580"],	// Tips: RGB of 'focusPrime' as 0.5 opacity.
 					"transparent":		["default", "transparent", "transparent", "transparent"],
 					"none":				["default", "none", "none", "none"]
 				}
