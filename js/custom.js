@@ -159,34 +159,43 @@ function setTheme(themeIndex) {
 								// e.g., elementKey = "body"
 								switch (cssKey) {
 									case "general":
-										if(!generalStyles[elements[elementKey]]) {
+										if (!generalStyles[elements[elementKey]]) {
 											generalStyles[elements[elementKey]] = {};
 										}
 										generalStyles[elements[elementKey]][propertyKey] = pallets[palletKey][setKey][themeIndex];
-										//generalStyles[elements[elementKey]] = generalStyles[elements[elementKey]] ?
-											//generalStyles[elements[elementKey]] + " " + propertyKey + ": " + pallets[palletKey][setKey][themeIndex] + " !important;" : propertyKey + ": " + pallets[palletKey][setKey][themeIndex] + " !important;";
 										break;
-										/*
 									case "hoverIn":
-										hoverInStyles[elements[elementKey]][propertyKey] = pallets[palletKey][setKey][themeIndex] + " !important";
+										if (!hoverInStyles[elements[elementKey]]) {
+											hoverInStyles[elements[elementKey]] = {};
+										}
+										hoverInStyles[elements[elementKey]][propertyKey] = pallets[palletKey][setKey][themeIndex];
 										//hoverInStyles[elements[elementKey]] = hoverInStyles[elements[elementKey]] ?
 											//hoverInStyles[elements[elementKey]] + " " + propertyKey + ": " + pallets[palletKey][setKey][themeIndex] + " !important;" : propertyKey + ": " + pallets[palletKey][setKey][themeIndex] + " !important;";
 										break;
 									case "hoverOut":
-										hoverOutStyles[elements[elementKey]][propertyKey] = pallets[palletKey][setKey][themeIndex] + " !important";
+										if (!hoverOutStyles[elements[elementKey]]) {
+											hoverOutStyles[elements[elementKey]] = {};
+										}
+										hoverOutStyles[elements[elementKey]][propertyKey] = pallets[palletKey][setKey][themeIndex];
 										//hoverOutStyles[elements[elementKey]] = hoverOutStyles[elements[elementKey]] ?
 											//hoverOutStyles[elements[elementKey]] + " " + propertyKey + ": " + pallets[palletKey][setKey][themeIndex] + " !important;" : propertyKey + ": " + pallets[palletKey][setKey][themeIndex] + " !important;";
 										break;
 									case "focusIn":
-										focusInStyles[elements[elementKey]][propertyKey] = pallets[palletKey][setKey][themeIndex] + " !important";
+										if (!focusInStyles[elements[elementKey]]) {
+											focusInStyles[elements[elementKey]] = {};
+										}
+										focusInStyles[elements[elementKey]][propertyKey] = pallets[palletKey][setKey][themeIndex];
 										//focusInStyles[elements[elementKey]] = focusInStyles[elements[elementKey]] ?
 											//focusInStyles[elements[elementKey]] + " " + propertyKey + ": " + pallets[palletKey][setKey][themeIndex] + " !important;" : propertyKey + ": " + pallets[palletKey][setKey][themeIndex] + " !important;";
 										break;
 									case "focusOut":
-										focusOutStyles[elements[elementKey]][propertyKey] = pallets[palletKey][setKey][themeIndex] + " !important";
+										if (!focusOutStyles[elements[elementKey]]) {
+											focusOutStyles[elements[elementKey]] = {};
+										}
+										focusOutStyles[elements[elementKey]][propertyKey] = pallets[palletKey][setKey][themeIndex];
 										//focusOutStyles[elements[elementKey]] = focusOutStyles[elements[elementKey]] ?
 											//focusOutStyles[elements[elementKey]] + " " + propertyKey + ": " + pallets[palletKey][setKey][themeIndex] + " !important;" : propertyKey + ": " + pallets[palletKey][setKey][themeIndex] + " !important;";
-										break;*/
+										break;
 								}
 							}
 						}
@@ -195,25 +204,29 @@ function setTheme(themeIndex) {
 			}
 
 			for (let generalStyleKey in generalStyles) {
-				for (let propertyKey in generalStyles[generalStyleKey]){
+				for (let propertyKey in generalStyles[generalStyleKey]) {
 					$(generalStyleKey).css(propertyKey, generalStyles[generalStyleKey][propertyKey]);
 				}
 			}
-			/*for (let hoverInStyleKey in hoverInStyles) {
-				$(hoverInStyleKey).hover(function(e) {
-					if (e.type === "mouseenter") {
-						$(this).attr("style", hoverInStyles[hoverInStyleKey]);
-					}
-				});
+			for (let hoverInStyleKey in hoverInStyles) {
+				for (let propertyKey in hoverInStyles[hoverInStyleKey]) {
+					$(hoverInStyleKey).hover(function(e) {
+						if (e.type === "mouseenter") {
+							$(this).css(propertyKey, hoverInStyles[hoverInStyleKey][propertyKey]);
+						}
+					});
+				}
 			}
 			for (let hoverOutStyleKey in hoverOutStyles) {
-				$(hoverOutStyleKey).hover(function(e) {
-					if (e.type === "mouseleave") {
-						$(this).attr("style", hoverOutStyles[hoverOutStyleKey]);
-					}
-				});
+				for (let propertyKey in hoverOutStyles[hoverOutStyleKey]) {
+					$(hoverOutStyleKey).hover(function(e) {
+						if (e.type === "mouseleave") {
+							$(this).css(propertyKey, hoverOutStyles[hoverOutStyleKey][propertyKey]);
+						}
+					});
+				}
 			}
-			for (let focusInStyleKey in focusInStyles) {
+			/*for (let focusInStyleKey in focusInStyles) {
 				$(focusInStyleKey).focus(function(e) {
 					console.log($(this).attr('style'));
 					$(this).attr("style", $(this).attr("style") + focusInStyles[focusInStyleKey]);
