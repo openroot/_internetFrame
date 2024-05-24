@@ -210,7 +210,6 @@ function setTheme(themeIndex) {
 						if (e.type === "mouseenter") {
 							$(this).css(propertyKey, hoverInStyles[hoverInStyleKey][propertyKey]);
 						}
-					
 					}
 				});
 			}
