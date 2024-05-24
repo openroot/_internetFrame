@@ -137,7 +137,7 @@ function setTheme(themeIndex) {
 				"hoverOut": {
 					"coloring": {
 						"color": {
-							"focusPrime": [".btn-outline-primary", "a"],
+							"focusPrime": [".btn-outline-primary"],
 							"darkTextPrime": [".dropdown-item"],
 							//"lightTextPrime": ["a.btn"]
 						},
