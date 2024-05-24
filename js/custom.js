@@ -84,12 +84,12 @@ function setTheme(themeIndex) {
 					"coloring": {
 						"background-color": {
 							"background": ["body", "header>div#navbarTopShade", "footer>div#navbarBottomShade"],
-							"base": ["li>.dropdown-menu", ".card-body", ".bg-light", ".form-control", ".form-select", "input", "textarea"],
+							"base": [".bg-light", "input", "textarea", ".form-control", ".form-select", ".card-body", "li>.dropdown-menu"],
 							"focusPrime": [".btn-primary", ".btn-outline-primary", ".card-header"],
 							"transparent": [".btn-outline-primary", "input[type='range']"]
 						},
 						"color": {
-							"background": [".form-control", ".form-select", "input", "textarea"],
+							"background": ["input", "textarea", ".form-control", ".form-select"],
 							"focusPrime": [".btn-outline-primary"]
 						},
 						"border-color": {
@@ -101,14 +101,23 @@ function setTheme(themeIndex) {
 				"hoverIn": {
 					"coloring": {
 						"background-color": {
-							"focusPrime": [".dropdown-item"]
+							"focusPrime": [".btn-outline-primary", ".dropdown-item"]
+						},
+						"border-color": {
+							"background": [".btn-outline-primary"]
 						}
 					}
 				},
 				"hoverOut": {
 					"coloring": {
+						"color": {
+							"focusPrime": [".btn-outline-primary"]
+						},
 						"background-color": {
-							"transparent": [".dropdown-item"]
+							"transparent": [".btn-outline-primary", ".dropdown-item"]
+						},
+						"border-color": {
+							"focusPrime": [".btn-outline-primary"]
 						}
 					}
 				}
