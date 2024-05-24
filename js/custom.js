@@ -102,7 +102,7 @@ function setTheme(themeIndex) {
 						},
 						"border-color": {
 							"background": [".btn-primary"],
-							"focusPrime": [".btn-outline-primary"],
+							"focusPrime": [".btn-outline-primary", "a.btn-primary"],
 							"darkTextPrime": [".alert-primary"],
 							"opacifiedBase": [".card"]
 						}
