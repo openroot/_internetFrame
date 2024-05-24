@@ -75,7 +75,9 @@ function setTheme(themeIndex) {
 					"background": ["default", "bisque", "#7CB9E8"],
 					"base": ["default", "#FFFAE5", "#C9FFE5"],
 					"focusPrime": ["default", "#DC3545", "#551B8C"],
-					"transparent": ["default", "transparent", "transparent"]
+					"opacifiedPrime": ["default", "0 0 0 .25rem rgba(220, 53, 69, .5)", "0 0 0 .25rem rgba(85, 27, 140, .5)"],
+					"transparent": ["default", "transparent", "transparent"],
+					"none": ["default", "none", "none"]
 				}
 			}
 
@@ -95,6 +97,9 @@ function setTheme(themeIndex) {
 						"border-color": {
 							"background": [".btn-primary"],
 							"focusPrime": [".btn-outline-primary"]
+						},
+						"box-shadow": {
+							"opacifiedPrime": [".btn-primary:focus"]
 						}
 					}
 				},
@@ -120,12 +125,28 @@ function setTheme(themeIndex) {
 							"focusPrime": [".btn-outline-primary"]
 						}
 					}
+				},
+				"focusIn": {
+					"coloring": {
+						"box-shadow": {
+							"opacifiedPrime": [".btn-primary"]
+						}
+					}
+				},
+				"focusOut": {
+					"coloring": {
+						"box-shadow": {
+							"none": [".btn-primary"]
+						}
+					}
 				}
 			};
 
-			let generalInlineStyles = {};
-			let hoverInInlineStyles = {};
-			let hoverOutInlineStyles = {};
+			let generalStyles = {};
+			let hoverInStyles = {};
+			let hoverOutStyles = {};
+			let focusInStyles = {};
+			let focusOutStyles = {};
 			for (let cssKey in css) {
 				let zone = css[cssKey]; // e.g., cssKey = "general"
 				for (let palletKey in zone) {
@@ -138,16 +159,24 @@ function setTheme(themeIndex) {
 								// e.g., elementKey = "body"
 								switch (cssKey) {
 									case "general":
-										generalInlineStyles[elements[elementKey]] = generalInlineStyles[elements[elementKey]] ?
-											generalInlineStyles[elements[elementKey]] + " " + propertyKey + ": " + pallets[palletKey][setKey][themeIndex] + " !important;" : propertyKey + ": " + pallets[palletKey][setKey][themeIndex] + " !important;";
+										generalStyles[elements[elementKey]] = generalStyles[elements[elementKey]] ?
+											generalStyles[elements[elementKey]] + " " + propertyKey + ": " + pallets[palletKey][setKey][themeIndex] + " !important;" : propertyKey + ": " + pallets[palletKey][setKey][themeIndex] + " !important;";
 										break;
 									case "hoverIn":
-										hoverInInlineStyles[elements[elementKey]] = hoverInInlineStyles[elements[elementKey]] ?
-											hoverInInlineStyles[elements[elementKey]] + " " + propertyKey + ": " + pallets[palletKey][setKey][themeIndex] + " !important;" : propertyKey + ": " + pallets[palletKey][setKey][themeIndex] + " !important;";
+										hoverInStyles[elements[elementKey]] = hoverInStyles[elements[elementKey]] ?
+											hoverInStyles[elements[elementKey]] + " " + propertyKey + ": " + pallets[palletKey][setKey][themeIndex] + " !important;" : propertyKey + ": " + pallets[palletKey][setKey][themeIndex] + " !important;";
 										break;
 									case "hoverOut":
-										hoverOutInlineStyles[elements[elementKey]] = hoverOutInlineStyles[elements[elementKey]] ?
-											hoverOutInlineStyles[elements[elementKey]] + " " + propertyKey + ": " + pallets[palletKey][setKey][themeIndex] + " !important;" : propertyKey + ": " + pallets[palletKey][setKey][themeIndex] + " !important;";
+										hoverOutStyles[elements[elementKey]] = hoverOutStyles[elements[elementKey]] ?
+											hoverOutStyles[elements[elementKey]] + " " + propertyKey + ": " + pallets[palletKey][setKey][themeIndex] + " !important;" : propertyKey + ": " + pallets[palletKey][setKey][themeIndex] + " !important;";
+										break;
+									case "focusIn":
+										focusInStyles[elements[elementKey]] = focusInStyles[elements[elementKey]] ?
+											focusInStyles[elements[elementKey]] + " " + propertyKey + ": " + pallets[palletKey][setKey][themeIndex] + " !important;" : propertyKey + ": " + pallets[palletKey][setKey][themeIndex] + " !important;";
+										break;
+									case "focusOut":
+										focusOutStyles[elements[elementKey]] = focusOutStyles[elements[elementKey]] ?
+											focusOutStyles[elements[elementKey]] + " " + propertyKey + ": " + pallets[palletKey][setKey][themeIndex] + " !important;" : propertyKey + ": " + pallets[palletKey][setKey][themeIndex] + " !important;";
 										break;
 								}
 							}
@@ -156,21 +185,32 @@ function setTheme(themeIndex) {
 				}
 			}
 
-			for (let generalInlineStyleKey in generalInlineStyles) {
-				$(generalInlineStyleKey).attr("style", generalInlineStyles[generalInlineStyleKey]);
+			for (let generalStyleKey in generalStyles) {
+				$(generalStyleKey).attr("style", generalStyles[generalStyleKey]);
 			}
-			for (let hoverInInlineStyleKey in hoverInInlineStyles) {
-				$(hoverInInlineStyleKey).hover(function(e) {
+			for (let hoverInStyleKey in hoverInStyles) {
+				$(hoverInStyleKey).hover(function(e) {
 					if (e.type === "mouseenter") {
-						$(this).attr("style", hoverInInlineStyles[hoverInInlineStyleKey]);
+						$(this).attr("style", hoverInStyles[hoverInStyleKey]);
 					}
 				});
 			}
-			for (let hoverOutInlineStyleKey in hoverOutInlineStyles) {
-				$(hoverOutInlineStyleKey).hover(function(e) {
+			for (let hoverOutStyleKey in hoverOutStyles) {
+				$(hoverOutStyleKey).hover(function(e) {
 					if (e.type === "mouseleave") {
-						$(this).attr("style", hoverOutInlineStyles[hoverOutInlineStyleKey]);
+						$(this).attr("style", hoverOutStyles[hoverOutStyleKey]);
 					}
+				});
+			}
+			for (let focusInStyleKey in focusInStyles) {
+				$(focusInStyleKey).focus(function(e) {
+					console.log($(this).attr('style'));
+					$(this).attr("style", $(this).attr("style") + focusInStyles[focusInStyleKey]);
+				});
+			}
+			for (let focusOutStyleKey in focusOutStyles) {
+				$(focusOutStyleKey).focusout(function(e) {
+					$(this).attr("style", focusOutStyles[focusOutStyleKey]);
 				});
 			}
 		}
