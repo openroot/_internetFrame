@@ -93,7 +93,8 @@ function setTheme(themeIndex) {
 							"focusPrime": [".btn-outline-primary"]
 						},
 						"border-color": {
-							"background": [".btn-primary", ".btn-outline-primary"]
+							"background": [".btn-primary"],
+							"focusPrime": [".btn-outline-primary"]
 						}
 					}
 				},
