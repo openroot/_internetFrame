@@ -77,10 +77,10 @@ function setTheme(themeIndex) {
 					"focusPrime":			["default", "#DC3545", "#551B8C", "#0A1195"],		// Tips: Random darker side yet relative to 'base'.
 					"darkPrime":			["default", "#211A00", "#00954d", "#230000"],		// Tips: Multiplied darker side of 'base'.
 					"lightPrime":			["default", "#FFFFFF", "#FFFFFF", "#FFFFFF"],		// Tips: generally selected as closer to color white.
-					"shade":				["default", "#CBADAD", "#232323", "#232323"],		// Tips: 
+					"shade":				["default", "#CBADAD", "#A191B1", "#9697B3"],		// Tips: 
 					"opacifiedBase":		["default", "#FFFAE580", "#C9FFE580", "#F4CACA80"],	// Tips: RGB of 'base' as 0.5 opacity.
 					"opacifiedFocusPrime":	["default", "#DC354580", "#551B8C80", "#0A119580"],	// Tips: RGB of 'focusPrime' as 0.5 opacity.
-					"opacifiedShade":		["default", "#CBADAD80", "#23232380", "#23232380"],	// Tips: RGB of 'shade' as 0.5 opacity.
+					"opacifiedShade":		["default", "#CBADAD80", "#A191B180", "#9697B380"],	// Tips: RGB of 'shade' as 0.5 opacity.
 					"boxShadow":			["default", "0 0 0 .25rem #DC354580", "0 0 0 .25rem #551B8C80", "0 0 0 .25rem #0A119580"],	// Tips: RGB of 'focusPrime' as 0.5 opacity.
 					"transparent":			["default", "transparent", "transparent", "transparent"],
 					"none":					["default", "none", "none", "none"]
