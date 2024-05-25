@@ -92,7 +92,7 @@ function setTheme(themeIndex) {
 					"coloring": {
 						"color": {
 							"focusPrime": [".btn-outline-primary", "a"],
-							"darkPrime": ["body", ".dropdown-item", ".alert-primary", "input", "textarea", ".form-select", ".list-group-item"],
+							"darkPrime": ["body", ".dropdown-item", ".alert-primary", "input", "textarea", ".form-select", ".list-group-item", ".table"],
 							"lightPrime": [".btn-primary"]
 						},
 						"background-color": {
