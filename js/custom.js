@@ -98,10 +98,11 @@ function setTheme(themeIndex) {
 							"base": [".navbar", ".dropdown-menu", ".alert-primary", "input", "textarea", ".form-select", ".form-control", ".card-body", "li>.dropdown-menu", ".list-group-item"],
 							"focusPrime": [".btn-primary", ".btn-outline-primary"],
 							"opacifiedFocusPrime": [".card-header"],
-							"transparent": [".btn-outline-primary", "input[type='range']"]
+							"transparent": [".btn-outline-primary", "input[type='range']", ".img-thumbnail"]
 						},
 						"border-color": {
 							"background": [".btn-primary"],
+							"base": [".img-thumbnail"],
 							"focusPrime": [".btn-outline-primary", "a.btn-primary"],
 							"darkTextPrime": [".alert-primary", ".list-group-item"],
 							"opacifiedBase": [".card"]
