@@ -75,8 +75,8 @@ function setTheme(themeIndex) {
 					"background":			["default", "#FFE4C4", "#7CB9E8", "#FF9899"],		// Tips: Random in darker side.
 					"base":					["default", "#FFFAE5", "#C9FFE5", "#F4CACA"],		// Tips: Lighter side of 'background'.
 					"focusPrime":			["default", "#DC3545", "#551B8C", "#0A1195"],		// Tips: Random darker side yet relative to 'base'.
-					"darkTextPrime":		["default", "#211A00", "#00954d", "#230000"],		// Tips: Multiplied darker side of 'base'.
-					"lightTextPrime":		["default", "#FFFFFF", "#FFFFFF", "#FFFFFF"],		// Tips: generally selected as closer to color white.
+					"darkPrime":			["default", "#211A00", "#00954d", "#230000"],		// Tips: Multiplied darker side of 'base'.
+					"lightPrime":			["default", "#FFFFFF", "#FFFFFF", "#FFFFFF"],		// Tips: generally selected as closer to color white.
 					"opacifiedBase":		["default", "#FFFAE580", "#C9FFE580", "#F4CACA80"],	// Tips: RGB of 'base' as 0.5 opacity.
 					"opacifiedFocusPrime":	["default", "#DC354580", "#551B8C80", "#0A119580"],	// Tips: RGB of 'focusPrime' as 0.5 opacity.
 					"boxShadow":			["default", "0 0 0 .25rem #DC354580", "0 0 0 .25rem #551B8C80", "0 0 0 .25rem #0A119580"],	// Tips: RGB of 'focusPrime' as 0.5 opacity.
@@ -90,8 +90,8 @@ function setTheme(themeIndex) {
 					"coloring": {
 						"color": {
 							"focusPrime": [".btn-outline-primary", "a"],
-							"darkTextPrime": ["body", ".dropdown-item", ".alert-primary", "input", "textarea", ".form-select", ".form-control", ".list-group-item"],
-							"lightTextPrime": [".btn-primary"]
+							"darkPrime": ["body", ".dropdown-item", ".alert-primary", "input", "textarea", ".form-select", ".form-control", ".list-group-item"],
+							"lightPrime": [".btn-primary"]
 						},
 						"background-color": {
 							"background": ["body", "header>div#navbarTopShade", "footer>div#navbarBottomShade"],
@@ -104,7 +104,7 @@ function setTheme(themeIndex) {
 							"background": [".btn-primary"],
 							"base": [".img-thumbnail"],
 							"focusPrime": [".btn-outline-primary", "a.btn-primary"],
-							"darkTextPrime": [".alert-primary", ".list-group-item"],
+							"darkPrime": [".alert-primary", ".list-group-item"],
 							"opacifiedBase": [".card"]
 						}
 					}
@@ -117,17 +117,17 @@ function setTheme(themeIndex) {
 						"background-color": {
 							"base": [".bg-light"],
 							"focusPrime": [".bg-primary"],
-							"darkTextPrime": [".bg-dark"]
+							"darkPrime": [".bg-dark"]
 						},
 						"border-color": {
-							"darkTextPrime": [".border-primary"]
+							"darkPrime": [".border-primary"]
 						}
 					}
 				},
 				"hoverIn": {
 					"coloring": {
 						"color": {
-							"lightTextPrime": [".btn-outline-primary", ".dropdown-item"]
+							"lightPrime": [".btn-outline-primary", ".dropdown-item"]
 						},
 						"background-color": {
 							"focusPrime": [".btn-outline-primary", ".dropdown-item"],
@@ -142,8 +142,8 @@ function setTheme(themeIndex) {
 					"coloring": {
 						"color": {
 							"focusPrime": [".btn-outline-primary"],
-							"darkTextPrime": [".dropdown-item"],
-							"lightTextPrime": ["a.btn-primary"]
+							"darkPrime": [".dropdown-item"],
+							"lightPrime": ["a.btn-primary"]
 						},
 						"background-color": {
 							"focusPrime": ["a.btn-primary"],
