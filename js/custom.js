@@ -77,8 +77,10 @@ function setTheme(themeIndex) {
 					"focusPrime":			["default", "#DC3545", "#551B8C", "#0A1195"],		// Tips: Random darker side yet relative to 'base'.
 					"darkPrime":			["default", "#211A00", "#00954d", "#230000"],		// Tips: Multiplied darker side of 'base'.
 					"lightPrime":			["default", "#FFFFFF", "#FFFFFF", "#FFFFFF"],		// Tips: generally selected as closer to color white.
+					"shade":				["default", "#CBADAD", "#232323", "#232323"],		// Tips: 
 					"opacifiedBase":		["default", "#FFFAE580", "#C9FFE580", "#F4CACA80"],	// Tips: RGB of 'base' as 0.5 opacity.
 					"opacifiedFocusPrime":	["default", "#DC354580", "#551B8C80", "#0A119580"],	// Tips: RGB of 'focusPrime' as 0.5 opacity.
+					"opacifiedShade":		["default", "#CBADAD80", "#23232380", "#23232380"],	// Tips: RGB of 'shade' as 0.5 opacity.
 					"boxShadow":			["default", "0 0 0 .25rem #DC354580", "0 0 0 .25rem #551B8C80", "0 0 0 .25rem #0A119580"],	// Tips: RGB of 'focusPrime' as 0.5 opacity.
 					"transparent":			["default", "transparent", "transparent", "transparent"],
 					"none":					["default", "none", "none", "none"]
@@ -90,12 +92,12 @@ function setTheme(themeIndex) {
 					"coloring": {
 						"color": {
 							"focusPrime": [".btn-outline-primary", "a"],
-							"darkPrime": ["body", ".dropdown-item", ".alert-primary", "input", "textarea", ".form-select", ".form-control", ".list-group-item"],
+							"darkPrime": ["body", ".dropdown-item", ".alert-primary", "input", "textarea", ".form-select", ".list-group-item"],
 							"lightPrime": [".btn-primary"]
 						},
 						"background-color": {
 							"background": ["body", "header>div#navbarTopShade", "footer>div#navbarBottomShade"],
-							"base": [".navbar", ".dropdown-menu", ".alert-primary", "input", "textarea", ".form-select", ".form-control", ".card-body", "li>.dropdown-menu", ".list-group-item"],
+							"base": [".navbar", ".dropdown-menu", ".alert-primary", "input", "textarea", ".form-select", ".card-body", "li>.dropdown-menu", ".list-group-item"],
 							"focusPrime": [".btn-primary", ".btn-outline-primary"],
 							"opacifiedFocusPrime": [".card-header"],
 							"transparent": [".btn-outline-primary", "input[type='range']", ".img-thumbnail"]
@@ -104,8 +106,14 @@ function setTheme(themeIndex) {
 							"background": [".btn-primary"],
 							"base": [".img-thumbnail"],
 							"focusPrime": [".btn-outline-primary", "a.btn-primary"],
-							"darkPrime": [".alert-primary", ".list-group-item"],
-							"opacifiedBase": [".card"]
+							"darkPrime": [".alert-primary"],
+							"opacifiedShade": [".form-control", "input", "textarea", ".form-select", ".list-group-item", ".card", ".table"]
+						},
+						"border-bottom-color": {
+							"opacifiedShade": [".modal-header"]
+						},
+						"border-top-color": {
+							"opacifiedShade": [".modal-footer"]
 						}
 					}
 				},
@@ -120,7 +128,7 @@ function setTheme(themeIndex) {
 							"darkPrime": [".bg-dark"]
 						},
 						"border-color": {
-							"darkPrime": [".border-primary"]
+							"opacifiedShade": [".border-primary"]
 						}
 					}
 				},
