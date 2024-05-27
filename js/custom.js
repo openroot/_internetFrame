@@ -128,7 +128,7 @@ function setTheme(themeIndex) {
 							"darkPrime": [".bg-dark"]
 						},
 						"border-color": {
-							"opacifiedShade": [".border-primary"]
+							"opacifiedShade": [".border", ".border-primary"]
 						}
 					}
 				},
@@ -249,6 +249,8 @@ function setTheme(themeIndex) {
 					styleString += propertyKey + ": " + inlineStyles[inlineStyleKey][propertyKey] + ";";
 				}
 				if (styleString.length > 0) {
+					let temp = $(inlineStyleKey).attr("style"); // TODO: On theme change remove any old custom styling; here.
+					styleString = !temp ? styleString : temp + " " + styleString;
 					$(inlineStyleKey).attr("style", styleString);
 				}
 			}
